@@ -1131,8 +1131,11 @@ var MEDIA={
  rb_adapto:{foto:AD,video:[]},
  bac:{foto:'home',video:[]},
  privat:{foto:[],video:[]},
+ privat_privat:{foto:["media/gambar-130.jpg","media/gambar-131.jpg","media/gambar-132.jpg","media/gambar-133.jpg"],video:[]},
+ privat_mapel:{foto:["media/gambar-134.jpg","media/gambar-135.jpg"],video:[]},
+ privat_ujian:{foto:["media/gambar-136.jpg","media/gambar-137.jpg"],video:[]},
  bao:{foto:[],video:[]},
- mc:{foto:[],video:[]},
+ mc:{foto:["media/gambar-138.jpg","media/gambar-139.jpg","media/gambar-140.jpg","media/gambar-141.jpg"],video:[]},
  kal:{foto:KAL_FOTO,video:[]},
  rb:{foto:[],video:[]},
  robo:{foto:RG,video:[]},
@@ -1181,6 +1184,9 @@ function testis(id){
 /* Testimoni Brain Academy Online per jenjang (SD/SMP/SMA) */
 var BAO_IMG={sd:[['Ahda','media/gambar-095.webp'],['Ayesha','media/gambar-096.webp'],['Angela','media/gambar-097.webp']],smp:[['Intan','media/gambar-098.webp'],['Adinda','media/gambar-099.webp'],['Jessica','media/gambar-100.webp']],sma:[['Nurul','media/gambar-101.webp'],['Gede','media/gambar-102.webp'],['Yolanda','media/gambar-103.webp']]};
 var BAO_VID={apa:'media/video-024.mp4',fitur:'media/video-025.mp4',testi:'media/video-026.mp4'};
+/* VIDEO PER PRODUK: isi daftar alamat mp4 di sini. Kosong = tampil 'segera hadir'. */
+var XV={bac:['media/video-038.mp4','media/video-039.mp4','media/video-040.mp4'],mc:['media/video-037.mp4'],privat:['media/video-034.mp4','media/video-035.mp4','media/video-036.mp4'],kal_online:[],kal_robotic:[]};
+var XV_R={bac:'9/16',mc:'9/16',privat:'9/16',kal_online:'9/16',kal_robotic:'9/16'};
 var ROBO_VID=['media/video-027.mp4','media/video-028.mp4'];
 var RB_VID={apa:['media/video-029.mp4'],fitur:['media/video-030.mp4','media/video-031.mp4'],adapto:['media/video-032.mp4','media/video-033.mp4']};
 var BAO_VR={apa:'4/5',fitur:'4/5',testi:'16/9'};
@@ -1193,10 +1199,11 @@ function baoVideo(k){
  return {el:box,start:function(){},stop:function(){v.pause()}};
 }
 function vidViewer(id,k){
- var list=id==='kal'?[]:id==='robo'?ROBO_VID.map(function(x){return{s:x,r:'9/16'}}):id==='bao'?[{s:BAO_VID[k],r:BAO_VR[k]}]:(RB_VID[k]||[]).map(function(x){return{s:x,r:k==='adapto'?'1/1':'4/5'}});
+ var xk=id==='kal'?'kal_'+k:id;
+ var list=XV[xk]!==undefined?XV[xk].map(function(x){return{s:x,r:XV_R[xk]}}):id==='kal'?[]:id==='robo'?ROBO_VID.map(function(x){return{s:x,r:'9/16'}}):id==='bao'?[{s:BAO_VID[k],r:BAO_VR[k]}]:(RB_VID[k]||[]).map(function(x){return{s:x,r:k==='adapto'?'1/1':'4/5'}});
  var wrap=el('div'),vs=[],iv=null;
  if(id==='rb'&&k==='adapto'){iv=Viewer('rb_adapto','foto','ADAPTO Ruangbelajar');wrap.appendChild(iv.el);iv.start()}
- if(!list.length){var ph=el('div','mxv');ph.style.cssText+=';display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:600;text-align:center;padding:12px';ph.textContent='Video '+({adapto:'ADAPTO',online:'Kelas Online',robotic:'Kelas Robotic'}[k]||'')+' segera hadir';wrap.appendChild(ph)}
+ if(!list.length){var ph=el('div','mxv');ph.style.cssText+=';display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:600;text-align:center;padding:12px';ph.textContent=('Video '+({adapto:'ADAPTO',online:'Kelas Online',robotic:'Robotic',coding:'Coding'}[(id==='bac'||id==='mc'||id==='privat')?'':k]||'')).replace(/\s+$/,'')+' segera hadir';wrap.appendChild(ph)}
 if(list.length>1){
   var sl=el('div','vsl'),tr=el('div','vsl-t'),pill=el('div','vsl-p'),ix=0;
   var go=function(n){ix=(n+list.length)%list.length;vs.forEach(function(v){v.pause()});tr.style.transform='translateX(-'+ix*100+'%)';pill.textContent=(ix+1)+' / '+list.length};
@@ -1316,13 +1323,13 @@ function Viewer(id,kind,name){
   next=function(){show(idx+1)};
   mk();return {el:wrap,start:function(){started=true;show(0);arm(id.indexOf('bao_')===0?9000:TESTI_MS)},stop:function(){started=false;clearInterval(timer);timer=null}};
  }
- var src2=items(id,kind);real=src2.length>0;var kt=id.indexOf('kitab_')===0,rj=id.indexOf('ru_')===0;n=real?src2.length:((kt||rj)?1:3);if((kt||id==='rb_adapto'||id==='robo')&&real&&kind==='foto')box.style.aspectRatio='1/1';if(id==='kal'&&real&&kind==='foto')box.style.aspectRatio='4/5';if(rj&&kind==='foto')box.style.aspectRatio=id==='ru_info'?'1/1':id==='ru_pend'?'18/25':/^ru_tka_(sma|smp)_info$/.test(id)?'4/5':'4/1';
+ var src2=items(id,kind);real=src2.length>0;var kt=id.indexOf('kitab_')===0,rj=id.indexOf('ru_')===0,pv=id.indexOf('privat_')===0||id==='mc';n=real?src2.length:((kt||rj||pv)?1:3);if((kt||id==='rb_adapto'||id==='robo')&&real&&kind==='foto')box.style.aspectRatio='1/1';if((id==='kal'||pv)&&real&&kind==='foto')box.style.aspectRatio=id==='mc'?'3/4':'4/5';if(rj&&kind==='foto')box.style.aspectRatio=id==='ru_info'?'1/1':id==='ru_pend'?'18/25':/^ru_tka_(sma|smp)_info$/.test(id)?'4/5':'4/1';
  var trk=el('div','mxt');
  for(var j=0;j<n;j++){
   var sl=el('div','mxs');
   if(real&&kind==='foto'){sl.style.backgroundImage=bg(src2[j]);sl.setAttribute('role','img');sl.setAttribute('aria-label','Foto '+name+' '+(j+1))}
   else if(real){var v=document.createElement('video');v.src=src2[j];v.muted=true;v.playsInline=true;v.preload='metadata';v.setAttribute('playsinline','');v.addEventListener('ended',function(){if(auto())next()});sl.appendChild(v)}
-  else if(rj){sl.style.background=COL[0];sl.innerHTML=name+'<small>belum ditambahkan</small>'}else if(kt){sl.style.background=COL[0];sl.innerHTML=(kind==='video'?'Video ':'Foto ')+name+'<small>belum ditambahkan</small>'}else{sl.style.background=COL[j%3];sl.innerHTML=name+'<small>'+(kind==='video'?'Contoh video ':'Contoh foto ')+(j+1)+' dari '+n+'</small>'}
+  else if(rj){sl.style.background=COL[0];sl.innerHTML=name+'<small>belum ditambahkan</small>'}else if(kt||pv){sl.style.background=COL[0];sl.innerHTML=(kind==='video'?'Video ':'Foto ')+name+'<small>belum ditambahkan</small>'}else{sl.style.background=COL[j%3];sl.innerHTML=name+'<small>'+(kind==='video'?'Contoh video ':'Contoh foto ')+(j+1)+' dari '+n+'</small>'}
   trk.appendChild(sl);slides.push(sl);
   var dd=document.createElement('i');dots.appendChild(dd);dl.push(dd);
  }
@@ -1337,7 +1344,7 @@ function Viewer(id,kind,name){
   show(idx+1);
  };
  mk();return {el:wrap,
-  start:function(){started=true;show(0);if(real&&kind==='video')return;arm(rj&&real?(id==='ru_info'||id==='ru_pend'||/^ru_tka_(sma|smp)_info$/.test(id)?5000:3500):(kt||id==='rb_adapto'||id==='robo'||id==='kal')&&real?6000:(kind==='foto'||real?FOTO_MS:VIDEO_PH_MS))},
+  start:function(){started=true;show(0);if(real&&kind==='video')return;arm(pv&&real?5000:rj&&real?(id==='ru_info'||id==='ru_pend'||/^ru_tka_(sma|smp)_info$/.test(id)?5000:3500):(kt||id==='rb_adapto'||id==='robo'||id==='kal')&&real?6000:(kind==='foto'||real?FOTO_MS:VIDEO_PH_MS))},
   stop:function(){started=false;clearInterval(timer);timer=null;slides.forEach(function(s){var v=s.firstChild;if(v&&v.pause)v.pause()})}};
 }
 function buildRu(card,p,name){
@@ -1385,21 +1392,26 @@ function build(card){
  var p=el('div','mxp');p.id='mx-'+id;p.hidden=true;
  if(id==='ru'){buildRu(card,p,name);return}
  var bar=el('div','mxb'),cur=null,kind='',btns={},jj='sd';
- [['video','Video'],['foto','Foto'],['testimoni','Testimoni']].filter(function(x){return !(((id==='bao'||id==='rb')&&x[0]==='foto')||((id==='kitab'||id==='privat'||id==='mc'||id==='kal')&&x[0]==='video'))}).forEach(function(x){
+ [['video','Video'],['foto','Foto'],['testimoni','Testimoni']].filter(function(x){return !(((id==='bao'||id==='rb')&&x[0]==='foto')||(id==='kitab'&&x[0]==='video'))}).forEach(function(x){
   var b=el('button');b.type='button';b.textContent=x[1];b.setAttribute('aria-expanded','false');
   b.addEventListener('click',function(){open(x[0])});btns[x[0]]=b;bar.appendChild(b);
  });
- if(id==='bao'||id==='rb'||id==='kitab'||id==='privat'||id==='mc'||id==='kal')bar.style.gridTemplateColumns='repeat(2,1fr)';p.appendChild(bar);
+ if(id==='bao'||id==='rb'||id==='kitab')bar.style.gridTemplateColumns='repeat(2,1fr)';p.appendChild(bar);
  var cr=null,cj='pw',cb=[];
  if(id==='bac'){cr=el('div','cbr');cr.hidden=true;cr.setAttribute('role','group');cr.setAttribute('aria-label','Pilih cabang');
   [['pw','Cabang Purworejo'],['ln','Cabang Lainnya']].forEach(function(x){var b=el('button','cbb');b.textContent=x[1];b.type='button';b.setAttribute('aria-pressed',x[0]==='pw'?'true':'false');
    b.addEventListener('click',function(){cj=x[0];cb.forEach(function(y){y.setAttribute('aria-pressed',y===b?'true':'false')});if(kind==='testimoni'){close();open('testimoni')}});
    cb.push(b);cr.appendChild(b)});p.appendChild(cr)}
- var vr=null,vb=[],vj=id==='kal'?'coding':'apa';
+ var vr=null,vb=[],vj=id==='kal'?'online':'apa';
  if(id==='bao'||id==='rb'||id==='kal'){vr=el('div',(id==='bao'||id==='kal')?'mxj bj':'mxj');vr.hidden=true;vr.setAttribute('role','group');vr.setAttribute('aria-label','Pilih video');
-  (id==='bao'?[['apa','Apa itu BAON'],['fitur','Fitur Andalan'],['testi','Kuis Interaktif']]:id==='kal'?[['coding','Kelas Coding']]:[['apa','Apa itu Rubel'],['fitur','Fitur Andalan'],['adapto','ADAPTO']]).forEach(function(x){var b=el('button');b.type='button';b.textContent=x[1];b.setAttribute('aria-pressed',x[0]===vj?'true':'false');
+  (id==='bao'?[['apa','Apa itu BAON'],['fitur','Fitur Andalan'],['testi','Kuis Interaktif']]:id==='kal'?[['online','Kelas Online'],['coding','Coding'],['robotic','Robotic']]:[['apa','Apa itu Rubel'],['fitur','Fitur Andalan'],['adapto','ADAPTO']]).forEach(function(x){var b=el('button');b.type='button';b.textContent=x[1];b.setAttribute('aria-pressed',x[0]===vj?'true':'false');
    b.addEventListener('click',function(){vj=x[0];vb.forEach(function(y){y.setAttribute('aria-pressed',y===b?'true':'false')});if(kind==='video'){close();open('video')}});
    vb.push(b);vr.appendChild(b)});p.appendChild(vr)}
+ var fr=null,fb=[],pj='privat';
+ if(id==='privat'){fr=el('div','mxj bj');fr.hidden=true;fr.setAttribute('role','group');fr.setAttribute('aria-label','Pilih kategori foto');
+  [['privat','Privat'],['mapel','Mapel'],['ujian','Ujian']].forEach(function(x){var b=el('button');b.type='button';b.textContent=x[1];b.setAttribute('aria-pressed',x[0]===pj?'true':'false');
+   b.addEventListener('click',function(){pj=x[0];fb.forEach(function(y){y.setAttribute('aria-pressed',y===b?'true':'false')});if(kind==='foto'){close();open('foto')}});
+   fb.push(b);fr.appendChild(b)});p.appendChild(fr)}
  var lr=null,lb=[];
  if(id==='bao'){lr=el('div','mxj bj');lr.hidden=true;lr.setAttribute('role','group');lr.setAttribute('aria-label','Pilih jenjang');
   [['sd','SD'],['smp','SMP'],['sma','SMA']].forEach(function(x){var b=el('button');b.type='button';b.textContent=x[1];b.setAttribute('aria-pressed',x[0]==='sd'?'true':'false');
@@ -1411,10 +1423,10 @@ function build(card){
    b.addEventListener('click',function(){jj=x[0];jb.forEach(function(y){y.setAttribute('aria-pressed',y===b?'true':'false')});if(kind){var k=kind;close();open(k)}});
    jb.push(b);jr.appendChild(b)});p.appendChild(jr)}
  if(id==='bac'||id==='bao'){var g=el('a','mxg2 '+(id==='bao'?'on':'off'));g.href='https://rudiruangguru.github.io/kelasgratis/';g.target='_blank';g.rel='noopener';g.textContent='Coba Kelas Gratis';p.appendChild(g)}
- function close(){if(cur){cur.stop();cur.el.remove();cur=null}kind='';if(cr)cr.hidden=true;if(lr)lr.hidden=true;if(vr)vr.hidden=true;for(var k in btns)btns[k].setAttribute('aria-expanded','false')}
+ function close(){if(cur){cur.stop();cur.el.remove();cur=null}kind='';if(cr)cr.hidden=true;if(lr)lr.hidden=true;if(vr)vr.hidden=true;if(fr)fr.hidden=true;for(var k in btns)btns[k].setAttribute('aria-expanded','false')}
  function open(k){
   if(kind===k){close();return}
-  close();kind=k;var ln2=id==='bac'&&k==='testimoni'&&cj==='ln';if(cr)cr.hidden=k!=='testimoni';if(lr)lr.hidden=k!=='testimoni';if(vr)vr.hidden=k!=='video';var bt=id==='bao'&&k==='testimoni';cur=(id==='kal'&&k==='testimoni')?kalTesti():(id==='kal'&&k==='video'&&vj==='coding')?kalSlider(KAL_C,'Video'):((id==='bao'||id==='rb'||id==='robo'||id==='kal')&&k==='video')?vidViewer(id,vj):Viewer(id==='kitab'?'kitab_'+jj:(bt?'bao_'+jj:(ln2?'bac_lain':id)),k,(id==='kitab'||bt)?name+' '+jj.toUpperCase():(ln2?name+' Cabang Lainnya':name));p.appendChild(cur.el);cur.start();
+  close();kind=k;var ln2=id==='bac'&&k==='testimoni'&&cj==='ln';if(cr)cr.hidden=k!=='testimoni';if(lr)lr.hidden=k!=='testimoni';if(vr)vr.hidden=k!=='video';if(fr)fr.hidden=k!=='foto';var bt=id==='bao'&&k==='testimoni';cur=(id==='privat'&&k==='foto')?Viewer('privat_'+pj,'foto',({privat:'Privat',mapel:'Mapel',ujian:'Ujian'})[pj]):(id==='kal'&&k==='testimoni')?kalTesti():(id==='kal'&&k==='video'&&vj==='coding')?kalSlider(KAL_C,'Video'):((id==='bao'||id==='rb'||id==='robo'||id==='kal'||id==='bac'||id==='mc'||id==='privat')&&k==='video')?vidViewer(id,vj):Viewer(id==='kitab'?'kitab_'+jj:(bt?'bao_'+jj:(ln2?'bac_lain':id)),k,(id==='kitab'||bt)?name+' '+jj.toUpperCase():(ln2?name+' Cabang Lainnya':name));p.appendChild(cur.el);cur.start();
   btns[k].setAttribute('aria-expanded','true');
   cur.el.scrollIntoView({behavior:'smooth',block:'nearest'});
  }
