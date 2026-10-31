@@ -1108,6 +1108,8 @@ var KAL_FOTO=["media/gambar-083.jpg","media/gambar-084.jpg","media/gambar-085.jp
 var KAL_VID='media/video-001.mp4';
 var KAL_T=[['v','media/video-002.mp4'],['v','media/video-003.mp4'],['v','media/video-004.mp4'],['i','media/gambar-088.webp'],['i','media/gambar-089.webp'],['v','media/video-005.mp4'],['v','media/video-006.mp4'],['v','media/video-007.mp4'],['v','media/video-008.mp4'],['v','media/video-009.mp4'],['v','media/video-010.mp4'],['v','media/video-011.mp4'],['v','media/video-012.mp4'],['v','media/video-013.mp4']];
 var KAL_C=[['v','media/video-014.mp4'],['v',KAL_VID],['v','media/video-015.mp4'],['v','media/video-016.mp4'],['i','media/gambar-090.webp'],['v','media/video-017.mp4'],['v','media/video-018.mp4'],['v','media/video-019.mp4'],['v','media/video-020.mp4'],['v','media/video-021.mp4'],['v','media/video-022.mp4'],['v','media/video-023.mp4']];
+/* Kelas Online Kalananti: v = video, i = gambar (urutan tampil) */
+var KAL_O=[['v','media/video-045.mp4'],['i','media/gambar-142.jpg'],['i','media/gambar-143.jpg'],['i','media/gambar-144.jpg'],['v','media/video-049.mp4'],['v','media/video-050.mp4'],['v','media/video-051.mp4'],['v','media/video-052.mp4'],['v','media/video-053.mp4'],['v','media/video-054.mp4'],['v','media/video-055.mp4']];
 function kalTesti(){return kalSlider(KAL_T,'Testimoni')}
 function kalSlider(IT,lbl){
  var wrap=el('div'),vs=[],ix=0,n=IT.length;
@@ -1185,7 +1187,7 @@ function testis(id){
 var BAO_IMG={sd:[['Ahda','media/gambar-095.webp'],['Ayesha','media/gambar-096.webp'],['Angela','media/gambar-097.webp']],smp:[['Intan','media/gambar-098.webp'],['Adinda','media/gambar-099.webp'],['Jessica','media/gambar-100.webp']],sma:[['Nurul','media/gambar-101.webp'],['Gede','media/gambar-102.webp'],['Yolanda','media/gambar-103.webp']]};
 var BAO_VID={apa:'media/video-024.mp4',fitur:'media/video-025.mp4',testi:'media/video-026.mp4'};
 /* VIDEO PER PRODUK: isi daftar alamat mp4 di sini. Kosong = tampil 'segera hadir'. */
-var XV={bac:['media/video-038.mp4','media/video-039.mp4','media/video-040.mp4'],mc:['media/video-037.mp4'],privat:['media/video-034.mp4','media/video-035.mp4','media/video-036.mp4'],kal_online:[],kal_robotic:[]};
+var XV={bac:['media/video-038.mp4','media/video-039.mp4','media/video-040.mp4'],mc:['media/video-037.mp4'],privat:['media/video-034.mp4','media/video-035.mp4','media/video-036.mp4'],kal_online:[],kal_robotic:['media/video-041.mp4','media/video-042.mp4','media/video-043.mp4','media/video-044.mp4']};
 var XV_R={bac:'9/16',mc:'9/16',privat:'9/16',kal_online:'9/16',kal_robotic:'9/16'};
 var ROBO_VID=['media/video-027.mp4','media/video-028.mp4'];
 var RB_VID={apa:['media/video-029.mp4'],fitur:['media/video-030.mp4','media/video-031.mp4'],adapto:['media/video-032.mp4','media/video-033.mp4']};
@@ -1426,7 +1428,7 @@ function build(card){
  function close(){if(cur){cur.stop();cur.el.remove();cur=null}kind='';if(cr)cr.hidden=true;if(lr)lr.hidden=true;if(vr)vr.hidden=true;if(fr)fr.hidden=true;for(var k in btns)btns[k].setAttribute('aria-expanded','false')}
  function open(k){
   if(kind===k){close();return}
-  close();kind=k;var ln2=id==='bac'&&k==='testimoni'&&cj==='ln';if(cr)cr.hidden=k!=='testimoni';if(lr)lr.hidden=k!=='testimoni';if(vr)vr.hidden=k!=='video';if(fr)fr.hidden=k!=='foto';var bt=id==='bao'&&k==='testimoni';cur=(id==='privat'&&k==='foto')?Viewer('privat_'+pj,'foto',({privat:'Privat',mapel:'Mapel',ujian:'Ujian'})[pj]):(id==='kal'&&k==='testimoni')?kalTesti():(id==='kal'&&k==='video'&&vj==='coding')?kalSlider(KAL_C,'Video'):((id==='bao'||id==='rb'||id==='robo'||id==='kal'||id==='bac'||id==='mc'||id==='privat')&&k==='video')?vidViewer(id,vj):Viewer(id==='kitab'?'kitab_'+jj:(bt?'bao_'+jj:(ln2?'bac_lain':id)),k,(id==='kitab'||bt)?name+' '+jj.toUpperCase():(ln2?name+' Cabang Lainnya':name));p.appendChild(cur.el);cur.start();
+  close();kind=k;var ln2=id==='bac'&&k==='testimoni'&&cj==='ln';if(cr)cr.hidden=k!=='testimoni';if(lr)lr.hidden=k!=='testimoni';if(vr)vr.hidden=k!=='video';if(fr)fr.hidden=k!=='foto';var bt=id==='bao'&&k==='testimoni';cur=(id==='privat'&&k==='foto')?Viewer('privat_'+pj,'foto',({privat:'Privat',mapel:'Mapel',ujian:'Ujian'})[pj]):(id==='kal'&&k==='testimoni')?kalTesti():(id==='kal'&&k==='video'&&vj==='coding')?kalSlider(KAL_C,'Video'):(id==='kal'&&k==='video'&&vj==='online')?kalSlider(KAL_O,'Video'):((id==='bao'||id==='rb'||id==='robo'||id==='kal'||id==='bac'||id==='mc'||id==='privat')&&k==='video')?vidViewer(id,vj):Viewer(id==='kitab'?'kitab_'+jj:(bt?'bao_'+jj:(ln2?'bac_lain':id)),k,(id==='kitab'||bt)?name+' '+jj.toUpperCase():(ln2?name+' Cabang Lainnya':name));p.appendChild(cur.el);cur.start();
   btns[k].setAttribute('aria-expanded','true');
   cur.el.scrollIntoView({behavior:'smooth',block:'nearest'});
  }
