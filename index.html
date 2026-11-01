@@ -1262,7 +1262,7 @@ var MEDIA={
  privat_mapel:{foto:["media/gambar-134.jpg","media/gambar-135.jpg"],video:[]},
  privat_ujian:{foto:["media/gambar-136.jpg","media/gambar-137.jpg"],video:[]},
  bao:{foto:["media/bao-gambar.jpg"],video:[]},
- bao_fas:{foto:["media/bao-fasilitas.jpg","media/bao-fasilitas-2.jpg"],video:[]},
+ bao_fas:{foto:["media/bao-fasilitas.jpg"],video:[]},
  mc:{foto:["media/gambar-141.jpg","media/gambar-138.jpg","media/gambar-140.jpg","media/gambar-139.jpg"],video:[]},
  mc_online:{foto:["media/mc-online-1.webp","media/mc-online-2.webp","media/mc-online-3.webp"],video:[]},
  kal:{foto:KAL_FOTO,video:[]},
@@ -1315,7 +1315,9 @@ var BAO_IMG={sd:[['Ahda','media/gambar-095.webp'],['Ayesha','media/gambar-096.we
 var BAO_VID={apa:'media/video-024.mp4',fitur:'media/video-025.mp4',testi:'media/video-026.mp4'};
 /* VIDEO PER PRODUK: isi daftar alamat mp4 di sini. Kosong = tampil 'segera hadir'. */
 var XV={bac:['media/video-038.mp4','media/video-039.mp4','media/video-040.mp4'],mc:['media/video-037.mp4'],privat:['media/video-034.mp4','media/video-035.mp4','media/video-036.mp4'],kal_online:[],kal_robotic:['media/video-041.mp4','media/video-042.mp4','media/video-043.mp4','media/video-044.mp4']};
-var XV_R={bac:'9/16',mc:'9/16',privat:'9/16',kal_online:'9/16',kal_robotic:'9/16'};
+var XV_R={bac:'9/16',mc:'16/9',privat:'9/16',kal_online:'9/16',kal_robotic:'9/16'};
+/* XV_C: true = video di-crop (object-fit:cover) mengikuti rasio di XV_R, bukan diberi bilah hitam */
+var XV_C={mc:false};
 var ROBO_VID=['media/video-027.mp4','media/video-028.mp4'];
 var RB_VID={apa:['media/video-029.mp4'],fitur:['media/video-030.mp4','media/video-031.mp4'],adapto:['media/video-032.mp4','media/video-033.mp4']};
 var BAO_VR={apa:'4/5',fitur:'4/5',testi:'16/9'};
@@ -1329,14 +1331,14 @@ function baoVideo(k){
 }
 function vidViewer(id,k){
  var xk=id==='kal'?'kal_'+k:id;
- var list=XV[xk]!==undefined?XV[xk].map(function(x){return{s:x,r:XV_R[xk]}}):id==='kal'?[]:id==='robo'?ROBO_VID.map(function(x){return{s:x,r:'9/16'}}):id==='bao'?[{s:BAO_VID[k],r:BAO_VR[k]}]:(RB_VID[k]||[]).map(function(x){return{s:x,r:k==='adapto'?'1/1':'4/5'}});
+ var list=XV[xk]!==undefined?XV[xk].map(function(x){return{s:x,r:XV_R[xk],c:XV_C[xk]}}):id==='kal'?[]:id==='robo'?ROBO_VID.map(function(x){return{s:x,r:'9/16'}}):id==='bao'?[{s:BAO_VID[k],r:BAO_VR[k]}]:(RB_VID[k]||[]).map(function(x){return{s:x,r:k==='adapto'?'1/1':'4/5'}});
  var wrap=el('div'),vs=[],iv=null;
  if(id==='rb'&&k==='adapto'){iv=Viewer('rb_adapto','foto','ADAPTO Ruangbelajar');wrap.appendChild(iv.el);iv.start()}
  if(!list.length){var ph=el('div','mxv');ph.style.cssText+=';display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:600;text-align:center;padding:12px';ph.textContent=('Video '+({adapto:'ADAPTO',online:'Kelas Online',robotic:'Robotic',coding:'Coding'}[(id==='bac'||id==='mc'||id==='privat')?'':k]||'')).replace(/\s+$/,'')+' segera hadir';wrap.appendChild(ph)}
 if(list.length>1){
   var sl=el('div','vsl'),tr=el('div','vsl-t'),pill=el('div','vsl-p'),ix=0;
   var go=function(n){ix=(n+list.length)%list.length;vs.forEach(function(v){v.pause()});tr.style.transform='translateX(-'+ix*100+'%)';pill.textContent=(ix+1)+' / '+list.length};
-  list.forEach(function(x){var sd=el('div','vsl-s'),v=document.createElement('video');v.src=x.s;v.controls=true;v.playsInline=true;v.setAttribute('playsinline','');v.preload='metadata';v.style.cssText='display:block;width:100%;height:auto;background:#000;object-fit:contain';v.style.aspectRatio=x.r||'16/9';if(x.r==='9/16')v.style.maxHeight='78vh';sd.appendChild(v);tr.appendChild(sd);vs.push(v)});
+  list.forEach(function(x){var sd=el('div','vsl-s'),v=document.createElement('video');v.src=x.s;v.controls=true;v.playsInline=true;v.setAttribute('playsinline','');v.preload='metadata';v.style.cssText='display:block;width:100%;height:auto;background:#000;object-fit:'+(x.c?'cover':'contain');v.style.aspectRatio=x.r||'16/9';if(x.r==='9/16')v.style.maxHeight='78vh';sd.appendChild(v);tr.appendChild(sd);vs.push(v)});
   var pb=el('button','vsl-b vsl-l'),nb=el('button','vsl-b vsl-r');pb.type='button';nb.type='button';pb.textContent='\u2039';nb.textContent='\u203A';pb.setAttribute('aria-label','Video sebelumnya');nb.setAttribute('aria-label','Video berikutnya');
   pb.addEventListener('click',function(){go(ix-1)});nb.addEventListener('click',function(){go(ix+1)});
   sl.appendChild(tr);sl.appendChild(pill);sl.appendChild(pb);sl.appendChild(nb);wrap.appendChild(sl);go(0);
@@ -1344,7 +1346,7 @@ if(list.length>1){
   var box=el('div','mxv'),v=document.createElement('video');
   box.style.aspectRatio=x.r||'16/9';box.style.background='#000';
   v.src=x.s;v.controls=true;v.playsInline=true;v.setAttribute('playsinline','');v.preload='metadata';
-  v.style.cssText='display:block;width:100%;height:100%;object-fit:contain;background:#000';if(x.r==='9/16'){box.style.aspectRatio='auto';v.style.height='auto';v.style.aspectRatio='9/16';v.style.maxHeight='78vh'}
+  v.style.cssText='display:block;width:100%;height:100%;object-fit:'+(x.c?'cover':'contain')+';background:#000';if(x.r==='9/16'){box.style.aspectRatio='auto';v.style.height='auto';v.style.aspectRatio='9/16';v.style.maxHeight='78vh'}
   v.addEventListener('play',function(){vs.forEach(function(o){if(o!==v)o.pause()})});
   box.appendChild(v);wrap.appendChild(box);vs.push(v);
  });
@@ -1546,6 +1548,8 @@ var FAS={
  kal_python:{name:'Python',slides:[{head:'Online Group Python',ul:true,items:['Kelas 1 sesi per minggu dengan total 1-6 level','1-on-1 antara orang tua dan teacher di setiap level','online interaktif','Melatih logical thinking, problem solving, dan digital literacy','Didampingi teacher tersertifikasi dan berpengalaman','Sertifikat & progress report di setiap level','Belajar secara online dengan pengalaman kelas yang seru','Belajar dari basic sampai siap ikut kompetisi']}]},
  privat:{name:'Privat',slides:[{head:'Kurikulum Nasional',ul:true,items:['Belajar privat hingga 60 sesi','Bebas pilih pengajar','Bebas atur jadwal','Bebas pilih mata pelajaran di kurikulum nasional (Contoh: Matematika, Fisika, Ekonomi, Sejarah, dll)','Bebas atur materi','Laporan belajar']},
   {head:'Persiapan Ujian/Tes Akademik*',ul:true,items:['Belajar privat hingga 60 sesi','Bebas pilih pengajar','Bebas atur jadwal','Bebas pilih mata pelajaran di ujian/tes akademik (Contoh: UTBK/SNBT, TKA, dll)','Bebas atur materi','Laporan belajar']}]},
+ privat_kur:{name:'Privat',slides:[{head:'Kurikulum Nasional',ul:true,items:['Belajar privat hingga 60 sesi','Bebas pilih pengajar','Bebas atur jadwal','Bebas pilih mata pelajaran di kurikulum nasional (Contoh: Matematika, Fisika, Ekonomi, Sejarah, dll)','Bebas atur materi','Laporan belajar']}]},
+ privat_uji:{name:'Privat',slides:[{head:'Persiapan Ujian/Tes Akademik*',ul:true,items:['Belajar privat hingga 60 sesi','Bebas pilih pengajar','Bebas atur jadwal','Bebas pilih mata pelajaran di ujian/tes akademik (Contoh: UTBK/SNBT, TKA, dll)','Bebas atur materi','Laporan belajar']}]},
  mc_sing:{name:'Matematika Singapura',slides:[{head:'Matematika Singapura',ul:true,items:['Belajar mulai dari 24 sesi','Pembelajaran matematika yang lebih menekankan logika berpikir dan matematika dasar','Didukung ribuan soal digital yang variatif','Dilengkapi dengan Level Progression Test untuk mengevaluasi perkembangan belajar secara objektif','Tersedia kelas grup dan semi private']}]},
  mc_olim:{name:'Matematika Olimpiade',slides:[{head:'Matematika Olimpiade',ul:true,items:['Belajar mulai dari 48 sesi','Dirancang khusus untuk persiapan kompetisi matematika level SD','Didukung ribuan soal digital setingkat olimpiade nasional dan internasional','Dilengkapi dengan Level Progression Test untuk mengevaluasi perkembangan belajar secara objektif','Tersedia kelas semi private']}]},
  mc_sem:{name:'Sempoa',slides:[{head:'Sempoa',ul:true,items:['Belajar mulai dari 24 sesi','Berlatih hitung cepat dengan mental arithmetics (sempoa bayangan)','Didukung ribuan soal yang variatif','Dilengkapi dengan Level Progression Test untuk mengevaluasi perkembangan belajar secara objektif','Tersedia kelas grup dan privat']}]},
@@ -1732,9 +1736,9 @@ function build(card){
   [['online','Kelas Online'],['jelas','Penjelasan']].forEach(function(x){var b=el('button');b.type='button';b.textContent=x[1];b.setAttribute('aria-pressed',x[0]===gj?'true':'false');
    b.addEventListener('click',function(){gj=x[0];gb.forEach(function(y){y.setAttribute('aria-pressed',y===b?'true':'false')});if(kind==='foto'){close();open('foto')}});
    gb.push(b);gr.appendChild(b)});p.appendChild(gr)}
- var mr=null,mb=[],mj='sing';
- if(id==='mc'){mr=el('div','mxj bj');mr.hidden=true;mr.setAttribute('role','group');mr.setAttribute('aria-label','Pilih program');
-  [['sing','Matematika Singapura'],['olim','Matematika Olimpiade'],['sem','Sempoa']].forEach(function(x){var b=el('button');b.type='button';b.textContent=x[1];b.setAttribute('aria-pressed',x[0]===mj?'true':'false');
+ var mr=null,mb=[],mj=id==='privat'?'kur':'sing';
+ if(id==='mc'||id==='privat'){mr=el('div','mxj bj');mr.hidden=true;mr.setAttribute('role','group');mr.setAttribute('aria-label','Pilih program');if(id==='privat')mr.style.gridTemplateColumns='repeat(2,1fr)';
+  (id==='privat'?[['kur','Kurikulum Nasional'],['uji','Persiapan Ujian/Tes Akademik']]:[['sing','Matematika Singapura'],['olim','Matematika Olimpiade'],['sem','Sempoa']]).forEach(function(x){var b=el('button');b.type='button';b.textContent=x[1];b.setAttribute('aria-pressed',x[0]===mj?'true':'false');
    b.addEventListener('click',function(){mj=x[0];mb.forEach(function(y){y.setAttribute('aria-pressed',y===b?'true':'false')});if(kind==='fasilitas'){close();open('fasilitas')}});
    mb.push(b);mr.appendChild(b)});p.appendChild(mr)}
  var jb=[];
@@ -1746,7 +1750,7 @@ function build(card){
  function close(){if(cur){cur.stop();cur.el.remove();cur=null}kind='';if(cr)cr.hidden=true;if(lr)lr.hidden=true;if(vr)vr.hidden=true;if(fr)fr.hidden=true;if(mr)mr.hidden=true;if(gr)gr.hidden=true;for(var k in btns)btns[k].setAttribute('aria-expanded','false')}
  function open(k){
   if(kind===k){close();return}
-  close();kind=k;if(k==='fasilitas'){if(mr)mr.hidden=false;cur=id==='bao'?Viewer('bao_fas','foto','Fasilitas '+name):FasViewer(id==='mc'?'mc_'+mj:id);p.appendChild(cur.el);cur.start(id==='kitab'?({sd:0,smp:1,sma:2,snbt:2})[jj]:0);btns[k].setAttribute('aria-expanded','true');cur.el.scrollIntoView({behavior:'smooth',block:'nearest'});return}var ln2=id==='bac'&&k==='testimoni'&&cj==='ln';if(cr)cr.hidden=k!=='testimoni';if(lr)lr.hidden=k!=='testimoni';if(vr)vr.hidden=k!=='video';if(fr)fr.hidden=k!=='foto';if(gr)gr.hidden=k!=='foto';var bt=id==='bao'&&k==='testimoni';cur=(id==='mc'&&k==='foto')?Viewer(gj==='online'?'mc_online':'mc','foto',gj==='online'?'Kelas Online':'Penjelasan'):(id==='privat'&&k==='foto')?Viewer('privat_'+pj,'foto',({privat:'Privat',mapel:'Mapel',ujian:'Ujian'})[pj]):(id==='kal'&&k==='testimoni')?kalTesti():(id==='kal'&&k==='video'&&vj==='coding')?kalSlider(KAL_C,'Video'):(id==='kal'&&k==='video'&&vj==='online')?kalSlider(KAL_O,'Video'):((id==='bao'||id==='rb'||id==='robo'||id==='kal'||id==='bac'||id==='mc'||id==='privat')&&k==='video')?vidViewer(id,vj):Viewer(id==='kitab'?'kitab_'+jj:(bt?'bao_'+jj:(ln2?'bac_lain':id)),k,(id==='kitab'||bt)?name+' '+jj.toUpperCase():(ln2?name+' Cabang Lainnya':name));p.appendChild(cur.el);cur.start();
+  close();kind=k;if(k==='fasilitas'){if(mr)mr.hidden=false;cur=id==='bao'?Viewer('bao_fas','foto','Fasilitas '+name):FasViewer(id==='mc'?'mc_'+mj:id==='privat'?'privat_'+mj:id);p.appendChild(cur.el);cur.start(id==='kitab'?({sd:0,smp:1,sma:2,snbt:2})[jj]:0);btns[k].setAttribute('aria-expanded','true');cur.el.scrollIntoView({behavior:'smooth',block:'nearest'});return}var ln2=id==='bac'&&k==='testimoni'&&cj==='ln';if(cr)cr.hidden=k!=='testimoni';if(lr)lr.hidden=k!=='testimoni';if(vr)vr.hidden=k!=='video';if(fr)fr.hidden=k!=='foto';if(gr)gr.hidden=k!=='foto';var bt=id==='bao'&&k==='testimoni';cur=(id==='mc'&&k==='foto')?Viewer(gj==='online'?'mc_online':'mc','foto',gj==='online'?'Kelas Online':'Penjelasan'):(id==='privat'&&k==='foto')?Viewer('privat_'+pj,'foto',({privat:'Privat',mapel:'Mapel',ujian:'Ujian'})[pj]):(id==='kal'&&k==='testimoni')?kalTesti():(id==='kal'&&k==='video'&&vj==='coding')?kalSlider(KAL_C,'Video'):(id==='kal'&&k==='video'&&vj==='online')?kalSlider(KAL_O,'Video'):((id==='bao'||id==='rb'||id==='robo'||id==='kal'||id==='bac'||id==='mc'||id==='privat')&&k==='video')?vidViewer(id,vj):Viewer(id==='kitab'?'kitab_'+jj:(bt?'bao_'+jj:(ln2?'bac_lain':id)),k,(id==='kitab'||bt)?name+' '+jj.toUpperCase():(ln2?name+' Cabang Lainnya':name));p.appendChild(cur.el);cur.start();
   btns[k].setAttribute('aria-expanded','true');
   cur.el.scrollIntoView({behavior:'smooth',block:'nearest'});
  }
