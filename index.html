@@ -22,6 +22,7 @@
 <meta name="twitter:title" content="Bimbel Ruangguru Purworejo">
 <meta name="twitter:description" content="Les privat tatap muka di rumah atau di cabang dengan tentor pilihanmu, tersedia beasiswa &amp; trial gratis.">
 <meta name="twitter:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjd8mhwBIiLQR9nCyg7l3zDivqlNsu29pn1KvIeB_-IdNaRfru3Y4L56287KD2fL5jNUIxeqMjkubgqQzcYw6uJ-wEas6uFrU3MA3h2oewDV8SYz7fXRVUFmyNfSXGgIGPRAQJ0n00HWCOG0_qeMz3zyhPF3315hInJ-Qyz1-BChcrXU31HI76dptYA-fNZ/s1200/preview.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
 <style>
 :root{--bg:#ffffff;--tx:#1a1a1a;--tx2:#6b6b6b;--ln:#e4e4e4;--br:#9a9a9a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141414;--tx:#f0f0f0;--tx2:#a0a0a0;--ln:#2e2e2e;--br:#6a6a6a}}
@@ -216,9 +217,9 @@ body[data-view="home"] [data-v="home"],body[data-view="produk"] [data-v="produk"
 .pick button:focus-visible{outline:2px solid var(--tx);outline-offset:-3px}
 .hero{margin:0;background:#fff;border-radius:18px;overflow:hidden}
 .hero img{display:block;width:100%;height:auto}
-body[data-mode="ortu"] main{zoom:1.35}
-body[data-mode="ortu"] .bar a{font-size:13px}
-body[data-mode="ortu"] .bar svg{width:24px;height:24px}
+body[data-size="ortu"] main{zoom:1.35}
+body[data-size="ortu"] .bar a{font-size:13px}
+body[data-size="ortu"] .bar svg{width:24px;height:24px}
 .qs{margin:12px 0 0;padding:14px 14px 8px;border:1px solid #00a79d;border-radius:18px;background:#fff;color:#2d2d2d;text-align:center}
 body:not([data-mode="ortu"]) .qs.ortu,body[data-mode="ortu"] .qs.siswa{display:none}
 .qt{display:grid}
@@ -423,6 +424,16 @@ a.r.mad,.chip.mad,.rkb.mad,.fq2.mad>summary{box-shadow:inset 0 0 0 2px #dc2626,0
 .vid a{color:inherit;font-weight:600;text-decoration:underline}
 .gd{margin:12px 0 0;text-align:center;font-size:11px;font-weight:600;line-height:1.5;color:#2d2d2d}
 .gd+.vid{margin-top:6px}
+.pk2{max-width:640px;margin:18px auto 0;text-align:center;font-family:Poppins,Arial,sans-serif;color:var(--tx)}
+.pk2.pt{margin:4px auto 16px;padding:0 6px}
+.pk2 h3{margin:0 0 6px;font-size:clamp(15px,3.6vw,18px);font-weight:700}
+.pk2 .pl2{font-size:clamp(12.5px,3.2vw,14.5px);font-weight:600;color:#2563eb;line-height:1.5}
+.pk2 p{margin:8px 0 0;font-size:clamp(12px,3vw,14px);line-height:1.65;color:var(--tx2)}
+.kb2{display:flex;flex-direction:column;gap:10px;max-width:380px;margin:14px auto 0}
+.kb2 button{display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:wrap;width:100%;padding:13px 20px;border:0;border-radius:99px;background:linear-gradient(135deg,#2563eb,#1e3a8a);color:#fff;font:700 clamp(13px,3.4vw,15px) Poppins,Arial,sans-serif;cursor:pointer;box-shadow:0 4px 12px rgba(37,99,235,.4)}
+.kb2 button:active{transform:scale(.97)}
+.kb2 .rk{display:inline-block;padding:2px 9px;border-radius:99px;background:#fff;color:#b91c1c;font-size:.78em;font-weight:700;white-space:nowrap}
+#bacb2{background:linear-gradient(135deg,#00a79d,#00746c);box-shadow:0 4px 12px rgba(0,167,157,.45)}
 @keyframes ctaPulse{0%{transform:scale(1);box-shadow:0 6px 0 #374b55,0 0 0 0 rgba(46,181,192,.6)}55%{transform:scale(1.04);box-shadow:0 6px 0 #374b55,0 0 0 12px rgba(46,181,192,0)}100%{transform:scale(1);box-shadow:0 6px 0 #374b55,0 0 0 0 rgba(46,181,192,0)}}
 #ctaBtn{animation:ctaPulse 1.6s ease-in-out infinite}
 a.cta{box-sizing:border-box;text-align:center;text-decoration:none}
@@ -463,6 +474,13 @@ a.cta{box-sizing:border-box;text-align:center;text-decoration:none}
 .tb[aria-expanded="true"]{background:#e9d9bf;color:#2d2d2d;border-color:transparent}
 .tb{background:#38bdf8;color:#0a2a3d}
 .tb[aria-expanded="true"]{background:#0ea5e9;color:#fff}
+.tb{background:#B8C6DB;color:#0f172a}
+.tb[aria-expanded="true"]{background:#8da2c2;color:#0f172a}
+.mxp .mxb button{background:var(--tc,#2eb5c0);color:var(--tt,#06222a);border-color:transparent}
+.mxp .mxb button[aria-expanded="true"]{outline:2px solid var(--tx);outline-offset:2px}
+.mxp .mxg2,.mxp .mxg2.on{background:var(--tc,#2eb5c0);color:var(--tt,#06222a)}
+.mxp .mxj button{border-color:var(--tc,#d4ccbc)}
+.mxp .mxj button[aria-pressed="true"],.mxp .mxj.bj button[aria-pressed="true"]{background:var(--tc,#dc2626);border-color:var(--tc,#dc2626);color:var(--tt,#fff)}
 .pn .bx>summary{background:#fff;border:1px solid #d4ccbc}
 .bf .bfi{margin:14px 0 8px;font-size:10.5px;line-height:1.5;text-align:center;color:var(--tx2)}
 .bf .bfg{display:grid;grid-template-columns:1fr 1fr;gap:8px}
@@ -597,14 +615,88 @@ a.r.off .d{color:#0e4a55;opacity:1}
 .cbb[aria-pressed="true"]{background:#2eb5c0;color:#06222a}
 .cbb:focus-visible{outline:2px solid #00a79d;outline-offset:2px}
 .cbr[hidden]{display:none}
+
+/* deskripsi produk: teks biasa tanpa kotak, warna netral */
+body a.r,body a.r.off,body a.r.on,body a.r.mad,body a.r.s,body a.r.l{background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;min-height:0!important;padding:4px 8px!important;margin:10px 0 16px!important;--tx:inherit;--tx2:inherit;color:inherit!important;filter:none!important}
+body a.r .n{color:var(--tx)!important;font-weight:700;font-size:14px;line-height:1.35}
+body a.r .d{color:var(--tx2)!important;opacity:1!important;font-size:12.5px;line-height:1.55;display:block;-webkit-line-clamp:unset;line-clamp:unset;overflow:visible}
+body a.r .p{color:var(--tx)!important;font-weight:600;font-size:12.5px;line-height:1.4;margin-top:6px}
+
+/* Home: jenjang, kelas, ganti tampilan layar */
+.jk{display:grid;grid-template-columns:1fr;gap:12px;margin:0 0 12px}
+.jf{display:flex;flex-direction:column;gap:4px;font-size:10.5px;font-weight:600;color:var(--tx2);text-align:left}
+.jf select{width:100%;padding:11px 10px;border:2px solid #00a79d;border-radius:14px;background:var(--bg);color:var(--tx);font:600 12px Poppins,Arial,sans-serif;box-shadow:0 3px 0 #f7941d}
+.jf select:disabled{opacity:.6}
+.jf select:focus-visible{outline:2px solid var(--tx);outline-offset:2px}
+.tzm{margin:0 0 12px;text-align:center}
+.tzm .pl{margin:0 0 6px;font-size:10px;font-weight:600;color:var(--tx2)}
+.tzm .sg{display:grid;grid-template-columns:1fr 1fr;border:2px solid #00a79d;border-radius:40px;overflow:hidden;box-shadow:0 3px 0 #f7941d}
+.tzm button{font:inherit;font-size:11.5px;font-weight:600;padding:11px 10px;border:0;background:transparent;color:var(--tx);cursor:pointer}
+.tzm button[aria-checked="true"]{background:#16a085;color:#fff}
+.tzm button:focus-visible{outline:2px solid var(--tx);outline-offset:-3px}
+
+/* gerbang awal (tidak bisa ditutup) */
+.gate{position:fixed;top:0;right:0;bottom:0;left:0;z-index:2000;display:flex;align-items:center;justify-content:center;box-sizing:border-box;padding:calc(16px + env(safe-area-inset-top,0px)) 16px calc(16px + env(safe-area-inset-bottom,0px));background:rgba(8,12,24,.8);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);overflow:auto}
+.gate[hidden]{display:none}
+.rec{position:fixed;top:0;right:0;bottom:0;left:0;z-index:1900;display:flex;align-items:center;justify-content:center;box-sizing:border-box;padding:calc(16px + env(safe-area-inset-top,0px)) 16px calc(16px + env(safe-area-inset-bottom,0px));background:rgba(8,12,24,.75);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);overflow:auto}
+.rec[hidden]{display:none}
+.rec-c{width:100%;max-width:380px;box-sizing:border-box;margin:auto;position:relative;padding:46px 16px 18px;border-radius:20px;background:var(--bg);color:var(--tx);border:3px solid #00a79d;box-shadow:0 6px 0 #f7941d;font-family:Poppins,Arial,sans-serif}
+.rec-x{position:absolute;top:8px;right:8px;display:flex;align-items:center;justify-content:center;width:34px;height:34px;padding:0;border:0;border-radius:50%;background:#e9d9bf;color:#2d2d2d;cursor:pointer}
+.rec-x svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round}
+.rec-x:focus-visible{outline:2px solid var(--tx);outline-offset:2px}
+.rec-c h2{margin:0 0 4px;font-size:17px;font-weight:700;text-align:center}
+.rec-s{margin:0 0 14px;font-size:11.5px;line-height:1.5;color:var(--tx2);text-align:center}
+.rec-l{display:flex;flex-direction:column;gap:10px;margin:0 0 14px}
+.rec-i{display:block;text-align:left;padding:12px 14px;border-radius:16px;color:#fff;box-shadow:0 4px 0 #374b55}
+.rec-i.off{background:#2eb5c0;color:#06222a}.rec-i.on{background:#f97316;color:#2b1200}.rec-i.mad{background:#dc2626;color:#fff}
+.rec-n{margin:0;font-size:13.5px;font-weight:700;line-height:1.3}
+.rec-d{margin:3px 0 0;font-size:11px;line-height:1.5;opacity:.95}
+.rec-p{margin:5px 0 0;font-size:11px;font-weight:700}
+.rec-g{display:block;width:100%;padding:13px 20px;border:0;border-radius:99px;background:linear-gradient(135deg,#00a79d,#00746c);color:#fff;font:700 13px Poppins,Arial,sans-serif;cursor:pointer;box-shadow:0 4px 12px rgba(0,167,157,.45)}
+.gate-c{width:100%;max-width:380px;box-sizing:border-box;margin:auto;position:relative;padding:48px 18px 18px;border-radius:20px;background:var(--bg);color:var(--tx);border:3px solid #00a79d;box-shadow:0 6px 0 #f7941d;font-family:Poppins,Arial,sans-serif}
+.gate-c h2{margin:0 0 6px;font-size:17px;font-weight:700;text-align:center}
+.gate-d{margin:0 0 14px;font-size:11.5px;line-height:1.55;color:var(--tx2);text-align:center}
+.gate-l{margin:0 0 6px;font-size:11px;font-weight:600;color:var(--tx2)}
+.gate-r{display:grid;grid-template-columns:1fr 1fr;border:2px solid #00a79d;border-radius:40px;overflow:hidden;margin:0 0 12px;box-shadow:0 3px 0 #f7941d}
+.gate-r button{font:inherit;font-size:12px;font-weight:600;padding:11px 10px;border:0;background:transparent;color:var(--tx);cursor:pointer}
+.gate-r button[aria-checked="true"]{background:#16a085;color:#fff}
+.gate-r button:focus-visible{outline:2px solid var(--tx);outline-offset:-3px}
+.gate-e{margin:0 0 10px;font-size:11px;font-weight:600;color:#dc2626;text-align:center}
+.gate-e[hidden]{display:none}
+.gate-b{display:block;width:100%;padding:13px 20px;border:0;border-radius:99px;background:linear-gradient(135deg,#00a79d,#00746c);color:#fff;font:700 14px Poppins,Arial,sans-serif;cursor:pointer;box-shadow:0 4px 12px rgba(0,167,157,.45)}
+.gate-b:active{transform:scale(.97)}
+.gate-b:disabled{opacity:.7;cursor:default}
+.gate-x{position:absolute;top:8px;right:8px;display:flex;align-items:center;justify-content:center;width:34px;height:34px;padding:0;border:0;border-radius:50%;background:#e9d9bf;color:#2d2d2d;cursor:pointer}
+.gate-x svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round}
+.gate-x:focus-visible{outline:2px solid var(--tx);outline-offset:2px}
+
+/* jenjang & kelas berupa tombol */
+.jc{min-width:0}
+.jg{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.kg{display:flex;flex-wrap:wrap;gap:8px;align-content:flex-start}
+.kg button{flex:1 1 0;min-width:44px}
+.jg button,.kg button{min-height:44px;padding:8px 4px;border:2px solid #00a79d;border-radius:14px;background:transparent;color:var(--tx);font:700 13px Poppins,Arial,sans-serif;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.jg button[aria-checked="true"],.kg button[aria-checked="true"]{background:#16a085;border-color:#16a085;color:#fff}
+.jg button:focus-visible,.kg button:focus-visible{outline:2px solid var(--tx);outline-offset:2px}
+.kg .kw{flex:1 1 100%;font-size:12px}
+.kg .kw:disabled{opacity:1;cursor:default}
+.kh{flex:1 1 100%;margin:0;padding:12px 4px;font-size:11px;line-height:1.4;color:var(--tx2);text-align:center}
+</style>
+<style>
+body.pvbig{overflow:hidden}
+body.pvbig main>*:not(#produk){display:none!important}
+body.pvbig main{max-width:none!important;padding:0!important;margin:0!important;zoom:1!important}
+body.pvbig .bar,body.pvbig #ad{display:none!important}
+body.pvbig #produk{display:block!important;position:fixed;inset:0;z-index:60}
 </style>
 </head>
-<body data-view="home">
+<body data-view="beranda">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><linearGradient id="igg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#feda75"/><stop offset=".3" stop-color="#fa7e1e"/><stop offset=".55" stop-color="#d62976"/><stop offset=".8" stop-color="#962fbf"/><stop offset="1" stop-color="#4f5bd5"/></linearGradient>
 <symbol id="i-wa-w" viewBox="0 0 24 24"><path fill="#fff" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol><symbol id="i-drive" viewBox="0 0 87.3 78"><path d="m6.6 66.85 3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3l13.75-23.8h-27.5c0 1.55.4 3.1 1.2 4.5z" fill="#0066da"/><path d="m43.65 25-13.75-23.8c-1.35.8-2.5 1.9-3.3 3.3l-25.4 44a9.06 9.06 0 0 0-1.2 4.5h27.5z" fill="#00ac47"/><path d="m73.55 76.8c1.35-.8 2.5-1.9 3.3-3.3l1.6-2.75 7.65-13.25c.8-1.4 1.2-2.95 1.2-4.5h-27.5l5.85 11.5z" fill="#ea4335"/><path d="m43.65 25 13.75-23.8c-1.35-.8-2.9-1.2-4.5-1.2h-18.5c-1.6 0-3.15.45-4.5 1.2z" fill="#00832d"/><path d="m59.8 53h-32.3l-13.75 23.8c1.35.8 2.9 1.2 4.5 1.2h50.8c1.6 0 3.15-.45 4.5-1.2z" fill="#2684fc"/><path d="m73.4 26.5-12.7-22c-.8-1.4-1.95-2.5-3.3-3.3l-13.75 23.8 16.15 28h27.45c0-1.55-.4-3.1-1.2-4.5z" fill="#ffba00"/></symbol><symbol id="i-maps" viewBox="0 0 24 24"><path d="M12 1.5a7.5 7.5 0 0 0-7.5 7.5c0 5.4 7.5 13.5 7.5 13.5S19.5 14.4 19.5 9A7.5 7.5 0 0 0 12 1.5z" fill="#ea4335"/><path d="M12 1.5A7.5 7.5 0 0 0 5.4 5.4l4.1 4.9z" fill="#4285f4"/><path d="M5.4 5.4A7.5 7.5 0 0 0 4.5 9c0 1.3.5 2.7 1.2 4l3.8-2.7z" fill="#fbbc04" opacity="0"/><path d="M18.6 5.4A7.5 7.5 0 0 0 12 1.5c-1.1 0-2.1.2-3 .6L12 6.7z" fill="#34a853" opacity="0"/><circle cx="12" cy="9" r="2.8" fill="#7b1f19"/></symbol><symbol id="i-ig-w" viewBox="0 0 24 24"><rect x="5.5" y="5.5" width="13" height="13" rx="4" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="12" cy="12" r="3.2" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="16.2" cy="7.8" r="1.1" fill="#fff"/></symbol><symbol id="i-wa" viewBox="0 0 24 24"><path fill="#25D366" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
 <symbol id="i-ig" viewBox="0 0 24 24"><rect width="24" height="24" rx="6" fill="url(#igg)"/><rect x="5.5" y="5.5" width="13" height="13" rx="4" fill="none" stroke="#fff" stroke-width="1.6"/><circle cx="12" cy="12" r="3.2" fill="none" stroke="#fff" stroke-width="1.6"/><circle cx="16.2" cy="7.8" r="1" fill="#fff"/></symbol></defs></svg>
 <main id="top">
   <header class="rg"><img class="bac" src="media/gambar-001.png" alt="Brain Academy Center" width="300" height="166"><img src="media/gambar-002.png" alt="Ruangguru" width="360" height="201"></header>
+  <div class="pk2 pt" id="pk2t" data-v="produk"><h3>Paket belajar yang banyak dipilih siswa</h3><div class="pl2">Privat, Brain Academy Center, Brain Academy Online, Ruangbelajar, Buku Kitab, Try Out</div><p>Setiap anak punya gaya belajar, kebiasaan, kebutuhan, dan anggaran yang berbeda. Karena itu, Ruangguru menyediakan dua jalur belajar: tatap muka bersama pendamping belajar (guru tersertifikasi) atau platform belajar mandiri di rumah. Silakan pilih yang paling sesuai.</p></div>
   <section class="beranda" id="beranda" data-v="beranda">
     <div class="pick"><p class="pl" id="pickL">Anda sebagai:</p><div class="sg" role="radiogroup" aria-labelledby="pickL"><button type="button" role="radio" aria-checked="false" data-mode="ortu"><span>Orang Tua</span></button><button type="button" role="radio" aria-checked="true" data-mode="siswa"><span>Siswa</span></button></div></div>
     <figure class="hero"><img src="media/gambar-003.jpg" alt="Poster Brain Academy by Ruangguru: Tingkatkan nilai dan raih sekolah impian, bimbel kombinasi tatap muka dan online" width="800" height="1131"></figure>
@@ -623,25 +715,8 @@ a.r.off .d{color:#0e4a55;opacity:1}
     <div class="tcb"><button type="button" class="tb" data-t="p-fasilitas" aria-controls="p-fasilitas" aria-expanded="false">Fasilitas</button><div class="pn fs" id="p-fasilitas" hidden><p class="pt">Fasilitas</p><details class="fz" name="fz"><summary>Ruang &amp; suasana belajar</summary><ul class="fl"><li>Ruang kelas ber-AC dengan TV untuk pengalaman belajar audio visual</li><li>Terintegrasi teknologi (LMS) dan pembelajaran interaktif dengan kuis bersama Master Teacher</li><li>Spot Klinik PR dan musholla</li></ul></details><details class="fz" name="fz"><summary>Akademik</summary><ul class="fl"><li>Kelas tatap muka bersama Master Teacher berpengalaman, materi sesuai pilihan kurikulum</li><li>Klinik PR tatap muka: tambahan kelas untuk membantu pemahaman dan kesulitan materi</li><li>Modul digital dan bank aktivitas</li><li>Akses aplikasi ruangbelajar (video materi dan bank soal) serta roboguru</li><li>Try out berkala dengan pembahasan</li><li>Laporan belajar: kehadiran, nilai, dan poin Panen Bintang</li><li>Pendampingan Student Advisor dan konseling privat via chat &amp; video call</li><li>Kelas pengembangan diri (public speaking, leadership, teamwork, communication, critical thinking)</li></ul></details><details class="fz" name="fz"><summary>SD &amp; SMP</summary><ul class="fl"><li>Kurikulum Merdeka</li><li>Video belajar animasi Dafa dan Lulu, latihan soal, kuis, dan rangkuman materi</li><li>Try out tengah dan akhir semester</li><li>Materi sesuai kurikulum sekolah dengan latihan soal dan try out PTS &amp; PAS</li><li>Persiapan TKA SD &amp; SMP</li></ul></details><details class="fz" name="fz"><summary>SMA</summary><ul class="fl"><li>K-13 Revisi atau Kurikulum Merdeka</li><li>Kelas 12 dengan sesi intensif lebih banyak untuk persiapan masuk universitas</li><li>Konseling pemilihan jurusan dan kampus: minat bakat, analisis passing grade, hingga simulasi seleksi masuk PTN</li></ul></details><details class="fz" name="fz"><summary>Persiapan SNBT / UTBK</summary><ul class="fl"><li>Kelas 12 + UTBK intensif (tatap muka hingga 4–18× sesi per minggu, tergantung paket)</li><li>Try out UTBK hingga 25× per tahun, tergantung paket</li><li>Persiapan Ujian Mandiri (paket Elite tatap muka: 6 sesi Ujian Mandiri)</li><li>Program persiapan masuk sekolah kedinasan</li></ul></details><p class="fnn">*Fasilitas mengikuti paket yang dipilih.</p></div><button type="button" class="tb" data-t="p-benefit" aria-controls="p-benefit" aria-expanded="false">Benefit</button><div class="pn bf" id="p-benefit" hidden><p class="pt">Benefit</p><p class="bfi">Jika ambil paket belajar offline di cabang, kamu mendapatkan paket belajar tambahan di bawah ini. Pilih paket untuk melihat rinciannya.</p><div class="bfg"><button type="button" class="bfb" data-b="to" aria-expanded="false" aria-controls="bfd-to">Try Out <span>(low)</span></button><button type="button" class="bfb" data-b="bk" aria-expanded="false" aria-controls="bfd-bk">Buku <span>(entry)</span></button><button type="button" class="bfb" data-b="rb" aria-expanded="false" aria-controls="bfd-rb">Rubel <span>(basic)</span></button><button type="button" class="bfb" data-b="on" aria-expanded="false" aria-controls="bfd-on">Online <span>(standard)</span></button></div><div class="bfd" id="bfd-to" hidden><p class="bft">Paket Try Out (low)</p><ul class="bn"><li>Try Out persiapan TKA untuk semua jenjang</li><li>Soal berstandar mirip UTBK asli, plus rasionalisasi SNBP</li><li>Ranking nasional se-Indonesia bersama siswa Ruangguru</li><li>Hasil masuk ke <b>rapor Try Out</b> yang bisa dipantau orangtua</li></ul></div><div class="bfd" id="bfd-bk" hidden><p class="bft">Paket Buku (entry)</p><ul class="bn"><li><b>Buku Kitab TKA</b>: latihan soal dan rangkuman materi</li><li>400rb+ soal lengkap dengan pembahasan</li><li>Barcode di buku terhubung ke kelas online di aplikasi <b>Ruangbelajar</b></li></ul></div><div class="bfd" id="bfd-rb" hidden><p class="bft">Paket Rubel (basic)</p><ul class="bn"><li>Akses aplikasi <b>Ruangbelajar</b>: 100rb+ video belajar adaptif</li><li>400rb+ bank soal untuk latihan mandiri di rumah</li><li>Fitur <b>ADAPTO</b> yang menyesuaikan materi dengan kemampuanmu</li></ul></div><div class="bfd" id="bfd-on" hidden><p class="bft">Paket Online (standard)</p><ul class="bn"><li><b>Brain Academy Online</b>: live teaching 8x per minggu bareng Star Teacher</li><li><b>Klinik PR</b> untuk bertanya dan membahas soal yang sulit</li><li>23x Try Out untuk mengukur kemampuan</li><li>Sesi konseling belajar</li></ul></div><p class="fnn">*Benefit mengikuti paket yang dipilih.</p></div><button type="button" class="tb" data-t="p-prosedur" aria-controls="p-prosedur" aria-expanded="false">Prosedur MT</button><div class="pn pm" id="p-prosedur" hidden><p class="pt">Prosedur MT</p><p class="pd">Anak belajar dengan seru, orang tua tahu perkembangannya. Setiap sesi belajar dicatat, diuji lewat kuis digital, dan dilaporkan dengan bukti screenshot ke grup WhatsApp Master Teacher (MT) bersama Admin. Semuanya terdokumentasi, tanpa menebak-nebak apa yang terjadi di kelas.</p><div class="chat"><div class="wh"><span class="av">M</span><div class="wt"><p class="wn">Grup MT Brain Academy</p><p class="ws">Master Teacher &amp; Admin</p></div></div><div class="wb"><p class="wd">Hari ini</p><div class="m o"><p><b>Laporan Kelas Hari Ini</b></p><p>Kehadiran 95% · Tugas 8/10 · Starchamp ★ 6</p><time>20.12</time></div><div class="m o"><p>Selamat malam Admin, berikut laporan kelas hari ini 🙏</p><time>20.12<svg class="tk2" viewBox="0 0 16 11" aria-label="Dibaca" role="img"><path d="M1 5.8l3.2 3.2L10.2 1.6M6.2 7.6l1.4 1.4L14.6 1.6"/></svg></time></div></div></div><p class="pmc">Contoh tampilan laporan di grup Master Teacher</p><p class="pmh">Lima langkah yang sama di setiap kelas</p><p class="pd">Semua Master Teacher kami mengikuti prosedur yang sama, jadi kualitas belajarnya terjaga dari pertemuan pertama sampai laporan ke Admin.</p><ol class="stp"><li><details class="sd" name="stp"><summary><span class="ps-n">1</span><span class="ps-t">Presensi tercatat sebelum kelas mulai</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="sb"><p class="ps-d">Master Teacher (MT) masuk ke sistem CMS dan memeriksa kehadiran setiap siswa. Data tersimpan otomatis, sehingga kehadiran anak selalu punya catatan yang jelas.</p><div class="ps-g"><span class="tgc">Kehadiran real-time</span><span class="tgc">Tersimpan di sistem</span></div><button type="button" class="ph-b" data-l="Lihat foto" aria-expanded="false" aria-controls="ph1">Lihat foto</button><figure class="ph" id="ph1" hidden><img src="media/gambar-016.jpg" alt="Tampilan sistem CMS: laporan performa siswa pada sesi belajar" width="640" height="903"></figure></div></details></li><li><details class="sd" name="stp"><summary><span class="ps-n">2</span><span class="ps-t">Aktif di kelas dapat bintang Starchamp</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="sb"><p class="ps-d">Siswa yang aktif bertanya, membantu teman, dan menyelesaikan tugas tepat waktu mendapat bintang emas. Bintang bisa ditukar menjadi poin, badge, atau hadiah.</p><div class="ps-g"><span class="tgc">Poin &amp; level</span><span class="tgc">Badge</span><span class="tgc">Hadiah</span></div><button type="button" class="ph-b" data-l="Lihat foto" aria-expanded="false" aria-controls="ph2">Lihat foto</button><figure class="ph" id="ph2" hidden><img src="media/gambar-017.jpg" alt="Tampilan sistem CMS: tab Starchamp untuk memberi bintang ke siswa" width="640" height="917"></figure></div></details></li><li><details class="sd" name="stp"><summary><span class="ps-n">3</span><span class="ps-t">Siswa ikut menilai pengalaman belajarnya</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="sb"><p class="ps-d">MT mengajak siswa dengan ramah untuk memberi penilaian di aplikasi dan menyampaikan masukan, lalu berterima kasih atas feedback-nya.</p><div class="ps-g"><span class="tgc">Masukan dari siswa</span><span class="tgc">Belajar makin baik</span></div><button type="button" class="ph-b" data-l="Lihat foto" aria-expanded="false" aria-controls="ph3">Lihat foto</button><figure class="ph" id="ph3" hidden><img src="media/gambar-018.jpg" alt="Layar ponsel siswa menampilkan hasil pengerjaan latihan soal" width="640" height="288"></figure></div></details></li><li><details class="sd" name="stp"><summary><span class="ps-n">4</span><span class="ps-t">Post test dan drill soal tatap muka atau via aplikasi Ruangbelajar</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="sb"><p class="ps-d">Post test dan drill soal bisa dilakukan tatap muka di kelas atau lewat aplikasi Ruangbelajar. MT memantau progres siswa secara langsung, lalu membahas dan mengoreksi jawaban bersama supaya pemahaman benar-benar kuat.</p><p class="ps-d"><b>Drill soal tatap muka:</b> MT memandu latihan soal langsung di kelas.</p><p class="ps-d"><b>Drill soal via aplikasi Ruangbelajar:</b> siswa bebas memilih mata pelajaran, topik, sub-topik, dan jumlah soal yang dikerjakan.</p><div class="ps-g"><span class="tgc">Umpan balik instan</span><span class="tgc">Pantau real-time</span><span class="tgc">Koreksi bersama</span></div><button type="button" class="ph-b" data-l="Lihat foto drill tatap muka" aria-expanded="false" aria-controls="ph4">Lihat foto drill tatap muka</button><button type="button" class="ph-b" data-l="Lihat foto drill via Ruangbelajar" aria-expanded="false" aria-controls="ph5">Lihat foto drill via Ruangbelajar</button><figure class="ph" id="ph4" hidden><img src="media/gambar-019.jpg" alt="Suasana belajar di kelas Brain Academy Center, siswa menunjukkan aplikasi di ponsel" width="640" height="480"></figure><figure class="ph" id="ph5" hidden><img src="media/gambar-020.jpg" alt="Fitur Drill Soal di aplikasi Ruangbelajar: pilih mata pelajaran, topik, dan jumlah soal" width="554" height="554"></figure></div></details></li><li><details class="sd" name="stp"><summary><span class="ps-n">5</span><span class="ps-t">Laporan dikirim ke grup WhatsApp Master Teacher bersama Admin</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="sb"><p class="ps-d">Usai kelas, MT mengirim screenshot bukti kegiatan ke grup WhatsApp Master Teacher yang beranggotakan Admin: daftar kehadiran, poin Starchamp, hasil post test, dan foto kelas, lengkap dengan keterangan singkat.</p><div class="ps-g"><span class="tgc">Ada bukti screenshot</span><span class="tgc">Dipantau Admin</span><span class="tgc">Terdokumentasi</span></div><button type="button" class="ph-b" data-l="Lihat foto" aria-expanded="false" aria-controls="ph6">Lihat foto</button><figure class="ph" id="ph6" hidden><img src="media/gambar-021.jpg" alt="Laporan Master Teacher berupa screenshot di grup WhatsApp MT BAC Purworejo" width="640" height="774"></figure></div></details></li></ol><details class="bx pmc" name="pmc-ex"><summary class="pmh"><span>Bikin semangat belajar naik level</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><p class="pd">Starchamp mengubah keaktifan di kelas menjadi poin dan hadiah, jadi anak punya alasan untuk berani bertanya dan mengerjakan tugas tepat waktu.</p><ul class="pmb"><li><b>Motivasi meningkat</b>Siswa terdorong lebih aktif berpartisipasi.</li><li><b>Keterlibatan terbangun</b>Suasana kelas terasa positif dan menyenangkan.</li><li><b>Kompetisi yang sehat</b>Siswa terpacu berkembang dan berprestasi.</li></ul><div class="sc"><button type="button" class="sc-b" id="scBtn" aria-label="Tambah 10 poin Starchamp">★</button><p class="sc-p"><b id="scPts">0</b> poin</p><p class="sc-l">Level <span id="scLv">1</span></p><p class="sc-h">Coba tekan bintangnya. Setiap tekan +10 poin.</p></div></details><details class="bx pmc" name="pmc-ex"><summary class="pmh"><span>Orang tua tanpa perlu khawatir</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><ul class="pmb"><li><b>Transparan dan akuntabel</b>Kehadiran dan capaian anak dicatat dan dilaporkan apa adanya.</li><li><b>Terdokumentasi dengan bukti</b>Setiap kelas dilaporkan lengkap dengan screenshot dan foto kegiatan.</li><li><b>Ada tim yang memantau</b>Admin ikut berada di grup laporan Master Teacher.</li></ul></details><p class="pmh">Ingin tahu program yang cocok untuk kamu?</p><p class="pd" style="text-align:center">Ceritakan kebutuhan belajar anak, dan Konsultan kami akan membantu menjelaskan program, jadwal, dan biayanya lewat WhatsApp.</p><a class="lk g" href="https://wa.me/6285177454988?text=Halo%20Brain%20Academy%20Purworejo%2C%20saya%20ingin%20konsultasi%20program%20belajar%20tatap%20muka." target="_blank" rel="noopener">Hubungi Konsultan</a></div><button type="button" class="tb" data-t="p-alamat" aria-controls="p-alamat" aria-expanded="false">Alamat</button><div class="pn" id="p-alamat" hidden><p class="pt">Alamat</p><p class="pd"><b>Brain Academy Ruangguru Purworejo</b><br>Jl. Tentara Pelajar No. 7, Sibung, Pangenjurutengah, Kabupaten Purworejo, Jawa Tengah 54114</p><a class="lk y" href="https://maps.app.goo.gl/5PHb6JQXwSPXZEYG8" target="_blank" rel="noopener"><svg class="li" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-maps"/></svg>Buka di Google Maps</a></div><button type="button" class="tb" data-t="p-testimoni" aria-controls="p-testimoni" aria-expanded="false">Testimoni</button><div class="pn" id="p-testimoni" hidden><p class="pt">Testimoni siswa Ruangguru</p><div class="tmg"><figure class="tmc"><figcaption><img class="tma" src="media/gambar-022.jpg" alt="Foto Seadate Nona" width="128" height="128"><div>Seadate Nona<span>SMAN 1 Purworejo</span></div></figcaption><p class="tmq">“Di Ruangguru MT-nya seruuu, ada MT yg ngejelasin kimia asik bgtt padahal aku ga suka kimia”</p></figure><figure class="tmc"><figcaption><img class="tma" src="media/gambar-023.jpg" alt="Foto Elysia" width="128" height="128"><div>Elysia<span>SMAN 1 Purworejo</span></div></figcaption><p class="tmq">“Les di Ruangguru seru banget! yang ngga paham sama materi di sekolah jadi paham krn MT-nya yang asik-asik, jadi ngga takut buat nanya-nanya. Kelasnya juga nyaman, betah kalau les sampe malem. Ada fasilitas TV-nya juga, jadi belajarnya lebih interaktif dan ngga ngebosenin. Pokoknya asikk pol 🫰🏻”</p></figure><figure class="tmc"><figcaption><img class="tma" src="media/gambar-024.jpg" alt="Foto orangtua siswa SMP" width="128" height="128"><div>Anonymous<span>Orangtua siswa SMP</span></div></figcaption><p class="tmq">“Anak saya tipenya pemalu, kalau di kelas besar gak berani tanya. Semenjak les Privat 1-on-1 jadi lebih aktif nanya, tutornya sabar banget. Nilai rapor naik dari 78 ke 89.”</p></figure><figure class="tmc"><figcaption><img class="tma" src="media/gambar-025.jpg" alt="Foto Kevin Jonas" width="128" height="128"><div>Kevin Jonas<span>SMAN 7 Purworejo</span></div></figcaption><p class="tmq">“Aku les di ruangguru rasanya kayak belajar tapi bawaannya fun, pelajarannya mudah dipahami dengan cara penyampaian yang asik, suasanya kelas ruangguru juga mendukung, pokoknya oke banget dehh👍🏻👍🏻”</p></figure><figure class="tmc"><figcaption><img class="tma" src="media/gambar-026.jpg" alt="Foto Ganes" width="128" height="128"><div>Ganes<span>SDN Purworejo</span></div></figcaption><p class="tmq">“Di ruang guru asik banget seru lagi temen temen nya asik banget guru nya baik materi mudah di pelajari tidak rumit soal soal nya mudah”</p></figure><figure class="tmc"><figcaption><img class="tma" src="media/gambar-027.jpg" alt="Foto Nauzan" width="128" height="128"><div>Nauzan<span>SDN Purworejo</span></div></figcaption><p class="tmq">“Pengalaman ku les di ruangguru, aku sangat senang bisa les di ruangguru karena bertemu teman yang seru dan lucu selain itu juga karena guru yang baik.”</p></figure></div></div><button type="button" class="tb" data-t="p-harga" aria-controls="p-harga" aria-expanded="false">Harga Paket</button><div class="pn hp" id="p-harga" hidden><p class="pt">Harga Paket</p><p class="pd">Harga paket setiap jenjang sifatnya kondisional</p><ul class="hg"><li><span>6 SD</span><span>Rp42.000 &ndash; Rp37.000 / sesi</span></li><li><span>8 SMP</span><span>Rp41.000 &ndash; Rp36.000 / sesi</span></li><li><span>9 SMP</span><span>Rp41.000 &ndash; Rp36.000 / sesi</span></li><li><span>10 SMA</span><span>Rp49.000 &ndash; Rp43.000 / sesi</span></li><li><span>11 SMA</span><span>Rp49.000 &ndash; Rp43.000 / sesi</span></li><li><span>12 SMA</span><span>Rp85.000 &ndash; Rp74.000 / sesi</span></li></ul><a class="lk g" href="https://wa.me/6285177454988?text=Halo%20Brain%20Academy%20Purworejo%2C%20saya%20ingin%20menanyakan%20harga%20paket%20terbaru." target="_blank" rel="noopener">Tanya harga terbaru</a></div><button type="button" class="tb" data-t="p-beasiswa" aria-controls="p-beasiswa" aria-expanded="false">Beasiswa Ruangguru</button><div class="pn bw" id="p-beasiswa" hidden><p class="pt">Beasiswa Ruangguru</p><p class="bw-h">Belajar lebih semangat, biaya lebih ringan.</p><div class="bw-r"><p class="bw-rt">Contoh rapor semester ini</p><ul><li><span>Matematika</span><b>90</b></li><li><span>IPA</span><b>88</b></li><li><span>Bahasa Indonesia</span><b>92</b></li><li><span>Bahasa Inggris</span><b>87</b></li></ul><p class="bw-rb">Potongan biaya!</p></div><details class="bx" name="bw-ex"><summary class="bw-s"><span>Empat jalur beasiswa, pilih yang sesuai</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><p class="pd" style="text-align:center">Ajukan sesuai kondisimu. Tim Brain Academy yang menilai dan mengabari hasilnya.</p><div class="bw-c"><span class="bw-b">Berdasarkan nilai</span><p class="bw-ct">1. Beasiswa Prestasi</p><p class="bw-cd">Dinilai dari nilai rapor. Semakin baik nilainya, semakin besar potongan biaya yang kamu dapat.</p><p class="bw-cn">Besar potongan mengikuti nilai rapor.</p></div><div class="bw-c"><span class="bw-b">Berdasarkan penilaian tim</span><p class="bw-ct">2. Beasiswa Anak Guru</p><p class="bw-cd">Untuk anak dari orang tua yang berprofesi sebagai guru. Tim kami menilai berdasarkan pengamatan terhadap SK orang tua, lalu menentukan potongan biayanya.</p><p class="bw-cn">Siapkan salinan SK orang tua saat konsultasi.</p></div><div class="bw-c"><span class="bw-b">Potongan berjenjang</span><p class="bw-ct">3. Beasiswa Pindah Bimbel</p><p class="bw-cd">Untuk siswa yang pindah dari bimbel lain ke Brain Academy. Besar potongan dianalisis dan diputuskan secara berjenjang oleh tim kami.</p><p class="bw-cn">Ceritakan kondisi belajarmu saat konsultasi.</p></div><div class="bw-c"><span class="bw-b">Khusus siswa terpilih</span><p class="bw-ct">4. Beasiswa Tanpa Syarat</p><p class="bw-cd">Diberikan kepada siswa terpilih, hasil diskusi jangka panjang dengan tim kami, untuk siswa yang minat lesnya sangat tinggi.</p><p class="bw-cn">Tidak ada berkas khusus yang perlu disiapkan.</p></div></details><details class="bx" name="bw-ex"><summary class="bw-s"><span>Siapkan berkasnya dulu</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><p class="pd" style="text-align:center">Pilih jalur beasiswa, lalu centang berkas yang sudah kamu punya.</p><div class="bw-tb"><button type="button" class="bw-t" aria-selected="true">1. Beasiswa Prestasi</button><button type="button" class="bw-t" aria-selected="false">2. Beasiswa Anak Guru</button><button type="button" class="bw-t" aria-selected="false">3. Beasiswa Pindah Bimbel</button><button type="button" class="bw-t" aria-selected="false">4. Beasiswa Tanpa Syarat</button></div><div class="bw-l"><p class="bw-lt">Untuk Beasiswa Prestasi</p><label><input type="checkbox"><span>Rapor terbaru (asli atau fotokopi)</span></label><label><input type="checkbox"><span>Identitas siswa: nama, kelas, dan asal sekolah</span></label><label><input type="checkbox"><span>Kontak orang tua atau wali yang bisa dihubungi</span></label></div><div class="bw-l" hidden><p class="bw-lt">Untuk Beasiswa Anak Guru</p><label><input type="checkbox"><span>Salinan SK orang tua</span></label></div><div class="bw-l" hidden><p class="bw-lt">Untuk Beasiswa Pindah Bimbel</p><p>Ceritakan kondisi belajarmu saat konsultasi.</p></div><div class="bw-l" hidden><p class="bw-lt">Untuk Beasiswa Tanpa Syarat</p><p>Tidak ada berkas khusus yang perlu disiapkan.</p></div><a class="lk g" href="https://wa.me/6285177454988?text=Halo%20Brain%20Academy%20Purworejo%2C%20saya%20ingin%20bertanya%20tentang%20beasiswa." target="_blank" rel="noopener">Konsultasi beasiswa</a><p class="bw-fn">Daftar berkas ini panduan umum. Konsultan kami akan mengonfirmasi kebutuhan berkas yang pasti.</p></details><details class="bx" name="bw-ex"><summary class="bw-s"><span>Cara mendapatkan beasiswa</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><ol class="bw-st"><li><span class="ps-n">1</span><div><p class="ps-t">Hubungi konsultan</p><p class="ps-d">Chat kami lewat WhatsApp dan sampaikan jalur beasiswa yang ingin diajukan.</p></div></li><li><span class="ps-n">2</span><div><p class="ps-t">Kirim berkas</p><p class="ps-d">Kirim berkas sesuai jalur, misalnya rapor atau SK orang tua.</p></div></li><li><span class="ps-n">3</span><div><p class="ps-t">Tim menilai</p><p class="ps-d">Tim Brain Academy memeriksa data yang masuk dan menentukan besar potongan.</p></div></li><li><span class="ps-n">4</span><div><p class="ps-t">Mulai belajar</p><p class="ps-d">Setelah hasilnya keluar, siswa bisa langsung bergabung dengan potongan biaya.</p></div></li></ol></details><details class="bx" name="bw-ex"><summary class="bw-s"><span>Pertanyaan yang sering muncul</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="bw-q"><details class="q" name="bq"><summary><span>Berapa besar potongan Beasiswa Prestasi?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Besarnya tergantung nilai rapor. Kirim rapor ke konsultan kami, dan tim akan menyampaikan potongan yang kamu dapat.</div></details><details class="q" name="bq"><summary><span>Bagaimana Beasiswa Anak Guru dinilai?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Tim kami menilai berdasarkan pengamatan terhadap SK orang tua, lalu menentukan potongan biayanya.</div></details><details class="q" name="bq"><summary><span>Bagaimana potongan Beasiswa Pindah Bimbel ditentukan?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Tim kami menganalisis kondisimu dan memutuskan potongan secara berjenjang. Konsultan akan menjelaskan hasilnya.</div></details><details class="q" name="bq"><summary><span>Siapa yang mendapat Beasiswa Tanpa Syarat?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Siswa terpilih, hasil diskusi jangka panjang dengan tim kami, yang minat lesnya sangat tinggi.</div></details><details class="q" name="bq"><summary><span>Bisakah mengajukan dua beasiswa sekaligus?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Tanyakan langsung ke konsultan. Mereka akan menjelaskan aturan yang berlaku untuk kondisimu.</div></details><details class="q" name="bq"><summary><span>Ke mana saya bertanya lebih lanjut?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Hubungi konsultan Brain Academy Purworejo lewat tombol WhatsApp di halaman ini.</div></details></div></details><p class="bw-s">Siap belajar dengan biaya lebih ringan?</p><p class="pd" style="text-align:center">Ceritakan nilai rapor atau kondisimu ke konsultan kami. Kami bantu cek beasiswa yang cocok.</p><a class="lk g" href="https://wa.me/6285177454988?text=Halo%20Brain%20Academy%20Purworejo%2C%20saya%20ingin%20bertanya%20tentang%20beasiswa." target="_blank" rel="noopener">Bantu cek beasiswa</a></div></div>
   </section>
   
-  <div class="uf" data-v="produk">
-  <div class="h1"><span>Paket belajar yang banyak dipilih siswa</span></div>
-  <div class="ufg">
-   <button type="button" class="ub mad" data-p="Ruanguji/Try Out">Try Out<small>Low</small></button>
-   <button type="button" class="ub mad" data-p="Buku Kitab TKA">Buku<small>Entry</small></button>
-   <button type="button" class="ub mad" data-p="Ruang Belajar">Rubel<small>Basic</small></button>
-   <button type="button" class="ub on" data-p="Brain Academy Online">Online<small>Standard</small></button>
-   <button type="button" class="ub off" data-p="Brain Academy Center">Offline<small>Premium</small></button>
-   <button type="button" class="ub off" data-p="Privat (rumah/cabang)">Privat<small>Exclusive</small></button>
-  </div>
-  <p class="ut">Setiap anak punya gaya belajar, kebiasaan, kebutuhan, dan anggaran yang berbeda. Karena itu, Ruangguru menyediakan dua jalur belajar: <b>tatap muka bersama pendamping belajar</b> (guru tersertifikasi) atau <b>platform belajar mandiri di rumah</b>. Silakan pilih yang paling sesuai.</p>
-  <script>
-  document.querySelectorAll('.ub').forEach(function(b){b.addEventListener('click',function(){
-   var t=b.dataset.p,c=[].slice.call(document.querySelectorAll('.chip')).filter(function(x){return x.textContent.trim()===t})[0];
-   if(c)c.click();
-  })});
-  </script>
-  </div>
-  <nav id="produk" class="map" data-v="produk" aria-label="Peta pilihan belajar">
+  <div id="produk" data-v="produk"></div>
+    <nav class="pvb" style="display:none" aria-hidden="true">
   <div class="h1"><span>Tatap muka bersama pendamping belajar</span></div>
   <div class="cols">
     <div><p class="lb">Offline</p><div class="c"><button type="button" class="chip off" data-t="g-off" aria-controls="g-off" aria-expanded="false">Brain Academy Center</button><button type="button" class="chip off" data-t="g-off" aria-controls="g-off" aria-expanded="false">Privat (rumah/cabang)</button></div></div>
@@ -650,8 +725,10 @@ a.r.off .d{color:#0e4a55;opacity:1}
   <div class="h1 mm"><span>Platform belajar mandiri di rumah</span></div>
   <div class="c2"><button type="button" class="chip mad" data-t="g-mad" aria-controls="g-mad" aria-expanded="false">Ruanguji/Try Out</button><button type="button" class="chip mad" data-t="g-mad" aria-controls="g-mad" aria-expanded="false">Roboguru Plus</button><button type="button" class="chip mad" data-t="g-mad" aria-controls="g-mad" aria-expanded="false">Buku Kitab TKA</button><button type="button" class="chip mad" data-t="g-mad" aria-controls="g-mad" aria-expanded="false">Airis</button><button type="button" class="chip mad" data-t="g-mad" aria-controls="g-mad" aria-expanded="false">Ruang Belajar</button></div>
 </nav>
-  <p class="gd" data-v="produk">Pilih produk di atas untuk melihat penjelasan, video, foto, dan testimoninya.</p>
   <p class="vid" data-v="produk">Lihat <a href="https://www.instagram.com/reel/Ddadg51PN7o/?obrf=MTd3emZ0bXJlbng2bw==" target="_blank" rel="noopener">video</a> perbandingan produk offline, online dan mandiri.</p>
+  <div class="pk2" id="pk2" data-v="produk"><div class="kb2"><button type="button" id="kgb2" onclick="var a=document.querySelector('.bar a[href=&quot;#gratis&quot;]');if(a)a.click()">Konsultasi Gratis untuk Orang Tua</button>
+  <button type="button" id="faqb2">Pertanyaan Sering Diajukan</button>
+  <button type="button" id="bacb2">Lihat Brain Academy Center <b class="rk">★ Rekomendasi</b></button></div></div>
   <section class="sec" id="g-off" data-v="produk" hidden>
     <div class="h1"><span>Tatap muka bersama pendamping belajar</span></div>
     <div class="h2"><span>Offline</span></div>
@@ -710,9 +787,9 @@ a.r.off .d{color:#0e4a55;opacity:1}
   </section>
 </main>
 <nav class="bar" aria-label="Menu utama"><div class="in">
-  <a href="#top" aria-current="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11.500V16c0 1.500 2.700 3 6 3s6-1.500 6-3v-4.500"/></svg>BAC</a>
+  <a href="#home" aria-current="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg>Home</a>
   <a href="#produk"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Produk</a>
-  <a href="#home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg>Home</a>
+  <a href="#top"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11.500V16c0 1.500 2.700 3 6 3s6-1.500 6-3v-4.500"/></svg>BAC</a>
   <a href="#gratis"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M5 12v8h14v-8"/><path d="M12 8v12"/><path d="M12 8c-2-4-6-3-5 0 .5 1.200 3 1 5 0zM12 8c2-4 6-3 5 0-.5 1.200-3 1-5 0z"/></svg>Gratis</a>
   <a href="#faq"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.500 9.500a2.500 2.500 0 1 1 3.500 2.300c-.7.400-1 .9-1 1.700"/><path d="M12 17h.01"/></svg>FAQ</a>
 </div></nav>
@@ -981,19 +1058,36 @@ t.forEach(function(b,i){b.addEventListener('click',function(){
 <img src="media/gambar-029.jpg" alt="Trial Class Gratis Brain Academy Purworejo, hubungi Kak Rudi 0851-7745-4988" width="800" height="800">
 </div>
 </div>
+<div class="rec" id="rec" role="dialog" aria-modal="true" aria-labelledby="recT" hidden>
+<div class="rec-c">
+<button type="button" class="rec-x" id="recX" aria-label="Tutup rekomendasi"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+<h2 id="recT">Produk yang cocok untukmu</h2>
+<p class="rec-s" id="recS"></p>
+<div class="rec-l" id="recL"></div>
+<button type="button" class="rec-g" id="recG">Lihat semua produk</button>
+</div>
+</div>
+<div class="gate" id="gate" role="dialog" aria-modal="true" aria-label="Pilih peran, jenjang, dan kelas" hidden>
+<form class="gate-c" id="gateF" novalidate>
+<button type="button" class="gate-x" id="gateX" aria-label="Tutup, lewati"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+<div class="gate-r" role="radiogroup" aria-label="Dilihat sebagai"><button type="button" role="radio" aria-checked="false" data-r="Orang Tua">Orang Tua</button><button type="button" role="radio" aria-checked="false" data-r="Siswa">Siswa</button></div>
+<div class="jk"><div class="jc"><p class="gate-l">Jenjang</p><div class="jg" id="gJG" role="radiogroup" aria-label="Jenjang"><button type="button" role="radio" aria-checked="false" data-val="SD">SD</button><button type="button" role="radio" aria-checked="false" data-val="SMP">SMP</button><button type="button" role="radio" aria-checked="false" data-val="SMA">SMA</button><button type="button" role="radio" aria-checked="false" data-val="Gap Year">Gap Year</button></div></div><div class="jc"><p class="gate-l">Kelas</p><div class="kg" id="gKG" role="radiogroup" aria-label="Kelas"><p class="kh">Pilih jenjang dulu</p></div></div></div>
+<p class="gate-e" id="gateE" role="alert" hidden>Lengkapi pilihan di atas dulu ya.</p>
+<button type="submit" class="gate-b" id="gateB">Lanjut</button>
+</form>
+</div>
 <script>
 (function(){
-var ad=document.getElementById('ad'),x=document.getElementById('adX'),cur='home';
+var ad=document.getElementById('ad'),x=document.getElementById('adX'),cur=document.body.dataset.view||'',shown=false;
 if(!ad)return;
-function show(){ad.hidden=false;document.body.style.overflow='hidden';x.focus({preventScroll:true})}
+function show(){shown=true;ad.hidden=false;document.body.style.overflow='hidden';x.focus({preventScroll:true})}
 function hide(){ad.hidden=true;document.body.style.overflow=''}
 x.addEventListener('click',hide);
 document.querySelectorAll('.bar a').forEach(function(a){a.addEventListener('click',function(){
   var v=document.body.dataset.view;
-  if(v==='home'&&cur!=='home')show();
+  if(v==='home'&&cur!=='home'&&!shown)show();
   cur=v;
 })});
-show();
 })();
 </script>
 <script>
@@ -1392,6 +1486,8 @@ function buildRu(card,p,name){
 function build(card){
  var id=card.id,name=card.querySelector('.n').textContent;
  var p=el('div','mxp');p.id='mx-'+id;p.hidden=true;
+ var TCP={ru:['#CD7F32','#1a0d03'],airis:['#CD7F32','#1a0d03'],robo:['#CD7F32','#1a0d03'],kitab:['#C0C0C0','#0f172a'],rb:['#C0C0C0','#0f172a'],bao:['#FFD700','#2e2200'],mc:['#FFD700','#2e2200'],kal:['#FFD700','#2e2200'],bac:['#B8C6DB','#0f172a'],privat:['#5B5DC7','#fff']},tcp=TCP[id];
+ if(tcp){p.style.setProperty('--tc',tcp[0]);p.style.setProperty('--tt',tcp[1]);}
  if(id==='ru'){buildRu(card,p,name);return}
  var bar=el('div','mxb'),cur=null,kind='',btns={},jj='sd';
  [['video','Video'],['foto','Foto'],['testimoni','Testimoni']].filter(function(x){return !(((id==='bao'||id==='rb')&&x[0]==='foto')||(id==='kitab'&&x[0]==='video'))}).forEach(function(x){
@@ -1462,6 +1558,671 @@ bs.forEach(function(b){b.addEventListener('click',function(){
  bs.forEach(function(x){x.setAttribute('aria-expanded','false');document.getElementById('bfd-'+x.dataset.b).hidden=true});
  if(!open){b.setAttribute('aria-expanded','true');document.getElementById('bfd-'+b.dataset.b).hidden=false}
 })});
+})();
+</script>
+<template id="pvtpl"><style>
+:host{all:initial;display:block;--page:#eef1f6;--panel:#fff;--ink:#0f172a;--muted:#64748b;--ln-h:#475569;--mz:1}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+.pvroot{margin:0;background:var(--page);color:var(--ink);font-family:"Poppins","Segoe UI",Roboto,Arial,sans-serif;font-size:16px;line-height:normal;text-align:left;border-radius:18px;overflow:hidden;position:relative}
+.pvwrap{position:relative}
+.pvroot:not(.big) .pvwrap{padding-top:38px}
+.scroll{position:relative;overflow:auto;max-height:calc((100dvh - 190px)/var(--mz));touch-action:pan-x pan-y;overscroll-behavior:auto;-webkit-overflow-scrolling:touch}
+.stage{width:1000px;margin:0 auto;padding:32px 16px 90px}
+.zc{position:absolute;left:50%;transform:translateX(-50%);top:4px;right:auto;bottom:auto;z-index:40;display:flex;align-items:center;gap:0;padding:2px;border-radius:99px;background:var(--panel);box-shadow:0 3px 10px rgba(15,23,42,.25);border:1px solid rgba(100,116,139,.3)}
+.zc button{border:0;background:transparent;color:var(--ink);font:600 16px/1 Poppins,Arial,sans-serif;min-width:30px;height:28px;border-radius:99px;cursor:pointer}
+.zc button:active{background:rgba(100,116,139,.2)}
+.zc .pc{font-size:11px;min-width:44px}
+.eyebrow{text-align:center;font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);font-weight:600}
+h1{margin:6px 0 4px;text-align:center;font-size:clamp(22px,3.4vw,34px);font-weight:700;letter-spacing:-.3px}
+.vt{display:flex;width:max-content;max-width:100%;margin:0 auto 14px;padding:4px;border-radius:99px;background:rgba(100,116,139,.2)}
+.vt button{padding:8px 22px;border:0;border-radius:99px;background:transparent;color:var(--muted);font:700 clamp(12.5px,3.2vw,14px) Poppins,Arial,sans-serif;cursor:pointer;transition:background .15s,color .15s}
+.vt button.on{background:linear-gradient(135deg,#2563eb,#1e3a8a);color:#fff;box-shadow:0 3px 10px rgba(37,99,235,.4)}
+.pvroot[data-view=siswa] .pk,.pvroot[data-view=siswa] .kbs,.pvroot[data-view=siswa] #dock{display:none}
+.sub{text-align:center;margin:0 0 26px;font-size:14px;color:var(--muted)}
+.map{background:var(--panel);border-radius:22px;padding:20px 18px 18px;box-shadow:0 20px 50px rgba(15,23,42,.14)}
+.row{display:grid;grid-template-columns:128px repeat(6,1fr)}
+.grp{position:relative;text-align:center;padding:0 6px 50px}
+.grp .t{display:inline-block;padding:9px 24px;border-radius:99px;color:#fff;font-weight:600;font-size:clamp(14px,1.6vw,18px);background:linear-gradient(135deg,var(--g1),var(--g2));box-shadow:0 8px 18px rgba(0,0,0,.18)}
+.grp::before{content:"";position:absolute;left:50%;bottom:0;height:37px;width:3px;margin-left:-1.5px;background:var(--gc)}
+.grp::after{content:"";position:absolute;bottom:0;height:3px;left:calc(var(--bl) - 1.5px);right:calc(var(--bl) - 1.5px);background:var(--gc)}
+.g1{grid-column:2/6;--g1:#1e3a8a;--g2:#2563eb;--gc:#2563eb;--bl:12.5%}
+.g2{grid-column:6/8;--g1:#0f766e;--g2:#14b8a6;--gc:#0d9488;--bl:25%}
+.hint{align-self:end;display:flex;justify-content:center;padding:0 8px 10px}.hint img{width:96px;height:auto;display:block}
+.sticky-head{position:sticky;top:0;z-index:30;background:var(--panel);padding-top:16px;margin-top:-16px;border-radius:16px 16px 0 0;box-shadow:0 8px 10px -8px rgba(15,23,42,.35)}
+.lab{position:relative;text-align:center;padding:16px 0 14px}
+.lab.p{--gc:#2563eb}.lab.m{--gc:#0d9488}
+.lab::before{content:"";position:absolute;left:50%;top:-3px;height:19px;width:3px;margin-left:-1.5px;background:var(--gc)}
+.lab::after{content:"";position:absolute;left:50%;top:52px;bottom:0;width:3px;margin-left:-1.5px;background:#5c3a1c}
+.chip{position:relative;z-index:1;display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:99px;background:var(--panel);border:1.5px solid var(--gc);font-size:14px;font-weight:600;color:var(--ink)}
+.chip::before{content:"";width:9px;height:9px;border-radius:50%}
+.chip.off::before{background:#f97316}.chip.on::before{background:#22c55e}
+.band{position:relative;margin-top:8px;border-radius:16px;--sh:.3;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25)}
+.band::before{content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(180deg,rgba(255,255,255,var(--sh)),transparent 50%)}
+.b1{--t:#1a0d03;--acc:#8a4a1c;--ln:#4a2a0c;background:linear-gradient(135deg,#CD7F32,#A05A2C)}
+.b2{--t:#0f172a;--acc:#6b6b6b;--ln:#4b5563;background:linear-gradient(135deg,#C0C0C0,#A8A8A8)}
+.b3{--t:#2e2200;--acc:#c98a00;--ln:#6b5200;background:linear-gradient(135deg,#FFD700,#FFB700)}
+.b4{--t:#0f172a;--acc:#5f7ea6;--ln:#334a6b;background:linear-gradient(135deg,#E5E4E2,#B8C6DB)}
+.b5{--t:#fff;--acc:#4547a8;--ln:#fde9ee;background:linear-gradient(135deg,#5B5DC7,#E86A6A)}
+.tier{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;padding:14px 8px;text-align:center;color:#fff;background:#27b6c1;border-radius:16px 0 0 16px}
+
+.tier .n{width:34px;height:34px;border-radius:50%;border:2px solid #fff;display:grid;place-items:center;font-weight:700;font-size:15px;box-shadow:0 3px 8px rgba(0,0,0,.25)}
+.b1 .tier .n{background:linear-gradient(135deg,#CD7F32,#A05A2C);color:#1a0d03}
+.b2 .tier .n{background:linear-gradient(135deg,#C0C0C0,#A8A8A8);color:#0f172a}
+.b3 .tier .n{background:linear-gradient(135deg,#FFD700,#FFB700);color:#2e2200}
+.b4 .tier .n{background:linear-gradient(135deg,#E5E4E2,#B8C6DB);color:#0f172a}
+.b5 .tier .n{background:linear-gradient(135deg,#5B5DC7,#E86A6A);color:#fff}
+.tier .nm{font-weight:700;letter-spacing:1.8px;font-size:13px;text-transform:uppercase}
+.tier .ds{font-size:11px;opacity:.85}
+.cell{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:12px;padding:34px 10px 22px;min-height:100px}
+.ln::before,.ln-end::before{content:"";position:absolute;left:50%;top:-8px;bottom:0;width:3px;margin-left:-1.5px;background:var(--ln)}
+.ln-end::before{bottom:auto;height:42px}
+.ln-end::after{content:"";position:absolute;left:50%;top:28px;width:11px;height:11px;margin-left:-5.5px;border-radius:50%;background:var(--ln)}
+.card{position:relative;z-index:1;width:100%;max-width:160px;padding:12px 10px;text-align:center;font-size:14.5px;font-weight:600;line-height:1.3;color:#0f172a;background:#fff;border-radius:12px;border-left:5px solid var(--acc);box-shadow:0 6px 14px rgba(15,23,42,.22)}
+.b5 .card{box-shadow:0 0 0 1px rgba(91,93,199,.6),0 6px 20px rgba(232,106,106,.3)}
+.legend{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;margin-top:18px;font-size:12.5px;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:6px;font-weight:600;color:var(--ink)}
+.legend i{width:18px;height:18px;border-radius:6px;display:inline-block}
+.legend em{font-style:normal;color:var(--muted);font-weight:500}
+.legend{flex-wrap:nowrap;gap:clamp(6px,2vw,14px);font-size:clamp(10.5px,2.8vw,13px)}
+.legend span{gap:5px;white-space:nowrap}
+.legend i{width:clamp(11px,3vw,16px);height:clamp(11px,3vw,16px);border-radius:4px}
+.card{cursor:pointer;transition:transform .15s}
+.card:hover,.card:focus-visible{transform:translateY(-2px);outline:none}
+.card:focus-visible{box-shadow:0 0 0 3px #2563eb}
+.stem{flex:1 0 22px;width:3px;margin:-12px 0 -22px;background:var(--ln)}
+.card.rec{box-shadow:0 6px 14px rgba(15,23,42,.22)}
+.card.rec::after{content:"★ Rekomendasi";position:absolute;bottom:-11px;left:calc(50% - 2.5px);transform:translateX(-50%);padding:3px 10px;border-radius:99px;background:#dc2626;color:#fff;font-size:10.5px;font-weight:700;letter-spacing:.4px;white-space:nowrap;box-shadow:0 0 0 2px #fff,0 3px 8px rgba(220,38,38,.45)}
+.chain .card+.card::before{content:"";position:absolute;left:50%;top:-12px;height:12px;width:3px;margin-left:-4px;background:var(--ln)}
+.chain .card+.card::after{content:"";position:absolute;left:50%;top:-6px;width:11px;height:6px;margin-left:-8px;border-radius:5.5px 5.5px 0 0;background:var(--ln)}
+.ov{position:fixed;inset:0;z-index:50;background:rgba(8,12,24,.55);display:flex;align-items:center;justify-content:center;padding:16px;backdrop-filter:blur(3px)}
+.ov[hidden]{display:none}
+.sheet{position:relative;width:100%;max-width:440px;max-height:calc(100dvh - 32px);overflow-y:auto;background:var(--panel);color:var(--ink);border-radius:20px;padding:24px 22px 22px;box-shadow:0 24px 60px rgba(0,0,0,.4);border-top:6px solid var(--tc,#2563eb)}
+.sheet h2{margin:10px 0 8px;font-size:22px}
+.sheet p{margin:12px 0 0;line-height:1.6;font-size:15px}
+.x{position:absolute;top:10px;right:12px;border:0;background:transparent;color:var(--muted);font-size:28px;cursor:pointer;line-height:1}
+.badge{display:inline-block;padding:4px 12px;border-radius:99px;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;background:var(--tc);color:var(--tt)}
+.tags{display:flex;gap:6px;flex-wrap:wrap}
+.tags span{font-size:12px;padding:3px 10px;border-radius:99px;background:rgba(100,116,139,.15);color:var(--muted);font-weight:600}
+.hint2{position:absolute;left:50%;bottom:64px;transform:translateX(-50%);z-index:40;display:flex;align-items:center;gap:10px;width:max-content;max-width:calc(100vw - 24px);padding:8px 8px 8px 8px;border-radius:20px;background:var(--panel);color:var(--ink);box-shadow:0 10px 30px rgba(15,23,42,.35);border:1px solid rgba(100,116,139,.3);font-size:13px;line-height:1.4;transition:opacity .4s}
+.hint2.gone{opacity:0;pointer-events:none}
+.hint2 svg{flex:none;width:84px;height:84px;border-radius:14px;background:rgba(37,99,235,.1)}
+.hint2 b{display:block;font-weight:700;font-size:14px}
+.hint2 span{color:var(--muted)}
+.hint2 button{flex:none;align-self:flex-start;border:0;background:transparent;color:var(--muted);font-size:22px;line-height:1;cursor:pointer;padding:0 6px}
+.hint2 .fg{fill:#f6cba5;stroke:#b5651d;stroke-width:1.5}
+.hint2 .tip{fill:#2563eb;opacity:.35;animation:tp 2.8s ease-in-out infinite}
+.hint2 .f1{animation:o1 2.8s ease-in-out infinite}
+.hint2 .f2{animation:o2 2.8s ease-in-out infinite}
+.hint2 .pl{fill:none;stroke:#2563eb;stroke-width:2;stroke-linecap:round;opacity:0;animation:ar 2.8s ease-in-out infinite}
+@keyframes o1{0%,12%{transform:translate(0,0)}45%,60%{transform:translate(-7px,7px)}95%,100%{transform:translate(0,0)}}
+@keyframes o2{0%,12%{transform:translate(0,0)}45%,60%{transform:translate(7px,-7px)}95%,100%{transform:translate(0,0)}}
+@keyframes tp{0%,12%,95%,100%{opacity:.25}45%,60%{opacity:.6}}
+@keyframes ar{0%,12%{opacity:0}30%,60%{opacity:1}80%,100%{opacity:0}}
+.tags .pt{flex-basis:100%;font-size:14px;font-weight:500;color:var(--muted);background:none;padding:0;border-radius:0}
+.ex{margin-top:18px}
+.ex[hidden]{display:none}
+.lj{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;font-weight:700;font-size:15px}
+.lj small{font-weight:500;font-size:11.5px;color:var(--muted)}
+.sl{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;padding:2px 0 6px}
+.sl::-webkit-scrollbar{display:none}
+.sl button{min-width:0;display:flex;align-items:center;justify-content:center;padding:12px 2px;border-radius:12px;border:1.5px solid var(--tc);background:transparent;color:var(--ink);font:600 clamp(10px,2.8vw,13.5px) Poppins,Arial,sans-serif;cursor:pointer;user-select:none}
+.sl{gap:6px;padding:2px 0 8px}
+.sl button{border:0;border-radius:14px;background-color:var(--tc);background-image:var(--tg,none);color:var(--tt,#fff);font-weight:700;padding:14px 2px;box-shadow:0 4px 0 #374b55;margin-bottom:2px;transition:transform .12s ease,box-shadow .12s ease}
+.sl button:active{background-color:var(--tc);background-image:var(--tg,none);transform:translateY(3px);box-shadow:0 1px 0 #374b55}
+.sl button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.cg{display:block;width:100%;margin-top:16px;padding:15px 16px;border:0;border-radius:14px;background-color:var(--tc,#2563eb);background-image:var(--tg,linear-gradient(135deg,var(--tc,#2563eb),color-mix(in srgb,var(--tc,#2563eb) 78%,#000)));color:var(--tt,#fff);font:700 18px Poppins,Arial,sans-serif;letter-spacing:.2px;cursor:pointer;box-shadow:0 5px 0 #374b55;animation:cgp 1.8s ease-in-out infinite}
+.cg small{display:block;font-weight:500;font-size:12px;opacity:.92;margin-top:2px}
+@keyframes cgp{0%,100%{box-shadow:0 5px 0 #374b55,0 0 0 0 color-mix(in srgb,var(--tc,#2563eb) 65%,transparent)}60%{box-shadow:0 5px 0 #374b55,0 0 0 10px color-mix(in srgb,var(--tc,#2563eb) 0%,transparent)}}
+.toast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:70;padding:10px 16px;border-radius:99px;background:#0f172a;color:#fff;font-size:13px;box-shadow:0 8px 24px rgba(0,0,0,.4);white-space:nowrap}
+.toast[hidden]{display:none}
+.dock{position:fixed;right:calc(8px + env(safe-area-inset-right,0px));top:50%;transform:translateY(-50%);z-index:40;display:flex;flex-direction:column;gap:clamp(8px,1.6vw,14px)}
+.dock button{width:clamp(42px,11vw,56px);height:clamp(42px,11vw,56px);padding:0;border:0;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.35);transition:transform .15s}
+.dock button:active{transform:scale(.92)}
+.dock svg{width:55%;height:55%}
+.dock .d-x{width:28px;height:28px;align-self:center;background:rgba(15,23,42,.8);color:#fff;font:700 15px/1 Arial,sans-serif;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.d-wa{background:#25d366}
+.dock .d-ck{display:none;background:#25d366;color:#fff;font:700 clamp(22px,6vw,30px)/1 Arial,sans-serif}
+.dock.min .d-ck{display:flex}
+.dock.min button:not(.d-ck){display:none}.d-ig{background:linear-gradient(45deg,#f9ce34,#ee2a7b 55%,#6228d7)}.d-gm{background:#00897b}.d-hm{background:#f59e0b}
+.wm{position:fixed;right:calc(18px + clamp(42px,11vw,56px) + env(safe-area-inset-right,0px));top:50%;transform:translateY(-50%);z-index:45;width:min(72vw,290px);max-height:80vh;overflow:auto;background:var(--panel);color:var(--ink);border-radius:16px;box-shadow:0 12px 32px rgba(0,0,0,.4);padding:12px}
+.wm[hidden]{display:none}
+.wm h3{margin:0 0 4px;font:700 14px Poppins,Arial,sans-serif;color:var(--muted)}
+.wm button{display:flex;width:100%;gap:10px;align-items:center;text-align:left;padding:11px 10px;margin-top:6px;border:1.5px solid #25d366;border-radius:12px;background:transparent;color:var(--ink);font:600 clamp(13px,3.6vw,14.5px) Poppins,Arial,sans-serif;cursor:pointer}
+.wm button span{flex:0 0 22px;height:22px;border-radius:50%;background:#25d366;color:#fff;font-size:12px;display:flex;align-items:center;justify-content:center}
+.wm button{border-color:var(--c,#25d366)}.wm button span{background:var(--c,#25d366)}
+.wm.frm{top:calc(12px + env(safe-area-inset-top,0px));transform:none;max-height:calc(100vh - 24px);width:min(84vw,340px)}
+.wm label{display:block;margin-top:8px;font:600 12.5px Poppins,Arial,sans-serif;color:var(--muted)}
+.wm input,.wm select{display:block;width:100%;box-sizing:border-box;margin-top:3px;padding:10px;border-radius:10px;border:1.5px solid var(--muted);background:var(--page);color:var(--ink);font:500 16px Poppins,Arial,sans-serif}
+.wm .go{margin-top:14px;justify-content:center;background:var(--c);border-color:var(--c);color:#fff}
+.kg{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;margin-top:12px;font:600 clamp(12px,3.2vw,14px) Poppins,Arial,sans-serif;color:var(--ink)}
+.kg button{padding:8px 18px;border:0;border-radius:99px;background:linear-gradient(135deg,#2563eb,#1e3a8a);color:#fff;font:700 clamp(12px,3.2vw,14px) Poppins,Arial,sans-serif;cursor:pointer;box-shadow:0 4px 12px rgba(37,99,235,.4)}
+.kg button:active{transform:scale(.96)}
+.kbs{display:flex;flex-direction:column;gap:10px;max-width:380px;margin:14px auto 0}
+.kbs button{display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:wrap;width:100%;padding:13px 20px;border:0;border-radius:99px;background:linear-gradient(135deg,#2563eb,#1e3a8a);color:#fff;font:700 clamp(13px,3.4vw,15px) Poppins,Arial,sans-serif;cursor:pointer;box-shadow:0 4px 12px rgba(37,99,235,.4)}
+.kbs button:active{transform:scale(.97)}
+.kbs .rk{display:inline-block;padding:2px 9px;border-radius:99px;background:#fff;color:#b91c1c;font-size:.78em;font-weight:700;white-space:nowrap}
+.pk{max-width:640px;margin:22px auto 0;text-align:center;font-family:Poppins,Arial,sans-serif;color:var(--ink)}
+.pk h3{margin:0 0 6px;font-size:clamp(15px,3.6vw,18px);font-weight:700}
+.pk .pl2{font-size:clamp(12.5px,3.2vw,14.5px);font-weight:600;color:#2563eb;line-height:1.5}
+.pk p{margin:8px 0 0;font-size:clamp(12px,3vw,14px);line-height:1.65;color:var(--muted)}
+.kg .rk{display:inline-block;margin-left:4px;padding:2px 9px;border-radius:99px;background:#dc2626;color:#fff;font-size:.78em;font-weight:700;letter-spacing:.3px;white-space:nowrap}
+#bacb{background:linear-gradient(135deg,#ef4444,#b91c1c);box-shadow:0 4px 12px rgba(220,38,38,.4)}
+.pk,.kbs{display:none!important}
+.faq{flex-basis:100%;display:flex;flex-direction:column;gap:8px;width:100%}
+.faq details{border:1px solid rgba(100,116,139,.3);border-radius:12px;padding:10px 14px;background:rgba(100,116,139,.07)}
+.faq summary{cursor:pointer;font-weight:600;font-size:14.5px;line-height:1.4}
+.faq details p{margin:8px 0 2px;font-size:14px;line-height:1.6;color:var(--muted)}
+.grp .t{cursor:pointer}.grp .t::after{content:" \24D8";font-size:.85em;opacity:.9}
+
+.vrow{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 14px}
+.vrow .vt{margin:0}
+.bigb{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border:0;border-radius:99px;background:linear-gradient(135deg,#f59e0b,#d97706);color:#fff;font:700 clamp(12.5px,3.2vw,14px) Poppins,Arial,sans-serif;cursor:pointer;box-shadow:0 3px 10px rgba(217,119,6,.45)}
+.bigb:active{transform:scale(.96)}
+.bigx{display:none}
+.pvroot.big{border-radius:0;height:100dvh}
+.pvroot.big .pvwrap{height:100%}
+.pvroot.big .scroll{position:absolute;inset:0;max-height:none;height:100%}
+.pvroot.big .bigb{display:none}
+.pvroot.big .bigx{display:flex;position:absolute;top:10px;left:10px;z-index:45;align-items:center;gap:6px;padding:9px 16px;border:0;border-radius:99px;background:rgba(15,23,42,.85);color:#fff;font:700 13px Poppins,Arial,sans-serif;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.35)}
+
+</style>
+<div class="pvroot" id="pvroot" data-view="ortu"><div class="pvwrap"><div class="scroll" id="sc"><div class="stage" id="st">
+
+<h1 id="ttl">Tampilan Produk Ruangguru</h1>
+<div class="vrow"><button type="button" class="bigb" id="big" aria-label="Buka tampilan diperbesar di tab baru">⤢ Diperbesar</button></div>
+<p class="sub">Klik salah satu produk untuk melihat penjelasan singkatnya.</p>
+<div class="map">
+
+<div class="sticky-head">
+<div class="row"><div></div>
+<div class="grp g1"><span class="t">Belajar Bareng Pendamping</span></div>
+<div class="grp g2"><span class="t">Belajar Mandiri</span></div></div>
+<div class="row"><div class="hint"><img src="data:image/png;base64,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" alt="Ruangguru"></div>
+<div class="lab p"><span class="chip off">Offline</span></div>
+<div class="lab p"><span class="chip off">Offline</span></div>
+<div class="lab p"><span class="chip on">Online</span></div>
+<div class="lab p"><span class="chip on">Online</span></div>
+<div class="lab m"><span class="chip on">Online</span></div>
+<div class="lab m"><span class="chip on">Online</span></div></div>
+</div>
+
+<div class="row band b1">
+<div class="tier"><div class="n">1</div><div class="nm">Bronze</div><div class="ds">Paling terjangkau</div></div>
+<div class="cell ln"></div><div class="cell ln"></div><div class="cell ln"></div><div class="cell ln"></div>
+<div class="cell ln-end"><div class="card">Try Out</div><i class="stem"></i></div>
+<div class="cell ln-end chain"><div class="card">Airis</div><div class="card">Roboguru</div></div>
+</div>
+
+<div class="row band b2">
+<div class="tier"><div class="n">2</div><div class="nm">Silver</div><div class="ds">Ekonomis</div></div>
+<div class="cell ln"></div><div class="cell ln"></div><div class="cell ln"></div><div class="cell ln"></div>
+<div class="cell ln-end chain"><div class="card">Buku Kitab</div><div class="card">Ruang Belajar</div></div>
+<div class="cell"></div>
+</div>
+
+<div class="row band b3">
+<div class="tier"><div class="n">3</div><div class="nm">Gold</div><div class="ds">Menengah</div></div>
+<div class="cell ln"></div><div class="cell ln"></div>
+<div class="cell ln-end chain"><div class="card">Brain Academy Online</div><div class="card">Match Champs</div><i class="stem"></i></div>
+<div class="cell ln-end"><div class="card">Kalananti</div></div>
+<div class="cell"></div><div class="cell"></div>
+</div>
+
+<div class="row band b4">
+<div class="tier"><div class="n">4</div><div class="nm">Platinum</div><div class="ds">Menengah atas</div></div>
+<div class="cell ln"></div>
+<div class="cell ln-end"><div class="card rec">Brain Academy Center</div><i class="stem"></i></div>
+<div class="cell ln"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+</div>
+
+<div class="row band b5">
+<div class="tier"><div class="n">5</div><div class="nm">Diamond</div><div class="ds">Premium</div></div>
+<div class="cell ln-end"><div class="card">Kedinasan TNI-Polri</div></div>
+<div class="cell ln-end"><div class="card">Privat Offline</div></div>
+<div class="cell ln-end"><div class="card">Privat Online</div></div>
+<div class="cell"></div><div class="cell"></div><div class="cell"></div>
+</div>
+
+</div>
+<div class="legend">
+<span><i style="background:linear-gradient(135deg,#CD7F32,#A05A2C)"></i>Bronze</span>
+<span><i style="background:linear-gradient(135deg,#C0C0C0,#A8A8A8)"></i>Silver</span>
+<span><i style="background:linear-gradient(135deg,#FFD700,#FFB700)"></i>Gold</span>
+<span><i style="background:linear-gradient(135deg,#E5E4E2,#B8C6DB)"></i>Platinum</span>
+<span><i style="background:linear-gradient(135deg,#5B5DC7,#E86A6A)"></i>Diamond</span>
+
+</div>
+<div class="pk"><h3>Paket belajar yang banyak dipilih siswa</h3><div class="pl2">Privat, Brain Academy Center, Brain Academy Online, Ruangbelajar, Buku Kitab, Try Out</div><p>Setiap anak punya gaya belajar, kebiasaan, kebutuhan, dan anggaran yang berbeda. Karena itu, Ruangguru menyediakan dua jalur belajar: tatap muka bersama pendamping belajar (guru tersertifikasi) atau platform belajar mandiri di rumah. Silakan pilih yang paling sesuai.</p></div>
+<div class="kbs"><button type="button" id="kgb" onclick="window.open('https://ruanggurupwr-bot.github.io/info/','_blank','noopener')">Konsultasi Gratis untuk Orang Tua</button>
+<button type="button" id="bacb">Lihat Brain Academy Center <b class="rk">★ Rekomendasi</b></button>
+<button type="button" id="faqb">Pertanyaan Sering Diajukan</button></div>
+</div></div>
+<div class="zc" id="zc"><button id="zo" aria-label="Perkecil">−</button><button class="pc" id="zp" aria-label="Pas layar">100%</button><button id="zi" aria-label="Perbesar">+</button></div>
+<button type="button" class="bigx" id="bigx">← Kembali</button></div><div class="ov" id="ov" hidden><div class="sheet" id="sh" role="dialog" aria-modal="true" aria-labelledby="mt"><button class="x" id="mx" aria-label="Tutup">×</button><span class="badge" id="mb"></span><h2 id="mt"></h2><div class="tags" id="mg"></div><p id="md"></p><div class="ex" id="ex" hidden><div class="lj">Lihat juga</div><div class="sl" id="sl"><button type="button" data-k="video">Video</button><button type="button" data-k="foto">Foto</button><button type="button" data-k="fasilitas">Fasilitas</button><button type="button" data-k="harga">Harga</button><button type="button" data-k="testimoni">Testimoni</button></div><button type="button" class="cg" id="cb" data-k="coba">Coba Kelas Gratis<small>Daftar sekarang, gratis</small></button></div></div></div>
+<div class="dock" id="dock" role="navigation" aria-label="Hubungi konsultan"><button type="button" class="d-ck" id="dck" aria-label="Tampilkan menu kontak" title="Tampilkan kontak">✓</button><button type="button" class="d-x" id="dx" aria-label="Sembunyikan menu kontak" title="Sembunyikan">✕</button><button type="button" class="d-wa" data-a="wa" aria-label="Chat WhatsApp konsultan" title="Chat WhatsApp"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3zm0 1.8a7.2 7.2 0 1 1-3.9 13.3l-.3-.2-2.4.6.6-2.3-.2-.3A7.2 7.2 0 0 1 12 4.8z"/><path d="M9 8.2c-.3 0-.7.2-.9.6-.3.6-.3 1.6.6 2.9 1 1.6 2.4 2.6 3.8 3 .8.2 1.5 0 1.9-.5.2-.3.3-.7.2-.8l-1.5-.7c-.2-.1-.4 0-.5.1l-.5.6c-.2.2-.4.2-.6.1-.8-.4-1.5-1-2-1.8-.1-.2-.1-.4 0-.5l.4-.5c.1-.2.1-.3 0-.5l-.6-1.4c-.1-.2-.2-.3-.4-.3z"/></svg></button><button type="button" class="d-ig" data-a="ig" aria-label="DM Instagram konsultan" title="DM Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="#fff"/></svg></button><button type="button" class="d-gm" data-a="gm" aria-label="Jadwalkan simulasi kelas online" title="Simulasi kelas online"><svg viewBox="0 0 24 24" fill="#fff"><rect x="2.5" y="6" width="13" height="12" rx="2.5"/><path d="M16.5 10.5 21.5 7v10l-5-3.5z"/></svg></button><button type="button" class="d-hm" data-a="hm" aria-label="Minta dikunjungi ke rumah" title="Kunjungan ke rumah"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 3 2.5 11.5h2.7V20h5v-5.5h3.6V20h5v-8.5h2.7z"/></svg></button></div>
+<div class="toast" id="ts" hidden></div></div>
+</template>
+<script>
+(function(){
+var HD=document,mount=HD.getElementById('produk'),tpl=HD.getElementById('pvtpl');
+if(!mount||!tpl)return;
+var sr=mount.attachShadow({mode:'open'});
+sr.appendChild(tpl.content.cloneNode(true));
+var root=sr.getElementById('pvroot');
+var pk2=HD.getElementById('pk2');
+if(pk2){
+ var fw=function(a,b){var x=HD.getElementById(a);if(x)x.addEventListener('click',function(){var y=sr.getElementById(b);if(y)y.click()})};
+ fw('bacb2','bacb');fw('faqb2','faqb');
+ var pk2t=HD.getElementById('pk2t');var syncPk=function(){var h=(root.getAttribute('data-view')==='siswa');pk2.hidden=h;if(pk2t)pk2t.hidden=h};
+ new MutationObserver(syncPk).observe(root,{attributes:true,attributeFilter:['data-view']});syncPk();
+}
+var PVDOC={
+ getElementById:function(i){return sr.getElementById(i)},
+ querySelector:function(s){return sr.querySelector(s)},
+ querySelectorAll:function(s){return sr.querySelectorAll(s)},
+ createElement:function(t){return HD.createElement(t)},
+ body:root,
+ addEventListener:function(type,fn,opt){
+  if(type==='click'){
+   sr.addEventListener('click',fn,opt);
+   HD.addEventListener('click',function(e){if(e.composedPath().indexOf(mount)>=0)return;fn(e)},opt);
+  }else HD.addEventListener(type,fn,opt);
+ }
+};
+function run(f){f(PVDOC)}
+run(function(document){
+(function(){
+var T={b1:['Bronze','#CD7F32','#1a0d03'],b2:['Silver','#C0C0C0','#0f172a'],b3:['Gold','#FFD700','#2e2200'],b4:['Platinum','#B8C6DB','#0f172a'],b5:['Diamond','#5B5DC7','#fff']};
+var D={
+'Try Out':'Simulasi ujian online untuk SD, SMP, dan SMA. Kamu bisa mengukur kesiapan sebelum ujian sebenarnya dan melihat hasilnya setelah selesai.',
+'Airis':'Tutor belajar berbasis AI yang terasa seperti teman. Bisa membantu memahami materi, menjawab PR, memberi latihan soal, dan diajak ngobrol. Dapat diakses lewat aplikasi Ruangguru.',
+'Roboguru':'Layanan tanya jawab soal: kirim soal yang sulit, lalu dapatkan konsep dan pembahasan jawabannya untuk membantu kamu belajar.',
+'Buku Kitab':'Buku belajar untuk persiapan TKA yang bisa dipelajari secara mandiri di mana saja.',
+'Ruang Belajar':'Belajar mandiri lewat video pelajaran, rangkuman, kuis, dan latihan soal yang bisa diakses kapan saja.',
+'Brain Academy Online':'Bimbingan belajar online bersama pengajar, sehingga siswa tetap mendapat pendampingan langsung dari rumah.',
+'Match Champs':'Kursus matematika dan logika untuk anak TK sampai SMP, mulai dari Singapore Math, Sempoa, hingga persiapan Olimpiade. Tersedia online dan offline.',
+'Kalananti':'Kursus coding dan robotik untuk anak yang dipandu pengajar secara online, untuk melatih logika dan kreativitas.',
+'Brain Academy Center':'Bimbingan belajar tatap muka di cabang, dengan pendampingan langsung dari pengajar untuk persiapan sekolah dan ujian. Paket unggulan yang diutamakan untuk direkomendasikan.',
+'Kedinasan TNI-Polri':'Program persiapan seleksi masuk sekolah kedinasan dan TNI-Polri, dengan pendampingan secara tatap muka.',
+'Privat Offline':'Les privat tatap muka dengan guru. Jadwal dan materi disesuaikan dengan kebutuhan siswa.',
+'Privat Online':'Les privat online dengan guru. Jadwal dan materi disesuaikan dengan kebutuhan siswa, bisa dari mana saja.'
+};
+var CB={'Airis':['Coba Gratis','Gratis, langsung coba'],'Roboguru':['Coba Gratis','Gratis, langsung coba'],'Try Out':['Coba Mini TO Gratis','Gratis, tanpa biaya'],'Buku Kitab':['Mau file PDF Gratis','Gratis, tanpa biaya'],'Ruang Belajar':['Coba Drill Soal Gratis','Gratis, langsung coba']};
+var ov=document.getElementById('ov'),sh=document.getElementById('sh'),last=null;
+function close(){ov.hidden=true;if(last)last.focus();}
+document.getElementById('mx').onclick=close;
+ov.addEventListener('click',function(e){if(e.target===ov)close();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!ov.hidden)close();});
+document.querySelectorAll('.card').forEach(function(c){
+var band=c.closest('.band'),idx=Array.prototype.indexOf.call(band.children,c.parentNode);
+var t=T[(band.className.match(/b[1-5]/)||['b1'])[0]];
+c.tabIndex=0;c.setAttribute('role','button');
+function open(){
+var n=c.textContent.trim();
+last=c;
+sh.style.setProperty('--tc',t[1]);sh.style.setProperty('--tt',t[2]);if(t[0]==='Diamond')sh.style.setProperty('--tg','linear-gradient(135deg,#5B5DC7,#E86A6A)');else sh.style.removeProperty('--tg');
+document.getElementById('mb').textContent='Tingkat '+t[0];
+document.getElementById('mt').textContent=n;
+document.getElementById('md').textContent=D[n]||'';
+var isB=n==='Brain Academy Center',g=idx<=4?'Belajar Bareng Pendamping':'Belajar Mandiri',m=idx<=2?'Offline':'Online';
+document.getElementById('mg').innerHTML=isB?'<span class="pt">'+g+' · '+m+'</span><span style="background:#dc2626;color:#fff">★ Rekomendasi</span>':'<span>'+g+'</span><span>'+m+'</span>';
+var cb=CB[n]||['Coba Kelas Gratis','Daftar sekarang, gratis'];
+document.getElementById('cb').innerHTML=cb[0]+'<small>'+cb[1]+'</small>';window.__prod=n;
+document.getElementById('ex').hidden=false;sh.scrollTop=0;
+ov.hidden=false;document.getElementById('mx').focus();
+}
+c.addEventListener('click',open);
+c.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open();}});
+});
+var GD={'Belajar Bareng Pendamping':['#2563eb','#fff','Belajar tatap muka bersama pendamping belajar, yaitu guru tersertifikasi. Anak dipandu langsung, kehadiran dan perkembangannya dipantau, sehingga cocok untuk anak yang butuh didampingi. Bisa dilakukan langsung di lokasi (offline) atau lewat layar (online).'],'Belajar Mandiri':['#0d9488','#fff','Belajar sendiri di rumah memakai gawai, kapan saja. Anak memilih sendiri materi, latihan soal, atau try out sesuai kebutuhannya, sehingga cocok untuk anak yang sudah punya kebiasaan belajar dan ingin mengatur waktunya sendiri.']};
+document.querySelectorAll('.grp .t').forEach(function(s){
+s.tabIndex=0;s.setAttribute('role','button');
+function go(){
+var n=s.textContent.trim(),g=GD[n],by={Offline:[],Online:[]};
+if(!g)return;
+document.querySelectorAll('.card').forEach(function(c){var band=c.closest('.band'),idx=Array.prototype.indexOf.call(band.children,c.parentNode);
+if((idx<=4?'Belajar Bareng Pendamping':'Belajar Mandiri')!==n)return;
+var m=idx<=2?'Offline':'Online',nm=c.textContent.trim();if(by[m].indexOf(nm)<0)by[m].push(nm);});
+last=s;sh.style.setProperty('--tc',g[0]);sh.style.setProperty('--tt',g[1]);
+document.getElementById('mb').textContent='Kelompok produk';
+document.getElementById('mt').textContent=n;
+document.getElementById('md').textContent=g[2];
+var h='';['Offline','Online'].forEach(function(m){if(by[m].length)h+='<span>'+m+': '+by[m].join(', ')+'</span>';});
+document.getElementById('mg').innerHTML=h;
+document.getElementById('ex').hidden=true;sh.scrollTop=0;
+ov.hidden=false;document.getElementById('mx').focus();
+}
+s.addEventListener('click',go);
+s.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}});
+});
+document.getElementById('bacb').onclick=function(){var c=document.querySelector('.card.rec');if(c)c.click();};
+var FQ=[['Apa bedanya Belajar Bareng Pendamping dan Belajar Mandiri?','Belajar Bareng Pendamping dipandu langsung oleh guru tersertifikasi, dan perkembangan anak dipantau. Belajar Mandiri dilakukan sendiri di rumah lewat gawai, kapan saja, cocok untuk anak yang sudah punya kebiasaan belajar.'],['Apa arti tingkat Bronze sampai Diamond?','Tingkat menunjukkan kisaran biaya: Bronze paling terjangkau, Silver ekonomis, Gold menengah, Platinum menengah atas, dan Diamond premium.'],['Produk mana yang direkomendasikan?','Brain Academy Center, yaitu bimbingan belajar tatap muka di cabang dengan pendampingan langsung dari pengajar. Tekan Tampilkan pada baris Brain Academy Center untuk melihat detailnya.'],['Apakah ada yang bisa dicoba gratis?','Ada. Airis dan Roboguru bisa dicoba gratis, Try Out punya Mini TO gratis, Buku Kitab punya file PDF gratis, dan Ruang Belajar punya Drill Soal gratis.'],['Apa bedanya Offline dan Online?','Offline berarti belajar tatap muka, misalnya di cabang atau di rumah. Online berarti belajar lewat layar dari mana saja.'],['Bagaimana cara konsultasi gratis untuk orang tua?','Tekan Tampilkan pada baris Konsultasi Gratis untuk Orang Tua untuk membuka halaman informasinya. Anda juga bisa menghubungi konsultan lewat tombol di bawah layar.']];
+document.getElementById('faqb').onclick=function(){
+last=this;sh.style.setProperty('--tc','#2563eb');sh.style.setProperty('--tt','#fff');
+document.getElementById('mb').textContent='FAQ';
+document.getElementById('mt').textContent='Pertanyaan Sering Diajukan';
+document.getElementById('md').textContent='';
+var h='<div class="faq">';FQ.forEach(function(q){h+='<details><summary>'+q[0]+'</summary><p>'+q[1]+'</p></details>';});
+document.getElementById('mg').innerHTML=h+'</div>';
+document.getElementById('ex').hidden=true;sh.scrollTop=0;
+ov.hidden=false;document.getElementById('mx').focus();
+};
+})();
+
+});
+run(function(document){
+(function(){
+var sc=document.getElementById('sc'),st=document.getElementById('st'),pc=document.getElementById('zp'),z=1,MIN=.3,MAX=3,manual=false;
+var BF=1;function fit(){return Math.max(MIN,Math.min(BF>1?1.5:1,sc.clientWidth/1000*BF));}
+function set(n,fx,fy){
+n=Math.max(MIN,Math.min(MAX,n));
+if(fx==null){fx=sc.clientWidth/2;fy=sc.clientHeight/2;}
+var r=n/z,l=(sc.scrollLeft+fx)*r-fx,t=(sc.scrollTop+fy)*r-fy;
+st.style.zoom=n;z=n;
+sc.scrollLeft=l;sc.scrollTop=t;
+pc.textContent=Math.round(n*100)+'%';
+}
+set(fit(),0,0);
+document.getElementById('zi').onclick=function(){manual=true;set(z*1.25);};
+document.getElementById('zo').onclick=function(){manual=true;set(z/1.25);};
+pc.onclick=function(){manual=false;set(fit(),0,0);sc.scrollLeft=0;};
+sc.addEventListener('wheel',function(e){if(!e.ctrlKey)return;e.preventDefault();manual=true;var b=sc.getBoundingClientRect();set(z*Math.exp(-e.deltaY*.01),e.clientX-b.left,e.clientY-b.top);},{passive:false});
+var d0=0,z0=1;
+function dist(t){var a=t[0],b=t[1];return Math.hypot(a.clientX-b.clientX,a.clientY-b.clientY);}
+sc.addEventListener('touchstart',function(e){if(e.touches.length===2){d0=dist(e.touches);z0=z;}},{passive:true});
+sc.addEventListener('touchmove',function(e){
+if(e.touches.length===2&&d0){e.preventDefault();manual=true;
+var b=sc.getBoundingClientRect(),a=e.touches[0],c=e.touches[1];
+set(z0*dist(e.touches)/d0,(a.clientX+c.clientX)/2-b.left,(a.clientY+c.clientY)/2-b.top);}
+},{passive:false});
+sc.addEventListener('touchend',function(e){if(e.touches.length<2)d0=0;},{passive:true});
+['gesturestart','gesturechange'].forEach(function(n){document.addEventListener(n,function(e){e.preventDefault();});});
+if(window.ResizeObserver){var lw=0;new ResizeObserver(function(){var w=sc.clientWidth;if(w&&w!==lw){lw=w;if(!manual)set(fit(),0,0)}}).observe(sc)}
+document.body.__pv={big:function(on){BF=on?1.6:1;manual=false;set(fit(),0,0);sc.scrollLeft=0;sc.scrollTop=0}};
+})();
+
+});
+run(function(document){
+
+(function(){
+var KG='https://rudiruangguru.github.io/kelasgratis/';
+/* Tautan Coba Kelas Gratis. Kunci 'coba|Nama produk' = khusus produk itu, contoh 'coba|Airis'. */
+var LINKS={coba:KG};
+var NAMA={video:'Video',foto:'Foto',fasilitas:'Fasilitas',harga:'Harga',testimoni:'Testimoni',coba:'Coba Kelas Gratis'};
+var MAPID={'Try Out':'ru','Airis':'airis','Roboguru':'robo','Buku Kitab':'kitab','Ruang Belajar':'rb','Brain Academy Online':'bao','Match Champs':'mc','Kalananti':'kal','Brain Academy Center':'bac','Privat Offline':'privat','Privat Online':'privat'};
+var CHIPTXT={ru:'Ruanguji/Try Out',robo:'Roboguru Plus',kitab:'Buku Kitab TKA',airis:'Airis',rb:'Ruang Belajar',bao:'Brain Academy Online',mc:'Match Champs',kal:'Kalananti',bac:'Brain Academy Center',privat:'Privat (rumah/cabang)'};
+var ts=document.getElementById('ts'),tt=0,sl=document.getElementById('sl'),down=false,moved=false,sx=0,s0=0;
+function toast(t,col){ts.textContent=t;ts.style.background=col?col[0]:'';ts.style.color=col?col[1]:'';ts.hidden=false;clearTimeout(tt);tt=setTimeout(function(){ts.hidden=true},2800);}
+var TCT={ru:['#CD7F32','#1a0d03'],airis:['#CD7F32','#1a0d03'],robo:['#CD7F32','#1a0d03'],kitab:['#C0C0C0','#0f172a'],rb:['#C0C0C0','#0f172a'],bao:['#FFD700','#2e2200'],mc:['#FFD700','#2e2200'],kal:['#FFD700','#2e2200'],bac:['#B8C6DB','#0f172a'],privat:['#5B5DC7','#fff']};
+function hostChip(txt){var cs=HD.querySelectorAll('nav.pvb .chip');for(var i=0;i<cs.length;i++)if(cs[i].textContent.trim()===txt)return cs[i];return null}
+function reveal(id){var c=hostChip(CHIPTXT[id]);if(!c)return false;c.click();return true}
+function closeSheet(){document.getElementById('mx').click()}
+function openPanel(id,label,prod){
+ if(!reveal(id)){toast(label+' '+prod+' belum tersedia');return}
+ closeSheet();
+ setTimeout(function(){
+  var p=HD.getElementById('mx-'+id);if(!p)return;
+  var bs=[].slice.call(p.querySelectorAll('.mxb button')),b=null;
+  bs.forEach(function(x){if(x.textContent.trim()===label)b=x});
+  if(b){if(b.getAttribute('aria-expanded')!=='true')b.click()}
+  else toast(label+' tidak ada untuk '+prod+', pilih menu yang tersedia');
+  setTimeout(function(){p.scrollIntoView({behavior:'smooth',block:'start'})},120);
+ },60);
+}
+function go(k,prod){
+ var id=MAPID[prod];
+ if(k==='coba'){window.open(LINKS['coba|'+prod]||LINKS.coba,'_blank','noopener');return}
+ if(k==='video'||k==='foto'||k==='testimoni'){openPanel(id,NAMA[k],prod);return}
+ if(k==='harga'){
+  if(!id||!reveal(id)){toast('Harga '+prod+' belum tersedia');return}
+  closeSheet();
+  var card=HD.getElementById(id),pr=card&&card.querySelector('.p');
+  if(pr)toast(prod+': '+pr.textContent.trim(),TCT[id]);
+  return;
+ }
+ if(k==='fasilitas'){
+  if(id!=='bac'){toast('Fasilitas '+prod+' belum tersedia');return}
+  closeSheet();
+  var a=HD.querySelector('.bar a[href="#top"]');if(a)a.click();
+  setTimeout(function(){var b=HD.querySelector('.tb[data-t="p-fasilitas"]');if(!b)return;if(b.getAttribute('aria-expanded')!=='true')b.click();b.scrollIntoView({behavior:'smooth',block:'center'})},120);
+ }
+}
+document.querySelectorAll('#ex [data-k]').forEach(function(b){
+ b.addEventListener('click',function(){
+  if(moved){moved=false;return;}
+  go(b.getAttribute('data-k'),window.__prod||'');
+ });
+});
+sl.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse')return;down=true;moved=false;sx=e.clientX;s0=sl.scrollLeft;});
+window.addEventListener('pointermove',function(e){if(!down)return;var dx=e.clientX-sx;if(Math.abs(dx)>4){moved=true;sl.style.scrollSnapType='none';sl.scrollLeft=s0-dx;}});
+window.addEventListener('pointerup',function(){if(!down)return;down=false;sl.style.scrollSnapType='';});
+})();
+
+});
+run(function(document){
+(function(){
+/* Pengaturan kontak. Isi IG_USER dengan username Instagram konsultan (tanpa @). */
+var WA_NO='6285177454988',IG_USER='rudi_ruangguruonline';
+var MAPS='https://www.google.com/maps/search/?api=1&query=Bimbel%20Brain%20Academy%20Ruangguru%20Purworejo%20Tentara%20Pelajar&query_place_id=ChIJDUNqEOjrei4RkVaxlSZVAMw';
+var H='Halo Kak Rudi, ';
+var Q=[['Penjelasan paket',H+'saya ingin minta penjelasan tentang paket belajar Ruangguru.'],['Harga terbaru',H+'saya ingin tahu harga terbaru paket belajar Ruangguru.'],['Potongan harga / promo',H+'saya ingin tahu potongan harga atau promo yang sedang berlaku.'],['Coba kelas gratis',H+'saya ingin mendaftar Coba Kelas Gratis.'],['Jadwal kelas',H+'saya ingin tahu jadwal kelas yang tersedia.'],['Cara mendaftar',H+'saya ingin tahu cara mendaftar bimbel di Ruangguru.'],['Jam buka kantor cabang',H+'saya ingin tahu jam buka kantor cabang Ruangguru.'],['Tanya hal lain',H+'saya ingin bertanya.']];
+var QW=Q.slice(0,7).concat([['Lokasi kantor (Google Maps)','maps']],Q.slice(7));
+var TT={wa:'Mau tanya apa?',ig:'Tanya lewat Instagram',gm:'Jadwalkan simulasi kelas online',hm:'Minta dikunjungi ke rumah'};
+var COL={wa:'#25d366',ig:'#e1306c',gm:'#00897b',hm:'#d97706'};
+var FM={
+gm:{i:'Halo Kak Rudi, saya ingin menjadwalkan simulasi kelas online (Google Meet).',f:[['Nama siswa','text'],['Jenjang','sel'],['Mata pelajaran','text'],['Hari / tanggal','date'],['Jam','time']]},
+hm:{i:'Halo Kak Rudi, saya ingin dikunjungi ke rumah untuk konsultasi program belajar Ruangguru.',f:[['Nama orang tua','text'],['Nama siswa','text'],['Jenjang','sel'],['Alamat lengkap / kecamatan','text'],['Hari / tanggal','date'],['Jam','time']]}
+};
+var t=document.getElementById('ts'),tm=0,dock=document.getElementById('dock'),cur='';
+function info(s){t.textContent=s;t.hidden=false;clearTimeout(tm);tm=setTimeout(function(){t.hidden=true;},2800);}
+var wm=document.createElement('div');wm.className='wm';wm.hidden=true;document.body.appendChild(wm);
+function wa(m){window.open('https://wa.me/'+WA_NO+'?text='+encodeURIComponent(m),'_blank','noopener');}
+function close(){wm.hidden=true;cur='';}
+function pick(k,m){
+close();
+if(k==='wa'){if(m[1]==='maps'){window.open(MAPS,'_blank','noopener');}else{wa(m[1]);}return;}
+if(!IG_USER){info('Username Instagram belum dipasang');return;}
+try{navigator.clipboard.writeText(m[1]);info('Pesan disalin, tempel di DM Instagram');}catch(e){}
+window.open('https://ig.me/m/'+IG_USER,'_blank','noopener');
+}
+function list(k,items){
+wm.className='wm';
+items.forEach(function(m,i){var b=document.createElement('button');b.type='button';b.innerHTML='<span>'+(i+1)+'</span>'+m[0];b.onclick=function(){pick(k,m);};wm.appendChild(b);});
+}
+function form(k){
+var f=FM[k],h='';
+wm.className='wm frm';
+f.f.forEach(function(x){h+='<label>'+x[0]+(x[1]==='sel'?'<select><option>SD</option><option>SMP</option><option>SMA</option></select>':'<input type="'+x[1]+'" autocomplete="off">')+'</label>';});
+wm.insertAdjacentHTML('beforeend',h+'<button type="button" class="go">Kirim lewat WhatsApp</button>');
+wm.querySelector('.go').onclick=function(){
+var el=wm.querySelectorAll('input,select'),L=[f.i,''];
+if(!el[0].value.trim()){info('Isi '+f.f[0][0].toLowerCase()+' dulu');return;}
+f.f.forEach(function(x,i){var v=el[i].value.trim();if(x[1]==='date'&&v){v=new Date(v+'T00:00').toLocaleDateString('id-ID',{weekday:'long',day:'numeric',month:'long',year:'numeric'});}L.push(x[0]+': '+(v||'-'));});
+close();wa(L.join('\n'));
+};
+}
+function show(k){
+if(cur===k&&!wm.hidden){close();return;}
+cur=k;wm.style.setProperty('--c',COL[k]);wm.innerHTML='<h3>'+TT[k]+'</h3>';
+if(FM[k]){form(k);}else{list(k,k==='wa'?QW:Q);}
+wm.hidden=false;
+}
+dock.querySelectorAll('[data-a]').forEach(function(b){b.addEventListener('click',function(){show(b.getAttribute('data-a'));});});
+document.getElementById('dx').addEventListener('click',function(){close();dock.classList.add('min');});
+document.getElementById('dck').addEventListener('click',function(){dock.classList.remove('min');});
+document.addEventListener('click',function(e){if(!wm.hidden&&!wm.contains(e.target)&&!dock.contains(e.target)){close();}});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){close();}});
+})();
+
+});
+
+/* skala tinggi kotak peta mengikuti zoom halaman utama (mode Orang Tua) */
+function syncZoom(){root.style.setProperty('--mz',HD.body.getAttribute('data-size')==='ortu'?'1.35':'1')}
+syncZoom();
+new MutationObserver(syncZoom).observe(HD.body,{attributes:true,attributeFilter:['data-size']});
+
+/* tampilan diperbesar (tab baru) */
+function enterBig(){
+ var a=HD.querySelector('.bar a[href="#produk"]');if(a&&HD.body.getAttribute('data-view')!=='produk')a.click();
+ var ad=HD.getElementById('ad'),x=HD.getElementById('adX');if(ad&&x&&!ad.hidden)x.click();
+ HD.body.classList.add('pvbig');root.classList.add('big');
+ if(root.__pv)root.__pv.big(true);
+ window.scrollTo(0,0);
+}
+function exitBig(){
+ HD.body.classList.remove('pvbig');root.classList.remove('big');
+ if(root.__pv)root.__pv.big(false);
+ try{history.replaceState(null,'',location.href.split('#')[0])}catch(e){}
+ window.scrollTo(0,0);
+}
+sr.getElementById('big').addEventListener('click',function(){
+ var u=location.href.split('#')[0],w=null;
+ if(/^https?:/.test(u)){try{w=window.open(u+'#besar','_blank')}catch(e){}}
+ if(!w)enterBig();
+});
+sr.getElementById('bigx').addEventListener('click',exitBig);
+sr.addEventListener('click',function(e){
+ if(!root.classList.contains('big'))return;
+ var c=e.target.closest&&e.target.closest('.card');
+ if(c)exitBig();
+});
+function hashBig(){
+ var h=location.hash;
+ if(/^#besar/.test(h)){if(!root.classList.contains('big'))enterBig()}
+ else if(root.classList.contains('big'))exitBig();
+}
+window.addEventListener('hashchange',hashBig);
+hashBig();
+})();
+</script>
+<script>
+(function(){
+var body=document.body,tb=document.querySelectorAll('.tzm button');
+function setSize(v){body.setAttribute('data-size',v);tb.forEach(function(k){k.setAttribute('aria-checked',k.getAttribute('data-size')===v?'true':'false')})}
+tb.forEach(function(b){b.addEventListener('click',function(){setSize(b.getAttribute('data-size'))})});
+new MutationObserver(function(){setSize(body.getAttribute('data-mode')==='ortu'?'ortu':'siswa')}).observe(body,{attributes:true,attributeFilter:['data-mode']});
+setSize('siswa');
+window.__mkJK=function(jg,kg,cb){
+ var KL={SD:[1,2,3,4,5,6],SMP:[7,8,9],SMA:[10,11,12]},st={j:'',k:''};
+ function mark(g,val){[].forEach.call(g.querySelectorAll('button'),function(b){b.setAttribute('aria-checked',b.getAttribute('data-val')===String(val)?'true':'false')})}
+ function renderK(){
+  var h='';
+  if(st.j==='Gap Year'){st.k='Lulus SMA/SMK';h='<button type="button" role="radio" aria-checked="true" class="kw" data-val="Lulus SMA/SMK" disabled>Lulus SMA/SMK</button>'}
+  else if(KL[st.j]){KL[st.j].forEach(function(n){h+='<button type="button" role="radio" aria-checked="false" data-val="'+n+'">'+n+'</button>'})}
+  else h='<p class="kh">Pilih jenjang dulu</p>';
+  kg.innerHTML=h;
+ }
+ jg.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;st.j=b.getAttribute('data-val');st.k='';mark(jg,st.j);renderK();cb(st)});
+ kg.addEventListener('click',function(e){var b=e.target.closest('button');if(!b||b.disabled)return;st.k=b.getAttribute('data-val');mark(kg,st.k);cb(st)});
+ return {get:function(){return st},set:function(j,k){st.j=j;st.k=k||'';mark(jg,j);renderK();if(st.k&&j!=='Gap Year')mark(kg,st.k);cb(st)}};
+};
+
+})();
+</script>
+<script>
+(function(){
+/* Isi alamat Web App Google Apps Script (lihat petunjuk) agar data masuk ke spreadsheet. Kosong = data belum dikirim. */
+var SHEET_URL='';
+var KEY='rg_gate_v1',g=document.getElementById('gate');
+if(!g)return;
+/* pilihan awal tidak disimpan: setiap halaman dimuat ulang, pengisian dimulai dari awal */
+var done=false,skipped=false;
+if(/^#besar/.test(location.hash))return;
+var F=document.getElementById('gateF'),E=document.getElementById('gateE'),B=document.getElementById('gateB'),rb=g.querySelectorAll('.gate-r button'),role='';
+var jk=window.__mkJK(document.getElementById('gJG'),document.getElementById('gKG'),function(){E.hidden=true});
+document.body.style.overflow='hidden';g.hidden=false;
+setTimeout(function(){try{rb[0].focus({preventScroll:true})}catch(e){}},50);
+rb.forEach(function(b){b.addEventListener('click',function(){role=b.getAttribute('data-r');rb.forEach(function(k){k.setAttribute('aria-checked',k===b?'true':'false')});E.hidden=true})});
+/* bisa dilewati dengan tombol X atau Esc (muncul lagi di kunjungan berikutnya); klik di luar kartu diabaikan */
+function skip(){
+ g.hidden=true;document.body.style.overflow='';window.scrollTo(0,0);
+}
+document.getElementById('gateX').addEventListener('click',skip);
+g.addEventListener('keydown',function(e){
+ if(e.key==='Escape'){e.preventDefault();skip();return}
+ if(e.key!=='Tab')return;
+ var f=[].slice.call(F.querySelectorAll('button')).filter(function(x){return !x.disabled});
+ if(!f.length)return;
+ var a=f[0],z=f[f.length-1];
+ if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus()}
+ else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus()}
+});
+F.addEventListener('submit',function(e){
+ e.preventDefault();
+ var st=jk.get();
+ if(!role||!st.j||!st.k){E.hidden=false;return}
+ B.disabled=true;
+ var d={waktu:new Date().toLocaleString('id-ID',{timeZone:'Asia/Jakarta'}),peran:role,jenjang:st.j,kelas:st.k};
+ if(SHEET_URL){
+  try{fetch(SHEET_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(d).toString(),keepalive:true}).catch(function(){})}catch(x){}
+ }
+ /* tutup pop-up lebih dulu, lalu isi pilihan dan buka menu Home */
+ g.hidden=true;document.body.style.overflow='';
+ try{
+  var pb=document.querySelector('.pick button[data-mode="'+(role==='Orang Tua'?'ortu':'siswa')+'"]');if(pb)pb.click();
+  if(window.__homeJK)window.__homeJK.set(st.j,st.j==='Gap Year'?'':st.k);
+ }catch(x){}
+ function toHome(){
+  try{
+   var hb=document.querySelector('.bar a[href="#home"]');if(hb)hb.click();
+   document.body.dataset.view='beranda';
+   document.querySelectorAll('.bar a').forEach(function(k){k.setAttribute('aria-current',k===hb?'true':'false')});
+   document.documentElement.style.scrollBehavior='auto';
+   window.scrollTo(0,0);document.documentElement.scrollTop=0;document.body.scrollTop=0;
+   document.documentElement.style.scrollBehavior='';
+  }catch(x){}
+ }
+ toHome();
+ if(window.requestAnimationFrame)requestAnimationFrame(toHome);
+ setTimeout(toHome,150);
+ setTimeout(function(){if(window.__showRec)window.__showRec(role,st.j,st.k)},250);
+});
+})();
+</script>
+<script>
+(function(){
+var rec=document.getElementById('rec');if(!rec)return;
+var C={
+bac:['Brain Academy Center','off','Mulai 42rb/sesi'],
+bao:['Brain Academy Online','on','Mulai 161rb/bulan'],
+kal:['Kalananti','on','Mulai 340rb/bulan'],
+rb:['Ruang Belajar','mad','Mulai 30rb/bulan'],
+ru:['Ruanguji/Try Out','mad','Mulai 16.500/try out'],
+kitab:['Buku Kitab TKA','mad','Mulai 120rb/buku'],
+privat:['Privat (rumah/cabang)','off','Mulai 195rb/sesi']
+};
+function pick(j,k){
+ var n=parseInt(k,10);
+ if(j==='SD'){
+  if(n===6)return [['bac','Belajar tatap muka bareng Master Teacher untuk persiapan TKA SD dan masuk SMP.'],['ru','Try out TKA SD untuk mengukur kesiapan sebelum ujian.'],['kitab','Buku latihan dan rangkuman TKA lengkap dengan pembahasan.']];
+  return [['bac','Belajar tatap muka bareng Master Teacher, cocok untuk membangun dasar belajar.'],['rb','Video materi dan bank soal, bisa belajar mandiri di rumah dengan biaya ringan.'],['kal','Kursus coding dan kreativitas, seru untuk anak yang suka bikin game dan animasi.']];
+ }
+ if(j==='SMP'){
+  if(n===9)return [['bac','Belajar tatap muka bareng Master Teacher untuk persiapan TKA SMP dan masuk SMA.'],['ru','Try out TKA SMP untuk mengukur kesiapan sebelum ujian.'],['kitab','Buku latihan dan rangkuman TKA lengkap dengan pembahasan.']];
+  return [['bac','Belajar tatap muka bareng Master Teacher, materi sesuai kurikulum sekolah.'],['bao','Live teaching dari rumah, ada Klinik PR dan try out rutin.'],['rb','Video materi dan bank soal untuk belajar mandiri kapan saja.']];
+ }
+ if(j==='SMA'){
+  if(n===12)return [['bac','Belajar tatap muka bareng Master Teacher untuk persiapan ujian dan seleksi kampus.'],['ru','Try out persiapan UTBK/SNBT yang mirip soal asli.'],['bao','Live teaching dari rumah dengan Klinik PR dan konseling.']];
+  return [['bac','Belajar tatap muka bareng Master Teacher, fondasi kuat sebelum kelas 12.'],['bao','Live teaching dari rumah, ada Klinik PR dan try out rutin.'],['rb','Video materi dan bank soal untuk belajar mandiri kapan saja.']];
+ }
+ return [['ru','Try out persiapan UTBK/SNBT untuk melihat kesiapan seleksi kampus.'],['bao','Live teaching dengan Star Teacher untuk mempersiapkan seleksi masuk kampus.'],['privat','Les 1-on-1 dengan jadwal fleksibel sesuai target kampus.']];
+}
+var prevOv='';
+function close(){rec.hidden=true;document.body.style.overflow=prevOv}
+window.__showRec=function(role,j,k){
+ var ortu=role==='Orang Tua',lv=(j==='Gap Year')?'Gap Year':(j+' kelas '+k);
+ document.getElementById('recT').textContent=ortu?'Produk yang cocok untuk anak Anda':'Produk yang cocok untukmu';
+ document.getElementById('recS').textContent='Pilihan awal untuk '+lv+(ortu?'. Anda bisa menutupnya kalau belum perlu.':'. Kamu bisa menutupnya kalau belum perlu.');
+ var h='';pick(j,k).forEach(function(x){var c=C[x[0]];h+='<div class="rec-i '+c[1]+'"><p class="rec-n">'+c[0]+'</p><p class="rec-d">'+x[1]+'</p><p class="rec-p">'+c[2]+'</p></div>'});
+ document.getElementById('recL').innerHTML=h;
+ prevOv=document.body.style.overflow;document.body.style.overflow='hidden';
+ rec.hidden=false;rec.querySelector('.rec-c').scrollTop=0;
+ try{document.getElementById('recX').focus({preventScroll:true})}catch(e){}
+};
+document.getElementById('recX').addEventListener('click',close);
+document.getElementById('recG').addEventListener('click',function(){close();var a=document.querySelector('.bar a[href="#produk"]');if(a)a.click()});
+rec.addEventListener('keydown',function(e){if(e.key==='Escape'){e.preventDefault();close()}});
 })();
 </script>
 </body>
