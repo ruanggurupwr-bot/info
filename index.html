@@ -429,6 +429,7 @@ a.r.mad,.chip.mad,.rkb.mad,.fq2.mad>summary{box-shadow:inset 0 0 0 2px #dc2626,0
 .pk2 h3{margin:0 0 6px;font-size:clamp(15px,3.6vw,18px);font-weight:700}
 .pk2 .pl2{font-size:clamp(12.5px,3.2vw,14.5px);font-weight:600;color:#2563eb;line-height:1.5}
 .pk2 p{margin:8px 0 0;font-size:clamp(12px,3vw,14px);line-height:1.65;color:var(--tx2)}
+.pk2 p b{color:var(--tx);font-weight:600}
 .kb2{display:flex;flex-direction:column;gap:10px;max-width:380px;margin:14px auto 0}
 .kb2 button{display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:wrap;width:100%;padding:13px 20px;border:0;border-radius:99px;background:linear-gradient(135deg,#2563eb,#1e3a8a);color:#fff;font:700 clamp(13px,3.4vw,15px) Poppins,Arial,sans-serif;cursor:pointer;box-shadow:0 4px 12px rgba(37,99,235,.4)}
 .kb2 button:active{transform:scale(.97)}
@@ -476,11 +477,16 @@ a.cta{box-sizing:border-box;text-align:center;text-decoration:none}
 .tb[aria-expanded="true"]{background:#0ea5e9;color:#fff}
 .tb{background:#B8C6DB;color:#0f172a}
 .tb[aria-expanded="true"]{background:#8da2c2;color:#0f172a}
-.mxp .mxb button{background:var(--tc,#2eb5c0);color:var(--tt,#06222a);border-color:transparent}
+.mxp .mxb button{background:var(--tc,#2eb5c0);background-image:var(--tg,none);color:var(--tt,#06222a);border-color:transparent}
 .mxp .mxb button[aria-expanded="true"]{outline:2px solid var(--tx);outline-offset:2px}
-.mxp .mxg2,.mxp .mxg2.on{background:var(--tc,#2eb5c0);color:var(--tt,#06222a)}
+.mxp .mxg2,.mxp .mxg2.on{background:var(--tc,#2eb5c0);background-image:var(--tg,none);color:var(--tt,#06222a)}
 .mxp .mxj button{border-color:var(--tc,#d4ccbc)}
-.mxp .mxj button[aria-pressed="true"],.mxp .mxj.bj button[aria-pressed="true"]{background:var(--tc,#dc2626);border-color:var(--tc,#dc2626);color:var(--tt,#fff)}
+.mxp .mxj button[aria-pressed="true"],.mxp .mxj.bj button[aria-pressed="true"]{background:var(--tc,#dc2626);background-image:var(--tg,none);border-color:var(--tc,#dc2626);color:var(--tt,#fff)}
+.mxp .cbb{border-color:var(--tc,#cdbfa3)}
+.mxp .cbb[aria-pressed="true"]{background:var(--tc,#2eb5c0);background-image:var(--tg,none);border-color:var(--tc,#2eb5c0);color:var(--tt,#06222a)}
+.mxp .fas-nav button{background:var(--tc,#fff);background-image:var(--tg,none);color:var(--tt,#2d2d2d);border-color:transparent;box-shadow:0 3px 0 #374b55}
+.mxp .fas-nav button:active{transform:translateY(2px);box-shadow:0 1px 0 #374b55}
+.mxp .fas-tile[aria-pressed="true"]{outline-color:var(--tc,#1d4f91)}
 .pn .bx>summary{background:#fff;border:1px solid #d4ccbc}
 .bf .bfi{margin:14px 0 8px;font-size:10.5px;line-height:1.5;text-align:center;color:var(--tx2)}
 .bf .bfg{display:grid;grid-template-columns:1fr 1fr;gap:8px}
@@ -598,6 +604,31 @@ a.r.off .d{color:#0e4a55;opacity:1}
 .mxq1 .tmc{margin:0;border:0;padding:0}
 .mxq1 span{display:block;text-align:center;font-size:10.5px;color:#5e5a52}
 .mxv.mxq .mxd i{background:#374b55}
+.mxq1.fas{align-self:start}
+.fas-t{margin:0 0 3px;font-size:10.5px;font-weight:700;color:#1d4f91}
+.fas-h{margin:0 0 8px;font-size:12.5px;font-weight:700;color:#1a1a1a}
+.fas-g{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.fas-tile{display:block;width:100%;font:inherit;color:inherit;border:1px solid #e2dccf;border-radius:12px;padding:10px 8px 12px;text-align:center;background:#fff;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.fas-tile span{display:block}
+.fas-tile[aria-pressed="true"]{outline:2px solid #1d4f91;outline-offset:1px;background:#f3f7fc}
+.fas-tile:focus-visible{outline:2px solid #2d2d2d;outline-offset:2px}
+.fas-tile .fas-logo{height:64px;margin:0 auto 8px;display:flex;align-items:center;justify-content:center}
+.fas-logo img{max-height:100%;max-width:100%;object-fit:contain}
+.fas-tile .fas-logo.none{border:1.5px dashed #c9c1b0;border-radius:10px;color:#8a8478;font-size:10.5px;font-weight:600}
+.fas-n{margin:0 0 2px;font-size:12.5px;font-weight:700;color:#1a1a1a}
+.fas-b{margin-top:2px}
+.fas-a{font-size:11px;font-weight:700;color:#1d4f91}
+.fas-d{font-size:11px;line-height:1.5;color:#2d2d2d}
+.fas-hint{margin:10px 0 0;text-align:center;font-size:10.5px;color:#5e5a52}
+.fas-s{margin:0 0 6px;font-size:11px;font-weight:600;color:#5e5a52}
+.fas-l{margin:0;padding-left:20px;font-size:11px;line-height:1.55;color:#2d2d2d}
+.fas-l li{margin:0 0 5px;padding-left:2px}
+.fas-l li::marker{font-weight:600;color:#5e5a52}
+.fas-l a{color:#1d4f91;text-decoration:underline;text-underline-offset:2px;word-break:break-all}
+.fas-nav{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:10px 4px 0}
+.fas-nav button{font:inherit;font-size:11px;font-weight:600;padding:8px 14px;border:1px solid #d4ccbc;border-radius:999px;background:#fff;color:#2d2d2d;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.fas-nav button:focus-visible{outline:2px solid #2d2d2d;outline-offset:2px}
+.fas-c{font-size:10.5px;font-weight:600;color:var(--tx2)}
 @media (prefers-reduced-motion:reduce){.mxt{transition:none}}
 
 /* warna tombol Benefit disamakan dengan tombol paket belajar (.ub) */
@@ -696,7 +727,7 @@ body.pvbig #produk{display:block!important;position:fixed;inset:0;z-index:60}
 <symbol id="i-ig" viewBox="0 0 24 24"><rect width="24" height="24" rx="6" fill="url(#igg)"/><rect x="5.5" y="5.5" width="13" height="13" rx="4" fill="none" stroke="#fff" stroke-width="1.6"/><circle cx="12" cy="12" r="3.2" fill="none" stroke="#fff" stroke-width="1.6"/><circle cx="16.2" cy="7.8" r="1" fill="#fff"/></symbol></defs></svg>
 <main id="top">
   <header class="rg"><img class="bac" src="media/gambar-001.png" alt="Brain Academy Center" width="300" height="166"><img src="media/gambar-002.png" alt="Ruangguru" width="360" height="201"></header>
-  <div class="pk2 pt" id="pk2t" data-v="produk"><h3>Paket belajar yang banyak dipilih siswa</h3><div class="pl2">Privat, Brain Academy Center, Brain Academy Online, Ruangbelajar, Buku Kitab, Try Out</div><p>Setiap anak punya gaya belajar, kebiasaan, kebutuhan, dan anggaran yang berbeda. Karena itu, Ruangguru menyediakan dua jalur belajar: tatap muka bersama pendamping belajar (guru tersertifikasi) atau platform belajar mandiri di rumah. Silakan pilih yang paling sesuai.</p></div>
+  <div class="pk2 pt" id="pk2t" data-v="produk"><h3>Paket Belajar Favorit Siswa</h3><div class="pl2">Privat offline, Brain Academy Center, Brain Academy Online, Ruangbelajar, Buku Kitab, Try Out</div><div data-for="siswa" hidden><p>Cara belajar tiap anak itu beda. Ada yang suka ditemani guru, ada yang lebih nyaman belajar sendiri di rumah.</p><p>Supaya semua bisa belajar, Ruangguru sediakan dua jalur: <b>tatap muka</b> bareng guru ahli, atau <b>belajar mandiri</b> lewat aplikasi. Kamu bisa pilih sesuai kebutuhan dan budgetmu.</p></div><div data-for="ortu"><p>Setiap keluarga punya pertimbangan berbeda dalam mendukung belajar Ananda.</p><p>Karena itu Ruangguru sediakan dua jalur fleksibel: <b>pendampingan intensif</b> bersama guru tersertifikasi, atau <b>belajar mandiri</b> dari rumah yang lebih hemat dan tetap terpantau.</p><p>Keduanya tetap memberikan materi terbaik yang disesuaikan dengan kebutuhan Ananda, agar belajar lebih efektif dan nyaman untuk keluarga.</p></div></div>
   <section class="beranda" id="beranda" data-v="beranda">
     <div class="pick"><p class="pl" id="pickL">Anda sebagai:</p><div class="sg" role="radiogroup" aria-labelledby="pickL"><button type="button" role="radio" aria-checked="false" data-mode="ortu"><span>Orang Tua</span></button><button type="button" role="radio" aria-checked="true" data-mode="siswa"><span>Siswa</span></button></div></div>
     <figure class="hero"><img src="media/gambar-003.jpg" alt="Poster Brain Academy by Ruangguru: Tingkatkan nilai dan raih sekolah impian, bimbel kombinasi tatap muka dan online" width="800" height="1131"></figure>
@@ -723,7 +754,7 @@ body.pvbig #produk{display:block!important;position:fixed;inset:0;z-index:60}
     <div><p class="lb">Online</p><div class="c"><button type="button" class="chip on" data-t="g-on" aria-controls="g-on" aria-expanded="false">Brain Academy Online</button><button type="button" class="chip on" data-t="g-on" aria-controls="g-on" aria-expanded="false">Match Champs</button><button type="button" class="chip on" data-t="g-on" aria-controls="g-on" aria-expanded="false">Kalananti</button></div></div>
   </div>
   <div class="h1 mm"><span>Platform belajar mandiri di rumah</span></div>
-  <div class="c2"><button type="button" class="chip mad" data-t="g-mad" aria-controls="g-mad" aria-expanded="false">Ruanguji/Try Out</button><button type="button" class="chip mad" data-t="g-mad" aria-controls="g-mad" aria-expanded="false">Roboguru Plus</button><button type="button" class="chip mad" data-t="g-mad" aria-controls="g-mad" aria-expanded="false">Buku Kitab TKA</button><button type="button" class="chip mad" data-t="g-mad" aria-controls="g-mad" aria-expanded="false">Airis</button><button type="button" class="chip mad" data-t="g-mad" aria-controls="g-mad" aria-expanded="false">Ruang Belajar</button></div>
+  <div class="c2"><button type="button" class="chip mad" data-t="g-mad" aria-controls="g-mad" aria-expanded="false">Ruanguji/Try Out</button><button type="button" class="chip mad" data-t="g-mad" aria-controls="g-mad" aria-expanded="false">Roboguru Plus</button><button type="button" class="chip mad" data-t="g-mad" aria-controls="g-mad" aria-expanded="false">Buku Kitab TKA</button><button type="button" class="chip mad" data-t="g-mad" aria-controls="g-mad" aria-expanded="false">Airis</button><button type="button" class="chip mad" data-t="g-mad" aria-controls="g-mad" aria-expanded="false">Ruangbelajar</button></div>
 </nav>
   <p class="vid" data-v="produk">Lihat <a href="https://www.instagram.com/reel/Ddadg51PN7o/?obrf=MTd3emZ0bXJlbng2bw==" target="_blank" rel="noopener">video</a> perbandingan produk offline, online dan mandiri.</p>
   <div class="pk2" id="pk2" data-v="produk"><div class="kb2"><button type="button" id="kgb2" onclick="var a=document.querySelector('.bar a[href=&quot;#gratis&quot;]');if(a)a.click()">Konsultasi Gratis untuk Orang Tua</button>
@@ -748,7 +779,7 @@ body.pvbig #produk{display:block!important;position:fixed;inset:0;z-index:60}
   <a id="robo" class="r s mad" href="#"><p class="n">Roboguru Plus</p><p class="d">Tanya soal 24 jam non-stop, dijawab &lt;5 menit. 20jt+ soal sudah terjawab.</p><p class="p">Mulai 7rb/koin</p></a>
   <a id="kitab" class="r l mad" href="#"><p class="n">Buku Kitab TKA</p><p class="d">Buku latihan &amp; rangkuman terlengkap. 400rb+ soal + pembahasan + terintegrasi barcode kelas online di aplikasi Ruangbelajar.</p><p class="p">Mulai 120rb/buku</p></a>
   <a id="airis" class="r s mad" href="#"><p class="n">Airis</p><p class="d">Asisten belajar AI pribadi. Rangkum materi, bikin soal latihan, jawab PR otomatis 24 jam.</p><p class="p">Mulai 33rb/bulan</p></a>
-  <a id="rb" class="r s mad" href="#"><p class="n">Ruang Belajar</p><p class="d">100rb+ video adaptif &amp; 400rb+ bank soal. Ada fitur ADAPTO satu-satunya di Indonesia.</p><p class="p">Mulai 30rb/bulan</p></a>
+  <a id="rb" class="r s mad" href="#"><p class="n">Ruangbelajar</p><p class="d">100rb+ video adaptif &amp; 400rb+ bank soal. Ada fitur ADAPTO satu-satunya di Indonesia.</p><p class="p">Mulai 30rb/bulan</p></a>
   </section>
   <section class="info" id="gratis" data-v="gratis">
     <div class="h1"><span>Layanan Gratis Kami</span></div>
@@ -766,7 +797,7 @@ body.pvbig #produk{display:block!important;position:fixed;inset:0;z-index:60}
     <div class="rw"><p class="rl"><b>500-an orang</b> telah terbantu layanan gratis ini</p><div class="fw" id="tk" aria-label="Sekolah siswa yang memakai layanan gratis" aria-live="off"></div></div>
   </section>
   <section class="info" id="faq" data-v="faq"><div class="h1"><span>FAQ</span></div>
-    <details class="fq" name="faq-cat"><summary><span>Pertanyaan Umum</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="fqb"><details class="fq2 off" name="fqs-0"><summary><span>Offline</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="qs"><details class="q" name="fq-0-off"><summary><span>Apa saja layanan Offline?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Ada dua: Brain Academy Center dan Privat. Keduanya tatap muka bersama pendamping belajar.</div></details><details class="q" name="fq-0-off"><summary><span>Apa itu Brain Academy Center?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Bimbel tatap muka dengan 130+ cabang. Hybrid online+offline, fasilitas premium, dengan 4+1 sesi per minggu.</div></details><details class="q" name="fq-0-off"><summary><span>Apa itu layanan Privat?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Les 1-on-1 eksklusif. Bebas pilih tutor dan materi, dengan jadwal fleksibel online/offline.</div></details><details class="q" name="fq-0-off"><summary><span>Apa bedanya Brain Academy Center dan Privat?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Brain Academy Center belajar di cabang dengan 4+1 sesi per minggu. Privat adalah les 1-on-1 dengan tutor, materi, dan jadwal yang bisa dipilih sendiri.</div></details><details class="q" name="fq-0-off"><summary><span>Brain Academy Center cocok untuk siapa?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Cocok untuk yang ambisius dengan nilai rapor.</div></details><details class="q" name="fq-0-off"><summary><span>Bagaimana cara mencoba sebelum mendaftar?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Ikut Trial Class gratis dulu. Kalau cocok, lanjut. Peserta Trial Class mendapatkan Kitab TKA*.</div></details></div></details><details class="fq2 on" name="fqs-0"><summary><span>Online</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="qs"><details class="q" name="fq-0-on"><summary><span>Apa saja layanan Online?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Ada tiga: Brain Academy Online, Match Champs, dan Kalananti.</div></details><details class="q" name="fq-0-on"><summary><span>Apa itu Brain Academy Online?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Live teaching 8x per minggu bareng Star Teacher, plus Klinik PR, 23x Tryout, dan Konseling.</div></details><details class="q" name="fq-0-on"><summary><span>Apa itu Match Champs?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Program kompetisi akademik dengan latihan soal HOTS dan pembahasan juara. Maksimal 20 siswa per kelas Elite.</div></details><details class="q" name="fq-0-on"><summary><span>Apa itu Kalananti?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Kursus coding dan kreativitas anak. Cocok untuk anak yang suka belajar membuat game dan animasi.</div></details><details class="q" name="fq-0-on"><summary><span>Untuk usia berapa Match Champs dan Kalananti?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Match Champs untuk anak 5-15 tahun (Matematika &amp; Logika). Kalananti untuk anak 5-18 tahun (Coding &amp; Programming). Keduanya secara online.</div></details><details class="q" name="fq-0-on"><summary><span>Apa bedanya belajar Online dan Offline?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Keduanya tatap muka bersama pendamping belajar. Offline dilakukan langsung di lokasi, Online lewat layar.</div></details></div></details><details class="fq2 mad" name="fqs-0"><summary><span>Belajar Mandiri</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="qs"><details class="q" name="fq-0-mad"><summary><span>Apa saja layanan Belajar mandiri?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Ada lima: Ruang Belajar, Roboguru Plus, Buku Kitab TKA, Airis, dan Ruanguji/Try Out. Semuanya dipakai sendiri menggunakan device.</div></details><details class="q" name="fq-0-mad"><summary><span>Apa itu Ruangbelajar?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">100rb+ video adaptif dan 400rb+ bank soal, dengan fitur ADAPTO (fitur canggih satu-satunya di Indonesia). <a href="https://www.ruangguru.com/blog/adapto" target="_blank" rel="noopener">Lihat video ADAPTO</a></div></details><details class="q" name="fq-0-mad"><summary><span>Apa itu Roboguru Plus?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Layanan tanya soal 24 jam non-stop, dijawab kurang dari 5 menit. Sudah 20jt+ soal terjawab.</div></details><details class="q" name="fq-0-mad"><summary><span>Apa itu Buku Kitab TKA?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Buku latihan dan rangkuman dengan 400rb+ soal dan pembahasan, terintegrasi barcode kelas online di aplikasi Ruangbelajar. Tersedia untuk jenjang SD, SMP, dan SMA.</div></details><details class="q" name="fq-0-mad"><summary><span>Apa itu Airis?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Asisten belajar AI pribadi. Bisa merangkum materi, membuat soal latihan, dan menjawab PR otomatis 24 jam.</div></details><details class="q" name="fq-0-mad"><summary><span>Apa itu Ruanguji/Try Out?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Try out persiapan TKA semua jenjang yang sudah diikuti 10jt+ siswa. Akurasinya 95% mirip UTBK asli, plus rasionalisasi SNBP.</div></details></div></details></div></details>
+    <details class="fq" name="faq-cat"><summary><span>Pertanyaan Umum</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="fqb"><details class="fq2 off" name="fqs-0"><summary><span>Offline</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="qs"><details class="q" name="fq-0-off"><summary><span>Apa saja layanan Offline?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Ada dua: Brain Academy Center dan Privat. Keduanya tatap muka bersama pendamping belajar.</div></details><details class="q" name="fq-0-off"><summary><span>Apa itu Brain Academy Center?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Bimbel tatap muka dengan 130+ cabang. Hybrid online+offline, fasilitas premium, dengan 4+1 sesi per minggu.</div></details><details class="q" name="fq-0-off"><summary><span>Apa itu layanan Privat?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Les 1-on-1 eksklusif. Bebas pilih tutor dan materi, dengan jadwal fleksibel online/offline.</div></details><details class="q" name="fq-0-off"><summary><span>Apa bedanya Brain Academy Center dan Privat?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Brain Academy Center belajar di cabang dengan 4+1 sesi per minggu. Privat adalah les 1-on-1 dengan tutor, materi, dan jadwal yang bisa dipilih sendiri.</div></details><details class="q" name="fq-0-off"><summary><span>Brain Academy Center cocok untuk siapa?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Cocok untuk yang ambisius dengan nilai rapor.</div></details><details class="q" name="fq-0-off"><summary><span>Bagaimana cara mencoba sebelum mendaftar?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Ikut Trial Class gratis dulu. Kalau cocok, lanjut. Peserta Trial Class mendapatkan Kitab TKA*.</div></details></div></details><details class="fq2 on" name="fqs-0"><summary><span>Online</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="qs"><details class="q" name="fq-0-on"><summary><span>Apa saja layanan Online?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Ada tiga: Brain Academy Online, Match Champs, dan Kalananti.</div></details><details class="q" name="fq-0-on"><summary><span>Apa itu Brain Academy Online?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Live teaching 8x per minggu bareng Star Teacher, plus Klinik PR, 23x Tryout, dan Konseling.</div></details><details class="q" name="fq-0-on"><summary><span>Apa itu Match Champs?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Program kompetisi akademik dengan latihan soal HOTS dan pembahasan juara. Maksimal 20 siswa per kelas Elite.</div></details><details class="q" name="fq-0-on"><summary><span>Apa itu Kalananti?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Kursus coding dan kreativitas anak. Cocok untuk anak yang suka belajar membuat game dan animasi.</div></details><details class="q" name="fq-0-on"><summary><span>Untuk usia berapa Match Champs dan Kalananti?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Match Champs untuk anak 5-15 tahun (Matematika &amp; Logika). Kalananti untuk anak 5-18 tahun (Coding &amp; Programming). Keduanya secara online.</div></details><details class="q" name="fq-0-on"><summary><span>Apa bedanya belajar Online dan Offline?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Keduanya tatap muka bersama pendamping belajar. Offline dilakukan langsung di lokasi, Online lewat layar.</div></details></div></details><details class="fq2 mad" name="fqs-0"><summary><span>Belajar Mandiri</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="qs"><details class="q" name="fq-0-mad"><summary><span>Apa saja layanan Belajar mandiri?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Ada lima: Ruangbelajar, Roboguru Plus, Buku Kitab TKA, Airis, dan Ruanguji/Try Out. Semuanya dipakai sendiri menggunakan device.</div></details><details class="q" name="fq-0-mad"><summary><span>Apa itu Ruangbelajar?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">100rb+ video adaptif dan 400rb+ bank soal, dengan fitur ADAPTO (fitur canggih satu-satunya di Indonesia). <a href="https://www.ruangguru.com/blog/adapto" target="_blank" rel="noopener">Lihat video ADAPTO</a></div></details><details class="q" name="fq-0-mad"><summary><span>Apa itu Roboguru Plus?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Layanan tanya soal 24 jam non-stop, dijawab kurang dari 5 menit. Sudah 20jt+ soal terjawab.</div></details><details class="q" name="fq-0-mad"><summary><span>Apa itu Buku Kitab TKA?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Buku latihan dan rangkuman dengan 400rb+ soal dan pembahasan, terintegrasi barcode kelas online di aplikasi Ruangbelajar. Tersedia untuk jenjang SD, SMP, dan SMA.</div></details><details class="q" name="fq-0-mad"><summary><span>Apa itu Airis?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Asisten belajar AI pribadi. Bisa merangkum materi, membuat soal latihan, dan menjawab PR otomatis 24 jam.</div></details><details class="q" name="fq-0-mad"><summary><span>Apa itu Ruanguji/Try Out?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Try out persiapan TKA semua jenjang yang sudah diikuti 10jt+ siswa. Akurasinya 95% mirip UTBK asli, plus rasionalisasi SNBP.</div></details></div></details></div></details>
     <details class="fq" name="faq-cat"><summary><span>Pertanyaan Populer</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="fqb"><details class="fq2 off" name="fqs-1"><summary><span>Offline</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="qs"><details class="q" name="fq-1-off"><summary><span>Mana yang cocok untuk menaikkan nilai rapor?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Brain Academy Center cocok untuk yang ambisius dengan nilai rapor.</div></details><details class="q" name="fq-1-off"><summary><span>Mana yang cocok kalau ingin memilih tutor sendiri?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Privat. Anda bebas memilih tutor dan materi.</div></details><details class="q" name="fq-1-off"><summary><span>Apakah jadwal belajarnya bisa disesuaikan?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Privat punya jadwal fleksibel, online maupun offline. Brain Academy Center berjalan dengan 4+1 sesi per minggu.</div></details><details class="q" name="fq-1-off"><summary><span>Apakah Brain Academy Center hanya tatap muka?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Tidak. Brain Academy Center bersifat hybrid, online dan offline.</div></details><details class="q" name="fq-1-off"><summary><span>Apakah bisa mencoba dulu sebelum masuk kelas?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Bisa. Ikut Trial Class gratis dulu. Kalau cocok, lanjut. Peserta Trial Class mendapatkan Kitab TKA*.</div></details><details class="q" name="fq-1-off"><summary><span>Saya orang tua, bagaimana konsultasi sebelum mendaftar?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Bapak/Ibu bisa memakai layanan gratis Chat / Call, Meet Online, atau Home Visit. Semuanya ada di menu Gratis.</div></details></div></details><details class="fq2 on" name="fqs-1"><summary><span>Online</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="qs"><details class="q" name="fq-1-on"><summary><span>Mana yang cocok untuk belajar rutin bareng guru?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Brain Academy Online, dengan live teaching 8x per minggu bareng Star Teacher.</div></details><details class="q" name="fq-1-on"><summary><span>Apakah ada try out di Brain Academy Online?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Ada. Program ini mencakup 23x Tryout, Klinik PR, dan Konseling.</div></details><details class="q" name="fq-1-on"><summary><span>Mana yang cocok untuk anak yang suka kompetisi?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Match Champs, dengan latihan soal HOTS dan pembahasan juara.</div></details><details class="q" name="fq-1-on"><summary><span>Adakah program untuk anak yang suka coding dan game?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Ada, yaitu Kalananti. Anak belajar membuat game dan animasi.</div></details><details class="q" name="fq-1-on"><summary><span>Adakah program untuk anak usia dini sampai remaja?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Match Champs untuk anak 5-15 tahun dan Kalananti untuk anak 5-18 tahun, keduanya secara online.</div></details><details class="q" name="fq-1-on"><summary><span>Siapa pengajar di Brain Academy Online?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Live teaching dibawakan bareng Star Teacher.</div></details></div></details><details class="fq2 mad" name="fqs-1"><summary><span>Belajar Mandiri</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="qs"><details class="q" name="fq-1-mad"><summary><span>Mana yang cocok untuk persiapan UTBK dan SNBP?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Ruanguji menyediakan try out dengan akurasi 95% mirip UTBK asli, plus rasionalisasi SNBP.</div></details><details class="q" name="fq-1-mad"><summary><span>Apakah ada layanan tanya soal sulit 24 jam?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Ada. Roboguru Plus melayani tanya soal 24 jam + dijawab melalui pembahasan runtut langkah demi langkah lengkap dengan video konsep. <a href="https://roboguru.ruangguru.com/" target="_blank" rel="noopener">Lihat selengkapnya</a></div></details><details class="q" name="fq-1-mad"><summary><span>Bagaimana cara mendapatkan Kitab TKA gratis?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Ikut Trial Class gratis. Peserta Trial Class mendapatkan Kitab TKA*.</div></details><details class="q" name="fq-1-mad"><summary><span>Mana yang cocok untuk belajar lewat video dan latihan soal?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Ruangbelajar, dengan 100rb+ video adaptif dan 400rb+ bank soal.</div></details><details class="q" name="fq-1-mad"><summary><span>Apa itu fitur ADAPTO?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">ADAPTO adalah fitur pembelajaran menggunakan grafis animasi menarik dengan menyesuaikan daya tangkap siswa. <a href="https://www.ruangguru.com/blog/adapto" target="_blank" rel="noopener">Lihat video ADAPTO</a></div></details><details class="q" name="fq-1-mad"><summary><span>Apakah ada asisten belajar berbasis AI?</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a">Ada, yaitu Airis. Soal latihan + menjawab PR otomatis 24 jam. Serta akses konten video dengan flashcard Stellar Energy. <a href="https://www.ruangguru.com/airis" target="_blank" rel="noopener">Lihat selengkapnya</a></div></details></div></details></div></details>
     <details class="fq" name="faq-cat" id="rekDet"><summary><span>Rekomendasi Produk (New AI)</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="fqb"><div class="rk">
       <p class="rki" id="rkIntro">Panduan penggunaan: Fitur ini membantu kamu memilih produk Ruangguru yang sesuai. Isi jawaban dengan jujur dan sesuai kondisi sebenarnya, agar rekomendasi yang diberikan tepat.</p>
@@ -907,7 +938,7 @@ document.querySelectorAll('[data-go]').forEach(function(a){a.addEventListener('c
 </script>
 <script>
 (function(){
-var P={"bac": {"n": "Brain Academy Center", "d": "Bimbel tatap muka 130+ cabang. Hybrid online+offline, fasilitas premium dengan 4+1 sesi/Minggu. Cocok untuk yang ambisius dengan nilai rapor.", "p": "Mulai 42rb/sesi"}, "privat": {"n": "Privat (rumah/cabang)", "d": "Les 1-on-1 eksklusif. Bebas pilih tutor dan materi serta jadwal fleksibel online/offline.", "p": "Mulai 195rb/sesi"}, "bao": {"n": "Brain Academy Online", "d": "Live teaching 8x/minggu bareng Star Teacher. Klinik PR + 23x Tryout + Konseling.", "p": "Mulai 161rb/bulan"}, "mc": {"n": "Match Champs", "d": "Program kompetisi akademik. Latihan soal HOTS + pembahasan juara. Max 20 siswa/kelas Elite.", "p": "Mulai 525rb/bulan"}, "kal": {"n": "Kalananti", "d": "Kursus coding & kreativitas anak. Cocok untuk anak suka belajar bikin game & animasi.", "p": "Mulai 340rb/bulan"}, "rb": {"n": "Ruang Belajar", "d": "100rb+ video adaptif & 400rb+ bank soal. Ada fitur ADAPTO satu-satunya di Indonesia.", "p": "Mulai 30rb/bulan"}, "robo": {"n": "Roboguru Plus", "d": "Tanya soal 24 jam non-stop, dijawab <5 menit. 20jt+ soal sudah terjawab.", "p": "Mulai 7rb/koin"}, "kitab": {"n": "Buku Kitab TKA", "d": "Buku latihan & rangkuman terlengkap. 400rb+ soal + pembahasan + terintegrasi barcode kelas online di aplikasi Ruangbelajar.", "p": "Mulai 120rb/buku"}, "airis": {"n": "Airis", "d": "Asisten belajar AI pribadi. Rangkum materi, bikin soal latihan, jawab PR otomatis 24 jam.", "p": "Mulai 33rb/bulan"}, "ru": {"n": "Ruanguji/Try Out", "d": "10jt+ siswa ikut Tryout persiapan TKA semua jenjang. Akurasi 95% mirip UTBK asli + rasionalisasi SNBP.", "p": "Mulai 16.500/try out"}};
+var P={"bac": {"n": "Brain Academy Center", "d": "Bimbel tatap muka 130+ cabang. Hybrid online+offline, fasilitas premium dengan 4+1 sesi/Minggu. Cocok untuk yang ambisius dengan nilai rapor.", "p": "Mulai 42rb/sesi"}, "privat": {"n": "Privat (rumah/cabang)", "d": "Les 1-on-1 eksklusif. Bebas pilih tutor dan materi serta jadwal fleksibel online/offline.", "p": "Mulai 195rb/sesi"}, "bao": {"n": "Brain Academy Online", "d": "Live teaching 8x/minggu bareng Star Teacher. Klinik PR + 23x Tryout + Konseling.", "p": "Mulai 161rb/bulan"}, "mc": {"n": "Match Champs", "d": "Program kompetisi akademik. Latihan soal HOTS + pembahasan juara. Max 20 siswa/kelas Elite.", "p": "Mulai 525rb/bulan"}, "kal": {"n": "Kalananti", "d": "Kursus coding & kreativitas anak. Cocok untuk anak suka belajar bikin game & animasi.", "p": "Mulai 340rb/bulan"}, "rb": {"n": "Ruangbelajar", "d": "100rb+ video adaptif & 400rb+ bank soal. Ada fitur ADAPTO satu-satunya di Indonesia.", "p": "Mulai 30rb/bulan"}, "robo": {"n": "Roboguru Plus", "d": "Tanya soal 24 jam non-stop, dijawab <5 menit. 20jt+ soal sudah terjawab.", "p": "Mulai 7rb/koin"}, "kitab": {"n": "Buku Kitab TKA", "d": "Buku latihan & rangkuman terlengkap. 400rb+ soal + pembahasan + terintegrasi barcode kelas online di aplikasi Ruangbelajar.", "p": "Mulai 120rb/buku"}, "airis": {"n": "Airis", "d": "Asisten belajar AI pribadi. Rangkum materi, bikin soal latihan, jawab PR otomatis 24 jam.", "p": "Mulai 33rb/bulan"}, "ru": {"n": "Ruanguji/Try Out", "d": "10jt+ siswa ikut Tryout persiapan TKA semua jenjang. Akurasi 95% mirip UTBK asli + rasionalisasi SNBP.", "p": "Mulai 16.500/try out"}};
 var S='Harga menyesuaikan paket dan kondisi belajar per semester, tanya konsultan.';
 var WA='6285177454988';
 var M={
@@ -1230,8 +1261,10 @@ var MEDIA={
  privat_privat:{foto:["media/gambar-130.jpg","media/gambar-131.jpg","media/gambar-132.jpg","media/gambar-133.jpg"],video:[]},
  privat_mapel:{foto:["media/gambar-134.jpg","media/gambar-135.jpg"],video:[]},
  privat_ujian:{foto:["media/gambar-136.jpg","media/gambar-137.jpg"],video:[]},
- bao:{foto:[],video:[]},
- mc:{foto:["media/gambar-138.jpg","media/gambar-139.jpg","media/gambar-140.jpg","media/gambar-141.jpg"],video:[]},
+ bao:{foto:["media/bao-gambar.jpg"],video:[]},
+ bao_fas:{foto:["media/bao-fasilitas.jpg","media/bao-fasilitas-2.jpg"],video:[]},
+ mc:{foto:["media/gambar-141.jpg","media/gambar-138.jpg","media/gambar-140.jpg","media/gambar-139.jpg"],video:[]},
+ mc_online:{foto:["media/mc-online-1.webp","media/mc-online-2.webp","media/mc-online-3.webp"],video:[]},
  kal:{foto:KAL_FOTO,video:[]},
  rb:{foto:[],video:[]},
  robo:{foto:RG,video:[]},
@@ -1239,7 +1272,7 @@ var MEDIA={
  kitab_smp:{foto:KT.smp.foto,video:[]},
  kitab_sma:{foto:KT.sma.foto,video:[]},
  kitab_snbt:{foto:KT.snbt.foto,video:[]},
- airis:{foto:[],video:[]},
+ airis:{foto:["media/airis-fitur.jpg"],video:[]},
  ru:{foto:[],video:[]},
  ru_mega:{foto:[B.mS,B.mP,B.mN],video:[]},
  ru_mega_sd:{foto:[B.mS],video:[]},
@@ -1258,7 +1291,7 @@ var MEDIA={
  ru_psi:{foto:[B.psi],video:[]},
  ru_info:{foto:[B.i1,B.i2,B.i3,B.i4,B.i5],video:[]}
 };
-var NAMA={'Brain Academy Center':'bac','Privat (rumah/cabang)':'privat','Brain Academy Online':'bao','Match Champs':'mc','Kalananti':'kal','Ruang Belajar':'rb','Roboguru Plus':'robo','Buku Kitab TKA':'kitab','Airis':'airis','Ruanguji/Try Out':'ru'};
+var NAMA={'Brain Academy Center':'bac','Privat (rumah/cabang)':'privat','Brain Academy Online':'bao','Match Champs':'mc','Kalananti':'kal','Ruangbelajar':'rb','Roboguru Plus':'robo','Buku Kitab TKA':'kitab','Airis':'airis','Ruanguji/Try Out':'ru'};
 var FOTO_MS=1500,VIDEO_PH_MS=3000,TESTI_MS=6000,COL=['#2eb5c0','#f97316','#374b55'];
 function el(t,c){var e=document.createElement(t);if(c)e.className=c;return e}
 function homePhotos(){var o=[];document.querySelectorAll('.hs-s').forEach(function(e){var v=e.style.getPropertyValue('--i');if(v)o.push(v.trim())});return o}
@@ -1324,7 +1357,7 @@ function baoTesti(j){
   f.appendChild(im);return f;
  });
 }
-/* Testimoni Math Champs, Ruang Belajar & Privat: dari situs resmi Ruangguru. Elemen ke-5: 'kutipan' = kutipan langsung, 'blog'/'video' = merujuk cerita/video, kosong = ringkasan */
+/* Testimoni Math Champs, Ruangbelajar & Privat: dari situs resmi Ruangguru. Elemen ke-5: 'kutipan' = kutipan langsung, 'blog'/'video' = merujuk cerita/video, kosong = ringkasan */
 var SRC_T={
  mc:[
   ['Shaun M. L.','Siswa Level Exploration · Math Champs','Menurut orang tuanya, Shaun jadi lebih paham matematika dan prestasinya naik. Cara mengajarnya menyenangkan, dan kakak pengajarnya sabar menjelaskan materi yang sulit.','https://www.ruangguru.com/olympiad-academy'],
@@ -1419,11 +1452,12 @@ function Viewer(id,kind,name){
   next=function(){show(idx+1)};
   mk();return {el:wrap,start:function(){started=true;show(0);arm(id.indexOf('bao_')===0?9000:TESTI_MS)},stop:function(){started=false;clearInterval(timer);timer=null}};
  }
- var src2=items(id,kind);real=src2.length>0;var kt=id.indexOf('kitab_')===0,rj=id.indexOf('ru_')===0,pv=id.indexOf('privat_')===0||id==='mc';n=real?src2.length:((kt||rj||pv)?1:3);if((kt||id==='rb_adapto'||id==='robo')&&real&&kind==='foto')box.style.aspectRatio='1/1';if((id==='kal'||pv)&&real&&kind==='foto')box.style.aspectRatio=id==='mc'?'3/4':'4/5';if(rj&&kind==='foto')box.style.aspectRatio=id==='ru_info'?'1/1':id==='ru_pend'?'18/25':/^ru_tka_(sma|smp)_info$/.test(id)?'4/5':'4/1';
+ var src2=items(id,kind);real=src2.length>0;var kt=id.indexOf('kitab_')===0,rj=id.indexOf('ru_')===0,pv=id.indexOf('privat_')===0||id==='mc'||id==='mc_online';n=real?src2.length:((kt||rj||pv)?1:3);if((kt||id==='rb_adapto'||id==='robo')&&real&&kind==='foto')box.style.aspectRatio='1/1';if((id==='kal'||pv)&&real&&kind==='foto')box.style.aspectRatio=id==='mc'?'3/4':id==='mc_online'?'16/9':'4/5';if(rj&&kind==='foto')box.style.aspectRatio=id==='ru_info'?'1/1':id==='ru_pend'?'18/25':/^ru_tka_(sma|smp)_info$/.test(id)?'4/5':'4/1';
+ if((id==='bao'||id==='bao_fas')&&real&&kind==='foto')box.style.aspectRatio=id==='bao'?'1229/1280':'1199/1312';
  var trk=el('div','mxt');
  for(var j=0;j<n;j++){
   var sl=el('div','mxs');
-  if(real&&kind==='foto'){sl.style.backgroundImage=bg(src2[j]);sl.setAttribute('role','img');sl.setAttribute('aria-label','Foto '+name+' '+(j+1))}
+  if(real&&kind==='foto'){sl.style.backgroundImage=bg(src2[j]);if(id==='bao_fas')sl.style.backgroundSize='contain';sl.setAttribute('role','img');sl.setAttribute('aria-label','Foto '+name+' '+(j+1))}
   else if(real){var v=document.createElement('video');v.src=src2[j];v.muted=true;v.playsInline=true;v.preload='metadata';v.setAttribute('playsinline','');v.addEventListener('ended',function(){if(auto())next()});sl.appendChild(v)}
   else if(rj){sl.style.background=COL[0];sl.innerHTML=name+'<small>belum ditambahkan</small>'}else if(kt||pv){sl.style.background=COL[0];sl.innerHTML=(kind==='video'?'Video ':'Foto ')+name+'<small>belum ditambahkan</small>'}else{sl.style.background=COL[j%3];sl.innerHTML=name+'<small>'+(kind==='video'?'Contoh video ':'Contoh foto ')+(j+1)+' dari '+n+'</small>'}
   trk.appendChild(sl);slides.push(sl);
@@ -1443,12 +1477,188 @@ function Viewer(id,kind,name){
   start:function(){started=true;show(0);if(real&&kind==='video')return;arm(pv&&real?5000:rj&&real?(id==='ru_info'||id==='ru_pend'||/^ru_tka_(sma|smp)_info$/.test(id)?5000:3500):(kt||id==='rb_adapto'||id==='robo'||id==='kal')&&real?6000:(kind==='foto'||real?FOTO_MS:VIDEO_PH_MS))},
   stop:function(){started=false;clearInterval(timer);timer=null;slides.forEach(function(s){var v=s.firstChild;if(v&&v.pause)v.pause()})}};
 }
+var FAS={
+ airis:{name:'Airis',slides:[{items:[
+  '70.000 Stellar Energy (lebih dari 2x lipat Paket Armstrong)',
+  'Pilih Karakter AI "Aurora & Orion" sebagai tutor / teman curhat',
+  '5x Lebih cepat & akurat dengan Mode Chat Stellar',
+  'Kecepatan, akurasi, dan struktur respons AI yang lebih baik',
+  'Bantu PR, Latihan Soal, dan fitur belajar lainnya',
+  'Konten video, kuis, dan flash card',
+  'Ngobrol bareng AI via chat, foto, dan unggah file',
+  'Akses AIRIS via http://ai.ruangguru.com',
+  'Masa aktif 3 Bulan']}]},
+ robo:{name:'Roboguru',slides:[{items:[
+  '*Stellar Energy s.d 6.250* untuk chat dengan AI',
+  '*Roboguru Forum: 30 Kuota (3.000 Golds)* - Bisa tanya soal dan garansi dijawab terverifikasi oleh Master Teacher dalam 24 jam',
+  '*TANPA BATAS!* Lihat jawaban terverifikasi di Roboguru oleh Master Teacher',
+  '*TANPA BATAS!* Lihat video pembahasan Roboguru sampai paham',
+  '*TANPA IKLAN!* Bebas akses Roboguru sepuasnya',
+  '*Siap 24 Jam* untuk jawab soal dengan tepat dan cepat',
+  '*Master Teacher terbaik* dan berpengalaman di bidangnya',
+  '*Akses lebih dari 15 mata pelajaran*',
+  '*Masa aktif 9 Bulan*']}]},
+ kitab:{name:'Buku Kitab TKA',slides:[
+  {head:'KITAB TKA SD EDISI 2027 [PRE ORDER]',sub:'Paket sudah termasuk:',ul:true,items:[
+   '1 Kitab TKA SD Ruangguru',
+   'Start pengiriman kitab estimasi minggu ke-3 Oktober 2026',
+   'Bentuk soal pilihan ganda biasa dan pilihan ganda kompleks',
+   'Materi terlengkap sesuai kisi-kisi resmi (PERKABAN)',
+   'Soal baru berbasis konsep, penalaran, dan model TKA',
+   'Latihan soal prediksi TKA SD 2027',
+   'Terdapat informasi dan tips seputar TKA yang dibutuhkan siswa',
+   'Bonus materi dan latihan soal IPA Fase B dan C BSKAP Kemendikdasmen 2025',
+   'Pembahasan mendalam + analisis pilihan salah',
+   '*BONUS EKSKLUSIF!* 4x TO regular, drill soal, 3 Year Canvas Plan, Study Planner, spesial diskon produk Ruangguru dan banyak bonus lainnya!']},
+  {head:'KITAB TKA SMP EDISI 2027',sub:'Paket sudah termasuk:',ul:true,items:[
+   '1 Kitab TKA SMP Ruangguru',
+   'Start pengiriman kitab estimasi 30 September 2026',
+   'Bentuk soal pilihan ganda biasa dan pilihan ganda kompleks',
+   'Materi terlengkap sesuai kisi-kisi resmi (PERKABAN)',
+   'Soal baru berbasis konsep, penalaran, dan model TKA',
+   'Latihan soal prediksi TKA SMP 2027',
+   'Terdapat informasi dan tips seputar TKA yang dibutuhkan siswa',
+   'Bonus materi dan latihan soal IPA + B. Inggris Fase D dan E BSKAP Kemendikdasmen 2025',
+   'Pembahasan mendalam + analisis pilihan salah',
+   '*BONUS EKSKLUSIF!* 4x TO regular, drill soal, 3 Year Canvas Plan, Study Planner, spesial diskon produk Ruangguru dan banyak bonus lainnya!']},
+  {head:'KITAB UTBK-SNBT RUANGGURU EDISI 2027',sub:'Paket sudah termasuk:',ul:true,items:[
+   '1 Kitab UTBK SNBT Ruangguru edisi 2027',
+   'Start pengiriman kitab estimasi 10 Agustus 2026',
+   'Terdapat informasi seputar UTBK',
+   'Materi Terlengkap Sesuai yang Diujikan di UTBK sejak 2019',
+   'Strategi Belajar UTBK Efektif ala Panglima UTBK Amadeo Yesa',
+   'Prediksi UTBK 2027 dengan Akurasi >97%',
+   'Lebih dari 900 Soal Baru & Tipe Soal Ter-Update Mirip UTBK 2026',
+   'Konsep Kilat dan Latihan Soal Berjenjang per Topik',
+   'Pembahasan Komprehensif dengan Analisis Jawaban Salah',
+   'Bentuk soal pilihan ganda biasa, pilihan ganda kompleks, dan isian singkat',
+   '*BONUS!* 5 Year Canvas Plan, Study Planner, spesial diskon produk ruangguru dan banyak bonus lainnya!']}]},
+ kal:{name:'Kalananti',tiles:[
+  {key:'kal_scratch',name:'Scratch',logo:'media/kalananti-scratch.png',lines:[['Usia 7-12 tahun','2D Animasi interaktif dan game']]},
+  {key:'kal_scratchjr',name:'ScratchJr',logo:'media/kalananti-scratchjr.png',lines:[['Usia 5-6 tahun','2D Animasi interaktif dan game']]},
+  {key:'kal_roblox',name:'Roblox Studio',logo:'media/kalananti-roblox.png',lines:[['Usia 10-15 tahun','Ciptakan Game dan Animasi 3D']]},
+  {key:'kal_python',name:'Python',logo:'media/kalananti-python.png',lines:[['Usia 16-18 tahun','Belajar coding dan logika pemrograman dengan proyek Python yang aplikatif']]}]},
+ kal_scratch:{name:'Scratch',slides:[{head:'Scratch',ul:true,items:['Kelas 1 sesi per minggu dengan total 1-6 level','Didampingi teacher tersertifikasi dan berpengalaman','1-on-1 antara orang tua dan teacher di setiap level','Sertifikat & progress report di setiap level','online interaktif','Belajar secara online dengan pengalaman kelas yang seru','Melatih logical thinking, problem solving, dan digital literacy','Belajar dari basic sampai siap ikut kompetisi']}]},
+ kal_scratchjr:{name:'Scratch Jr',slides:[
+  {head:'Kelas Persiapan Olimpiade Informatika / Kompetisi Coding (Group Online Class)',ul:true,items:['Sesi 1on1 dengan tutor untuk membahas dan/atau mempersiapkan project coding','Sesi online yg intensif dan interaktif, memungkinkan siswa untuk men-deepdive improvement yang diperlukan','Update rutin mengenai kompetisi informatika dan coding yang akan datang','Bimbingan dari Pengajar Berpengalaman yang memiliki background dan prestasi yg relevan']},
+  {head:'Online Group Scratch',sub:'Deskripsi Paket:',ul:true,items:['Kelas 1 sesi per minggu dengan total 1-6 level','1-on-1 antara orang tua dan teacher di setiap level','online interaktif','Melatih logical thinking, problem solving, dan digital literacy','Didampingi teacher tersertifikasi dan berpengalaman','Sertifikat & progress report di setiap level','Belajar secara online dengan pengalaman kelas yang seru','Belajar dari basic sampai siap ikut kompetisi']}]},
+ kal_roblox:{name:'Roblox Studio',slides:[{head:'Online Group Roblox Studio',ul:true,items:['Kelas 1 sesi per minggu dengan total 1-6 level','1-on-1 antara orang tua dan teacher di setiap level','online interaktif','Melatih logical thinking, problem solving, dan digital literacy','Didampingi teacher tersertifikasi dan berpengalaman','Sertifikat & progress report di setiap level','Belajar secara online dengan pengalaman kelas yang seru','Belajar dari basic sampai siap ikut kompetisi']}]},
+ kal_python:{name:'Python',slides:[{head:'Online Group Python',ul:true,items:['Kelas 1 sesi per minggu dengan total 1-6 level','1-on-1 antara orang tua dan teacher di setiap level','online interaktif','Melatih logical thinking, problem solving, dan digital literacy','Didampingi teacher tersertifikasi dan berpengalaman','Sertifikat & progress report di setiap level','Belajar secara online dengan pengalaman kelas yang seru','Belajar dari basic sampai siap ikut kompetisi']}]},
+ privat:{name:'Privat',slides:[{head:'Kurikulum Nasional',ul:true,items:['Belajar privat hingga 60 sesi','Bebas pilih pengajar','Bebas atur jadwal','Bebas pilih mata pelajaran di kurikulum nasional (Contoh: Matematika, Fisika, Ekonomi, Sejarah, dll)','Bebas atur materi','Laporan belajar']},
+  {head:'Persiapan Ujian/Tes Akademik*',ul:true,items:['Belajar privat hingga 60 sesi','Bebas pilih pengajar','Bebas atur jadwal','Bebas pilih mata pelajaran di ujian/tes akademik (Contoh: UTBK/SNBT, TKA, dll)','Bebas atur materi','Laporan belajar']}]},
+ mc_sing:{name:'Matematika Singapura',slides:[{head:'Matematika Singapura',ul:true,items:['Belajar mulai dari 24 sesi','Pembelajaran matematika yang lebih menekankan logika berpikir dan matematika dasar','Didukung ribuan soal digital yang variatif','Dilengkapi dengan Level Progression Test untuk mengevaluasi perkembangan belajar secara objektif','Tersedia kelas grup dan semi private']}]},
+ mc_olim:{name:'Matematika Olimpiade',slides:[{head:'Matematika Olimpiade',ul:true,items:['Belajar mulai dari 48 sesi','Dirancang khusus untuk persiapan kompetisi matematika level SD','Didukung ribuan soal digital setingkat olimpiade nasional dan internasional','Dilengkapi dengan Level Progression Test untuk mengevaluasi perkembangan belajar secara objektif','Tersedia kelas semi private']}]},
+ mc_sem:{name:'Sempoa',slides:[{head:'Sempoa',ul:true,items:['Belajar mulai dari 24 sesi','Berlatih hitung cepat dengan mental arithmetics (sempoa bayangan)','Didukung ribuan soal yang variatif','Dilengkapi dengan Level Progression Test untuk mengevaluasi perkembangan belajar secara objektif','Tersedia kelas grup dan privat']}]},
+ rb:{name:'Ruangbelajar',slides:[{items:[
+  'Akses semua mata pelajaran berdasarkan kelas selama tahun ajaran',
+  '>100rb video belajar premium dengan ADAPTO, satu-satunya video belajar interaktif di Indonesia',
+  '>400rb latihan soal serta pembahasan untuk mengukur pemahaman melalui Latihan Bab, Cek Kemampuan, Kuis Akhir, dan Drill Soal',
+  'Video belajar TKA berisi kisi-kisi dan pembahasan yang terus diperbarui (dapat dilihat di jenjang Kelas 6, 9 & 12)',
+  'SNBT Center + PELATNAS UTBK',
+  'Cek Peluang Lolos PTN',
+  'Tambahan 20x Try Out Premium ruanguji (TKA)',
+  'Latihan Bab, Bank soal dan Try Out PTS, PAS, US di ruang latihan',
+  'Stellar Energy s.d 32.000 untuk chat dengan AI',
+  'TANPA BATAS! Liat video pembahasan di Roboguru sampai paham',
+  'TANPA BATAS! Liat jawaban terverifikasi di Roboguru oleh Master Teacher',
+  'TANPA IKLAN! Bebas akses Roboguru sepuasnya',
+  'Rangkuman infografis dengan visualisasi menarik di setiap bab',
+  'Download materi offline',
+  'Monitor belajar dengan Laporan Belajar',
+  'Ruangguru Adventure & Teman Belajar']}]},
+ ru:{name:'Try Out',slides:[
+  {head:'Kelas 12 SMA',items:[
+   '*20x Tryout Premium UTBK SNBT / TKA / UM*',
+   'Variasi Soal Ter-update dan Prediktif',
+   'Penilaian dengan bobot nilai per soal (Khusus TO UM Premium)',
+   'Rasionalisasi Kampus (Khusus TO UTBK-SNBT Premium)',
+   'Pembahasan Soal Lengkap dengan Teks',
+   'Analisis dan Rekomendasi Materi yang Harus Dikuasai',
+   'Leaderboard Tryout Nasional',
+   '*Kuota berlaku 1 tahun* sejak pembelian',
+   'Penilaian IRT (Khusus TO UTBK-SNBT & TKA Premium)',
+   'Grafik Nilai Tryout (Khusus TO UTBK SNBT Premium)',
+   'Rekomendasi Jurusan (Khusus TO UTBK-SNBT Premium)',
+   'Analisis Peluang SNBP dengan Nilai Rapor',
+   'Prediksi Peluang Masuk Kampus Berdasarkan Hasil Tryout (Khusus TO UTBK SNBT Premium)',
+   'Kuota dapat digunakan untuk TO TKA SMA']},
+  {head:'All Jenjang',items:[
+   '*8x Tryout Premium TKA*',
+   'Variasi Soal Ter-update dan Prediktif',
+   'Pembahasan Soal Lengkap dengan Teks',
+   'Leaderboard Tryout Nasional',
+   'Kuota berlaku *1 tahun* sejak pembelian',
+   'Penilaian IRT (Khusus TO TKA Premium)',
+   'Analisis dan Rekomendasi Materi yang Harus Dikuasai',
+   'Kuota dapat digunakan untuk *TO TKA SD, SMP, maupun SMA*']}]}
+};
+function fasTxt(li,t,b){
+ var m=t.match(/https?:\/\/[^\s]+/);
+ if(m){var i=t.indexOf(m[0]);fasTxt(li,t.slice(0,i),b);var a=document.createElement('a');a.href=m[0];a.target='_blank';a.rel='noopener';a.textContent=m[0];li.appendChild(a);fasTxt(li,t.slice(i+m[0].length),b);return}
+ if(!t)return;
+ if(b){var x=document.createElement('b');x.textContent=t;li.appendChild(x)}else li.appendChild(document.createTextNode(t));
+}
+function fasRich(li,t){t.split('*').forEach(function(seg,i){fasTxt(li,seg,i%2===1)})}
+function fasEl(t,c,x){var e=el(t,c);if(x)e.textContent=x;return e}
+function FasTiles(D){
+ var wrap=el('div','mxw'),box=el('div','mxv mxq'),g=el('div','fas-g'),slot=el('div','fas-slot'),cur=null,sel=null,btns=[];
+ box.setAttribute('role','group');box.setAttribute('aria-label','Fasilitas '+D.name);
+ function clear(){if(cur){cur.stop();cur.el.remove();cur=null}btns.forEach(function(b){b.setAttribute('aria-pressed','false')});sel=null}
+ D.tiles.forEach(function(T){
+  var t=el('button','fas-tile'),lg=el('span','fas-logo');
+  t.type='button';t.setAttribute('aria-pressed','false');t.setAttribute('aria-label','Lihat fasilitas '+T.name);
+  if(T.logo){var im=document.createElement('img');im.src=T.logo;im.alt='Logo '+T.name;im.loading='lazy';lg.appendChild(im)}
+  else{lg.className='fas-logo none';lg.textContent='Logo '+T.name}
+  t.appendChild(lg);if(!T.logo)t.appendChild(fasEl('span','fas-n',T.name));
+  T.lines.forEach(function(L){var b=el('span','fas-b');b.appendChild(fasEl('span','fas-a',L[0]));b.appendChild(fasEl('span','fas-d',L[1]));t.appendChild(b)});
+  t.addEventListener('click',function(){
+   var same=sel===T;clear();if(same)return;
+   sel=T;t.setAttribute('aria-pressed','true');
+   cur=FasViewer(T.key);slot.appendChild(cur.el);cur.start();
+   cur.el.scrollIntoView({behavior:'smooth',block:'nearest'});
+  });
+  btns.push(t);g.appendChild(t);
+ });
+ box.appendChild(g);box.appendChild(fasEl('p','fas-hint','Ketuk logo untuk melihat fasilitasnya.'));
+ wrap.appendChild(box);wrap.appendChild(slot);
+ return {el:wrap,start:function(){},stop:function(){clear()}};
+}
+function FasViewer(id){
+ if(FAS[id].tiles)return FasTiles(FAS[id]);
+ var D=FAS[id],n=D.slides.length,idx=0,wrap=el('div','mxw'),box=el('div','mxv mxq'),grid=el('div','mxg'),dots=el('div','mxd'),slides=[],dl=[],cnt=null;
+ box.setAttribute('role','group');box.setAttribute('aria-roledescription','carousel');box.setAttribute('aria-label','Fasilitas '+D.name);
+ D.slides.forEach(function(S){
+  var s=el('div','mxs mxq1 fas');
+  if(S.tag)s.appendChild(fasEl('p','fas-t',S.tag));
+  if(S.head)s.appendChild(fasEl('p','fas-h',S.head));
+  if(S.sub)s.appendChild(fasEl('p','fas-s',S.sub));
+  var ol=el(S.ul?'ul':'ol','fas-l');
+  S.items.forEach(function(x){var li=document.createElement('li');fasRich(li,x);ol.appendChild(li)});
+  s.appendChild(ol);grid.appendChild(s);slides.push(s);
+  if(n>1){var d=document.createElement('i');dots.appendChild(d);dl.push(d)}
+ });
+ box.appendChild(grid);if(n>1)box.appendChild(dots);wrap.appendChild(box);
+ function show(i){
+  idx=(i+n)%n;
+  slides.forEach(function(s,k){s.classList.toggle('on',k===idx)});
+  dl.forEach(function(d,k){d.className=k===idx?'on':''});
+  if(cnt)cnt.textContent='Slide '+(idx+1)+' dari '+n;
+ }
+ if(n>1){
+  var nav=el('div','fas-nav'),pb=fasEl('button','','\u2039 Sebelumnya'),nb=fasEl('button','','Berikutnya \u203A');
+  cnt=fasEl('span','fas-c');pb.type='button';nb.type='button';
+  pb.addEventListener('click',function(){show(idx-1)});nb.addEventListener('click',function(){show(idx+1)});
+  nav.appendChild(pb);nav.appendChild(cnt);nav.appendChild(nb);wrap.appendChild(nav);
+  SlideMode.swipe(box,function(d){show(idx+d)});
+ }
+ return {el:wrap,start:function(i){show(i||0)},stop:function(){}};
+}
 function buildRu(card,p,name){
  var cur=null,cur2=null,cur3=null,top='',jj='',sub='',topBtn={};
  var LBL={sd:'SD',smp:'SMP',sma:'SMA',snbt:'SNBT',tni:'TNI/POLRI',ked:'Kedinasan',psi:'Psikotes Kedinasan'};
- var bar=el('div','mxb'),slot=el('div');bar.style.gridTemplateColumns='1.7fr .6fr .7fr 1.2fr';
- [['pend','Dampingi TKA'],['mega','TO'],['tka','TKA'],['testimoni','Testimoni']].forEach(function(x){
-  var b=el('button');b.type='button';b.textContent=x[1];b.setAttribute('aria-expanded','false');
+ var bar=el('div','mxb'),slot=el('div');bar.style.gridTemplateColumns='repeat(6,1fr)';
+ [['mega','TO Mega',2],['tka','TKA',2],['testimoni','Testimoni',2],['pend','Dampingi TKA',3],['fasilitas','Fasilitas',3]].forEach(function(x){
+  var b=el('button');b.type='button';b.textContent=x[1];b.style.gridColumn='span '+x[2];b.setAttribute('aria-expanded','false');
   b.addEventListener('click',function(){top=top===x[0]?'':x[0];jj='';sub='';draw()});
   topBtn[x[0]]=b;bar.appendChild(b);
  });
@@ -1465,6 +1675,7 @@ function buildRu(card,p,name){
   slot.innerHTML='';
   for(var k in topBtn)topBtn[k].setAttribute('aria-expanded',k===top?'true':'false');
   if(!top)return;
+  if(top==='fasilitas'){cur=FasViewer('ru');p.appendChild(cur.el);cur.start();return}
   if(top==='pend'){cur=Viewer('ru_pend','foto','Dampingi TKA');p.appendChild(cur.el);cur.start();return}
   if(top==='testimoni'){cur=Viewer('ru','testimoni',name);p.appendChild(cur.el);cur.start();return}
   var flat=top==='testimoni';
@@ -1487,14 +1698,15 @@ function build(card){
  var id=card.id,name=card.querySelector('.n').textContent;
  var p=el('div','mxp');p.id='mx-'+id;p.hidden=true;
  var TCP={ru:['#CD7F32','#1a0d03'],airis:['#CD7F32','#1a0d03'],robo:['#CD7F32','#1a0d03'],kitab:['#C0C0C0','#0f172a'],rb:['#C0C0C0','#0f172a'],bao:['#FFD700','#2e2200'],mc:['#FFD700','#2e2200'],kal:['#FFD700','#2e2200'],bac:['#B8C6DB','#0f172a'],privat:['#5B5DC7','#fff']},tcp=TCP[id];
- if(tcp){p.style.setProperty('--tc',tcp[0]);p.style.setProperty('--tt',tcp[1]);}
+ if(tcp){p.style.setProperty('--tc',tcp[0]);p.style.setProperty('--tt',tcp[1]);if(id==='privat')p.style.setProperty('--tg','linear-gradient(135deg,#5B5DC7,#E86A6A)');}
  if(id==='ru'){buildRu(card,p,name);return}
  var bar=el('div','mxb'),cur=null,kind='',btns={},jj='sd';
- [['video','Video'],['foto','Foto'],['testimoni','Testimoni']].filter(function(x){return !(((id==='bao'||id==='rb')&&x[0]==='foto')||(id==='kitab'&&x[0]==='video'))}).forEach(function(x){
+ [['video','Video'],['foto','Foto'],['testimoni','Testimoni']].concat((FAS[id]||id==='bao'||id==='mc'||id==='privat')?[['fasilitas','Fasilitas']]:[]).sort(function(a,b){var o={fasilitas:0,video:1,foto:2,testimoni:3};return o[a[0]]-o[b[0]]}).filter(function(x){return !(((id==='rb')&&x[0]==='foto')||(id==='kitab'&&x[0]==='video')||(id==='airis'&&(x[0]==='video'||x[0]==='testimoni')))}).forEach(function(x){
   var b=el('button');b.type='button';b.textContent=x[1];b.setAttribute('aria-expanded','false');
+  if(x[0]==='foto')b.textContent='Gambar';
   b.addEventListener('click',function(){open(x[0])});btns[x[0]]=b;bar.appendChild(b);
  });
- if(id==='bao'||id==='rb'||id==='kitab')bar.style.gridTemplateColumns='repeat(2,1fr)';p.appendChild(bar);
+ bar.style.gridTemplateColumns='repeat('+bar.children.length+',1fr)';p.appendChild(bar);
  var cr=null,cj='pw',cb=[];
  if(id==='bac'){cr=el('div','cbr');cr.hidden=true;cr.setAttribute('role','group');cr.setAttribute('aria-label','Pilih cabang');
   [['pw','Cabang Purworejo'],['ln','Cabang Lainnya']].forEach(function(x){var b=el('button','cbb');b.textContent=x[1];b.type='button';b.setAttribute('aria-pressed',x[0]==='pw'?'true':'false');
@@ -1515,16 +1727,26 @@ function build(card){
   [['sd','SD'],['smp','SMP'],['sma','SMA']].forEach(function(x){var b=el('button');b.type='button';b.textContent=x[1];b.setAttribute('aria-pressed',x[0]==='sd'?'true':'false');
    b.addEventListener('click',function(){jj=x[0];lb.forEach(function(y){y.setAttribute('aria-pressed',y===b?'true':'false')});if(kind==='testimoni'){close();open('testimoni')}});
    lb.push(b);lr.appendChild(b)});p.appendChild(lr)}
+ var gr=null,gb=[],gj='online';
+ if(id==='mc'){gr=el('div','mxj bj');gr.hidden=true;gr.setAttribute('role','group');gr.setAttribute('aria-label','Pilih gambar');gr.style.gridTemplateColumns='repeat(2,1fr)';
+  [['online','Kelas Online'],['jelas','Penjelasan']].forEach(function(x){var b=el('button');b.type='button';b.textContent=x[1];b.setAttribute('aria-pressed',x[0]===gj?'true':'false');
+   b.addEventListener('click',function(){gj=x[0];gb.forEach(function(y){y.setAttribute('aria-pressed',y===b?'true':'false')});if(kind==='foto'){close();open('foto')}});
+   gb.push(b);gr.appendChild(b)});p.appendChild(gr)}
+ var mr=null,mb=[],mj='sing';
+ if(id==='mc'){mr=el('div','mxj bj');mr.hidden=true;mr.setAttribute('role','group');mr.setAttribute('aria-label','Pilih program');
+  [['sing','Matematika Singapura'],['olim','Matematika Olimpiade'],['sem','Sempoa']].forEach(function(x){var b=el('button');b.type='button';b.textContent=x[1];b.setAttribute('aria-pressed',x[0]===mj?'true':'false');
+   b.addEventListener('click',function(){mj=x[0];mb.forEach(function(y){y.setAttribute('aria-pressed',y===b?'true':'false')});if(kind==='fasilitas'){close();open('fasilitas')}});
+   mb.push(b);mr.appendChild(b)});p.appendChild(mr)}
  var jb=[];
  if(id==='kitab'){var jr=el('div','mxj mxj4');jr.setAttribute('role','group');jr.setAttribute('aria-label','Pilih jenjang');
   [['sd','SD'],['smp','SMP'],['sma','SMA'],['snbt','SNBT']].forEach(function(x){var b=el('button');b.type='button';b.textContent=x[1];b.setAttribute('aria-pressed',x[0]==='sd'?'true':'false');
    b.addEventListener('click',function(){jj=x[0];jb.forEach(function(y){y.setAttribute('aria-pressed',y===b?'true':'false')});if(kind){var k=kind;close();open(k)}});
    jb.push(b);jr.appendChild(b)});p.appendChild(jr)}
- if(id==='bac'||id==='bao'){var g=el('a','mxg2 '+(id==='bao'?'on':'off'));g.href='https://rudiruangguru.github.io/kelasgratis/';g.target='_blank';g.rel='noopener';g.textContent='Coba Kelas Gratis';p.appendChild(g)}
- function close(){if(cur){cur.stop();cur.el.remove();cur=null}kind='';if(cr)cr.hidden=true;if(lr)lr.hidden=true;if(vr)vr.hidden=true;if(fr)fr.hidden=true;for(var k in btns)btns[k].setAttribute('aria-expanded','false')}
+ if(id==='bac'||id==='bao'){var g=el('a','mxg2 '+(id==='bao'?'on':'off'));g.href='https://rudiruangguru.github.io/kelasgratis/';g.target='_blank';g.rel='noopener';g.textContent=id==='bao'?'Coba Kelas BAON':'Coba Kelas BAC';p.appendChild(g)}
+ function close(){if(cur){cur.stop();cur.el.remove();cur=null}kind='';if(cr)cr.hidden=true;if(lr)lr.hidden=true;if(vr)vr.hidden=true;if(fr)fr.hidden=true;if(mr)mr.hidden=true;if(gr)gr.hidden=true;for(var k in btns)btns[k].setAttribute('aria-expanded','false')}
  function open(k){
   if(kind===k){close();return}
-  close();kind=k;var ln2=id==='bac'&&k==='testimoni'&&cj==='ln';if(cr)cr.hidden=k!=='testimoni';if(lr)lr.hidden=k!=='testimoni';if(vr)vr.hidden=k!=='video';if(fr)fr.hidden=k!=='foto';var bt=id==='bao'&&k==='testimoni';cur=(id==='privat'&&k==='foto')?Viewer('privat_'+pj,'foto',({privat:'Privat',mapel:'Mapel',ujian:'Ujian'})[pj]):(id==='kal'&&k==='testimoni')?kalTesti():(id==='kal'&&k==='video'&&vj==='coding')?kalSlider(KAL_C,'Video'):(id==='kal'&&k==='video'&&vj==='online')?kalSlider(KAL_O,'Video'):((id==='bao'||id==='rb'||id==='robo'||id==='kal'||id==='bac'||id==='mc'||id==='privat')&&k==='video')?vidViewer(id,vj):Viewer(id==='kitab'?'kitab_'+jj:(bt?'bao_'+jj:(ln2?'bac_lain':id)),k,(id==='kitab'||bt)?name+' '+jj.toUpperCase():(ln2?name+' Cabang Lainnya':name));p.appendChild(cur.el);cur.start();
+  close();kind=k;if(k==='fasilitas'){if(mr)mr.hidden=false;cur=id==='bao'?Viewer('bao_fas','foto','Fasilitas '+name):FasViewer(id==='mc'?'mc_'+mj:id);p.appendChild(cur.el);cur.start(id==='kitab'?({sd:0,smp:1,sma:2,snbt:2})[jj]:0);btns[k].setAttribute('aria-expanded','true');cur.el.scrollIntoView({behavior:'smooth',block:'nearest'});return}var ln2=id==='bac'&&k==='testimoni'&&cj==='ln';if(cr)cr.hidden=k!=='testimoni';if(lr)lr.hidden=k!=='testimoni';if(vr)vr.hidden=k!=='video';if(fr)fr.hidden=k!=='foto';if(gr)gr.hidden=k!=='foto';var bt=id==='bao'&&k==='testimoni';cur=(id==='mc'&&k==='foto')?Viewer(gj==='online'?'mc_online':'mc','foto',gj==='online'?'Kelas Online':'Penjelasan'):(id==='privat'&&k==='foto')?Viewer('privat_'+pj,'foto',({privat:'Privat',mapel:'Mapel',ujian:'Ujian'})[pj]):(id==='kal'&&k==='testimoni')?kalTesti():(id==='kal'&&k==='video'&&vj==='coding')?kalSlider(KAL_C,'Video'):(id==='kal'&&k==='video'&&vj==='online')?kalSlider(KAL_O,'Video'):((id==='bao'||id==='rb'||id==='robo'||id==='kal'||id==='bac'||id==='mc'||id==='privat')&&k==='video')?vidViewer(id,vj):Viewer(id==='kitab'?'kitab_'+jj:(bt?'bao_'+jj:(ln2?'bac_lain':id)),k,(id==='kitab'||bt)?name+' '+jj.toUpperCase():(ln2?name+' Cabang Lainnya':name));p.appendChild(cur.el);cur.start();
   btns[k].setAttribute('aria-expanded','true');
   cur.el.scrollIntoView({behavior:'smooth',block:'nearest'});
  }
@@ -1757,7 +1979,7 @@ h1{margin:6px 0 4px;text-align:center;font-size:clamp(22px,3.4vw,34px);font-weig
 <div class="row band b2">
 <div class="tier"><div class="n">2</div><div class="nm">Silver</div><div class="ds">Ekonomis</div></div>
 <div class="cell ln"></div><div class="cell ln"></div><div class="cell ln"></div><div class="cell ln"></div>
-<div class="cell ln-end chain"><div class="card">Buku Kitab</div><div class="card">Ruang Belajar</div></div>
+<div class="cell ln-end chain"><div class="card">Buku Kitab</div><div class="card">Ruangbelajar</div></div>
 <div class="cell"></div>
 </div>
 
@@ -1799,7 +2021,7 @@ h1{margin:6px 0 4px;text-align:center;font-size:clamp(22px,3.4vw,34px);font-weig
 <button type="button" id="faqb">Pertanyaan Sering Diajukan</button></div>
 </div></div>
 <div class="zc" id="zc"><button id="zo" aria-label="Perkecil">−</button><button class="pc" id="zp" aria-label="Pas layar">100%</button><button id="zi" aria-label="Perbesar">+</button></div>
-<button type="button" class="bigx" id="bigx">← Kembali</button></div><div class="ov" id="ov" hidden><div class="sheet" id="sh" role="dialog" aria-modal="true" aria-labelledby="mt"><button class="x" id="mx" aria-label="Tutup">×</button><span class="badge" id="mb"></span><h2 id="mt"></h2><div class="tags" id="mg"></div><p id="md"></p><div class="ex" id="ex" hidden><div class="lj">Lihat juga</div><div class="sl" id="sl"><button type="button" data-k="video">Video</button><button type="button" data-k="foto">Foto</button><button type="button" data-k="fasilitas">Fasilitas</button><button type="button" data-k="harga">Harga</button><button type="button" data-k="testimoni">Testimoni</button></div><button type="button" class="cg" id="cb" data-k="coba">Coba Kelas Gratis<small>Daftar sekarang, gratis</small></button></div></div></div>
+<button type="button" class="bigx" id="bigx">← Kembali</button></div><div class="ov" id="ov" hidden><div class="sheet" id="sh" role="dialog" aria-modal="true" aria-labelledby="mt"><button class="x" id="mx" aria-label="Tutup">×</button><span class="badge" id="mb"></span><h2 id="mt"></h2><div class="tags" id="mg"></div><p id="md"></p><div class="ex" id="ex" hidden><div class="lj">Lihat juga</div><div class="sl" id="sl"><button type="button" data-k="fasilitas">Fasilitas</button><button type="button" data-k="video">Video</button><button type="button" data-k="foto">Gambar</button><button type="button" data-k="testimoni">Testimoni</button><button type="button" data-k="harga">Harga</button></div><button type="button" class="cg" id="cb" data-k="coba">Coba Kelas Gratis<small>Daftar sekarang, gratis</small></button></div></div></div>
 <div class="dock" id="dock" role="navigation" aria-label="Hubungi konsultan"><button type="button" class="d-ck" id="dck" aria-label="Tampilkan menu kontak" title="Tampilkan kontak">✓</button><button type="button" class="d-x" id="dx" aria-label="Sembunyikan menu kontak" title="Sembunyikan">✕</button><button type="button" class="d-wa" data-a="wa" aria-label="Chat WhatsApp konsultan" title="Chat WhatsApp"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3zm0 1.8a7.2 7.2 0 1 1-3.9 13.3l-.3-.2-2.4.6.6-2.3-.2-.3A7.2 7.2 0 0 1 12 4.8z"/><path d="M9 8.2c-.3 0-.7.2-.9.6-.3.6-.3 1.6.6 2.9 1 1.6 2.4 2.6 3.8 3 .8.2 1.5 0 1.9-.5.2-.3.3-.7.2-.8l-1.5-.7c-.2-.1-.4 0-.5.1l-.5.6c-.2.2-.4.2-.6.1-.8-.4-1.5-1-2-1.8-.1-.2-.1-.4 0-.5l.4-.5c.1-.2.1-.3 0-.5l-.6-1.4c-.1-.2-.2-.3-.4-.3z"/></svg></button><button type="button" class="d-ig" data-a="ig" aria-label="DM Instagram konsultan" title="DM Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="#fff"/></svg></button><button type="button" class="d-gm" data-a="gm" aria-label="Jadwalkan simulasi kelas online" title="Simulasi kelas online"><svg viewBox="0 0 24 24" fill="#fff"><rect x="2.5" y="6" width="13" height="12" rx="2.5"/><path d="M16.5 10.5 21.5 7v10l-5-3.5z"/></svg></button><button type="button" class="d-hm" data-a="hm" aria-label="Minta dikunjungi ke rumah" title="Kunjungan ke rumah"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 3 2.5 11.5h2.7V20h5v-5.5h3.6V20h5v-8.5h2.7z"/></svg></button></div>
 <div class="toast" id="ts" hidden></div></div>
 </template>
@@ -1814,7 +2036,7 @@ var pk2=HD.getElementById('pk2');
 if(pk2){
  var fw=function(a,b){var x=HD.getElementById(a);if(x)x.addEventListener('click',function(){var y=sr.getElementById(b);if(y)y.click()})};
  fw('bacb2','bacb');fw('faqb2','faqb');
- var pk2t=HD.getElementById('pk2t');var syncPk=function(){var h=(root.getAttribute('data-view')==='siswa');pk2.hidden=h;if(pk2t)pk2t.hidden=h};
+ var pk2t=HD.getElementById('pk2t');var syncPk=function(){var v=root.getAttribute('data-view'),h=(v==='siswa');pk2.hidden=h;if(pk2t){pk2t.hidden=false;[].forEach.call(pk2t.querySelectorAll('[data-for]'),function(b){b.hidden=b.getAttribute('data-for')!==v})}};
  new MutationObserver(syncPk).observe(root,{attributes:true,attributeFilter:['data-view']});syncPk();
 }
 var PVDOC={
@@ -1839,7 +2061,7 @@ var D={
 'Airis':'Tutor belajar berbasis AI yang terasa seperti teman. Bisa membantu memahami materi, menjawab PR, memberi latihan soal, dan diajak ngobrol. Dapat diakses lewat aplikasi Ruangguru.',
 'Roboguru':'Layanan tanya jawab soal: kirim soal yang sulit, lalu dapatkan konsep dan pembahasan jawabannya untuk membantu kamu belajar.',
 'Buku Kitab':'Buku belajar untuk persiapan TKA yang bisa dipelajari secara mandiri di mana saja.',
-'Ruang Belajar':'Belajar mandiri lewat video pelajaran, rangkuman, kuis, dan latihan soal yang bisa diakses kapan saja.',
+'Ruangbelajar':'Belajar mandiri lewat video pelajaran, rangkuman, kuis, dan latihan soal yang bisa diakses kapan saja.',
 'Brain Academy Online':'Bimbingan belajar online bersama pengajar, sehingga siswa tetap mendapat pendampingan langsung dari rumah.',
 'Match Champs':'Kursus matematika dan logika untuk anak TK sampai SMP, mulai dari Singapore Math, Sempoa, hingga persiapan Olimpiade. Tersedia online dan offline.',
 'Kalananti':'Kursus coding dan robotik untuk anak yang dipandu pengajar secara online, untuk melatih logika dan kreativitas.',
@@ -1848,7 +2070,7 @@ var D={
 'Privat Offline':'Les privat tatap muka dengan guru. Jadwal dan materi disesuaikan dengan kebutuhan siswa.',
 'Privat Online':'Les privat online dengan guru. Jadwal dan materi disesuaikan dengan kebutuhan siswa, bisa dari mana saja.'
 };
-var CB={'Airis':['Coba Gratis','Gratis, langsung coba'],'Roboguru':['Coba Gratis','Gratis, langsung coba'],'Try Out':['Coba Mini TO Gratis','Gratis, tanpa biaya'],'Buku Kitab':['Mau file PDF Gratis','Gratis, tanpa biaya'],'Ruang Belajar':['Coba Drill Soal Gratis','Gratis, langsung coba']};
+var CB={'Airis':['Coba Airis','Gratis, langsung coba'],'Roboguru':['Coba Roboguru Plus','Gratis, langsung coba'],'Try Out':['Coba Mini Try Out','Gratis, tanpa biaya'],'Buku Kitab':['Buku Kitab (PDF)','Gratis, tanpa biaya'],'Ruangbelajar':['Coba Drill Soal','Gratis, langsung coba'],'Kalananti':['Coba Kelas Kalananti','Daftar sekarang, gratis'],'Match Champs':['Coba Kelas Match Champs','Daftar sekarang, gratis'],'Brain Academy Online':['Coba Kelas BAON','Daftar sekarang, gratis'],'Brain Academy Center':['Coba Kelas BAC','Daftar sekarang, gratis'],'Privat Offline':['Coba Kelas Privat Offline','Daftar sekarang, gratis'],'Privat Online':['Coba Kelas Privat Online','Daftar sekarang, gratis'],'Kedinasan TNI-Polri':['Coba Kelas Kedinasan','Daftar sekarang, gratis']};
 var ov=document.getElementById('ov'),sh=document.getElementById('sh'),last=null;
 function close(){ov.hidden=true;if(last)last.focus();}
 document.getElementById('mx').onclick=close;
@@ -1866,9 +2088,9 @@ document.getElementById('mb').textContent='Tingkat '+t[0];
 document.getElementById('mt').textContent=n;
 document.getElementById('md').textContent=D[n]||'';
 var isB=n==='Brain Academy Center',g=idx<=4?'Belajar Bareng Pendamping':'Belajar Mandiri',m=idx<=2?'Offline':'Online';
-document.getElementById('mg').innerHTML=isB?'<span class="pt">'+g+' · '+m+'</span><span style="background:#dc2626;color:#fff">★ Rekomendasi</span>':'<span>'+g+'</span><span>'+m+'</span>';
+document.getElementById('mg').innerHTML=isB?'<span class="pt">'+g+' · '+m+'</span><span style="background:#dc2626;color:#fff">★ Rekomendasi</span>':'<span class="pt">'+g+' \u00b7 '+m+'</span>';
 var cb=CB[n]||['Coba Kelas Gratis','Daftar sekarang, gratis'];
-document.getElementById('cb').innerHTML=cb[0]+'<small>'+cb[1]+'</small>';window.__prod=n;
+document.getElementById('cb').innerHTML=cb[0]+'<small>'+cb[1]+'</small>';window.__prod=n;var hv=(n==='Airis'||n==='Buku Kitab'||n==='Try Out'),hf=(n==='Ruangbelajar'||n==='Try Out'),ht=(n==='Airis');var vbtn=document.querySelector('#ex [data-k="video"]');if(vbtn)vbtn.style.display=hv?'none':'';var fbtn=document.querySelector('#ex [data-k="foto"]');if(fbtn){fbtn.style.display=hf?'none':'';fbtn.textContent='Gambar'}var tbtn=document.querySelector('#ex [data-k="testimoni"]');if(tbtn)tbtn.style.display=ht?'none':'';var slr=document.getElementById('sl');if(slr)slr.style.gridTemplateColumns='repeat('+(5-(hv?1:0)-(hf?1:0)-(ht?1:0))+',1fr)';
 document.getElementById('ex').hidden=false;sh.scrollTop=0;
 ov.hidden=false;document.getElementById('mx').focus();
 }
@@ -1884,7 +2106,7 @@ if(!g)return;
 document.querySelectorAll('.card').forEach(function(c){var band=c.closest('.band'),idx=Array.prototype.indexOf.call(band.children,c.parentNode);
 if((idx<=4?'Belajar Bareng Pendamping':'Belajar Mandiri')!==n)return;
 var m=idx<=2?'Offline':'Online',nm=c.textContent.trim();if(by[m].indexOf(nm)<0)by[m].push(nm);});
-last=s;sh.style.setProperty('--tc',g[0]);sh.style.setProperty('--tt',g[1]);
+last=s;sh.style.setProperty('--tc',g[0]);sh.style.setProperty('--tt',g[1]);sh.style.removeProperty('--tg');
 document.getElementById('mb').textContent='Kelompok produk';
 document.getElementById('mt').textContent=n;
 document.getElementById('md').textContent=g[2];
@@ -1897,9 +2119,9 @@ s.addEventListener('click',go);
 s.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}});
 });
 document.getElementById('bacb').onclick=function(){var c=document.querySelector('.card.rec');if(c)c.click();};
-var FQ=[['Apa bedanya Belajar Bareng Pendamping dan Belajar Mandiri?','Belajar Bareng Pendamping dipandu langsung oleh guru tersertifikasi, dan perkembangan anak dipantau. Belajar Mandiri dilakukan sendiri di rumah lewat gawai, kapan saja, cocok untuk anak yang sudah punya kebiasaan belajar.'],['Apa arti tingkat Bronze sampai Diamond?','Tingkat menunjukkan kisaran biaya: Bronze paling terjangkau, Silver ekonomis, Gold menengah, Platinum menengah atas, dan Diamond premium.'],['Produk mana yang direkomendasikan?','Brain Academy Center, yaitu bimbingan belajar tatap muka di cabang dengan pendampingan langsung dari pengajar. Tekan Tampilkan pada baris Brain Academy Center untuk melihat detailnya.'],['Apakah ada yang bisa dicoba gratis?','Ada. Airis dan Roboguru bisa dicoba gratis, Try Out punya Mini TO gratis, Buku Kitab punya file PDF gratis, dan Ruang Belajar punya Drill Soal gratis.'],['Apa bedanya Offline dan Online?','Offline berarti belajar tatap muka, misalnya di cabang atau di rumah. Online berarti belajar lewat layar dari mana saja.'],['Bagaimana cara konsultasi gratis untuk orang tua?','Tekan Tampilkan pada baris Konsultasi Gratis untuk Orang Tua untuk membuka halaman informasinya. Anda juga bisa menghubungi konsultan lewat tombol di bawah layar.']];
+var FQ=[['Apa bedanya Belajar Bareng Pendamping dan Belajar Mandiri?','Belajar Bareng Pendamping dipandu langsung oleh guru tersertifikasi, dan perkembangan anak dipantau. Belajar Mandiri dilakukan sendiri di rumah lewat gawai, kapan saja, cocok untuk anak yang sudah punya kebiasaan belajar.'],['Apa arti tingkat Bronze sampai Diamond?','Tingkat menunjukkan kisaran biaya: Bronze paling terjangkau, Silver ekonomis, Gold menengah, Platinum menengah atas, dan Diamond premium.'],['Produk mana yang direkomendasikan?','Brain Academy Center, yaitu bimbingan belajar tatap muka di cabang dengan pendampingan langsung dari pengajar. Tekan Tampilkan pada baris Brain Academy Center untuk melihat detailnya.'],['Apakah ada yang bisa dicoba gratis?','Ada. Airis dan Roboguru bisa dicoba gratis, Try Out punya Mini TO gratis, Buku Kitab punya file PDF gratis, dan Ruangbelajar punya Drill Soal gratis.'],['Apa bedanya Offline dan Online?','Offline berarti belajar tatap muka, misalnya di cabang atau di rumah. Online berarti belajar lewat layar dari mana saja.'],['Bagaimana cara konsultasi gratis untuk orang tua?','Tekan Tampilkan pada baris Konsultasi Gratis untuk Orang Tua untuk membuka halaman informasinya. Anda juga bisa menghubungi konsultan lewat tombol di bawah layar.']];
 document.getElementById('faqb').onclick=function(){
-last=this;sh.style.setProperty('--tc','#2563eb');sh.style.setProperty('--tt','#fff');
+last=this;sh.style.setProperty('--tc','#2563eb');sh.style.setProperty('--tt','#fff');sh.style.removeProperty('--tg');
 document.getElementById('mb').textContent='FAQ';
 document.getElementById('mt').textContent='Pertanyaan Sering Diajukan';
 document.getElementById('md').textContent='';
@@ -1948,10 +2170,10 @@ run(function(document){
 (function(){
 var KG='https://rudiruangguru.github.io/kelasgratis/';
 /* Tautan Coba Kelas Gratis. Kunci 'coba|Nama produk' = khusus produk itu, contoh 'coba|Airis'. */
-var LINKS={coba:KG};
+var LINKS={coba:KG,'coba|Ruangbelajar':'https://wa.me/6285177454988?text=Halo%20Kak%20Rudi%2C%20saya%20ingin%20coba%20Drill%20Soal.','coba|Kalananti':'https://wa.me/6285177454988?text=Halo%20Kak%20Rudi%2C%20saya%20ingin%20coba%20Kelas%20Kalananti.','coba|Match Champs':'https://wa.me/6285177454988?text=Halo%20Kak%20Rudi%2C%20saya%20ingin%20coba%20Kelas%20Match%20Champs.','coba|Privat Offline':'https://wa.me/6285177454988?text=Halo%20Kak%20Rudi%2C%20saya%20ingin%20coba%20Kelas%20Privat%20Offline.','coba|Privat Online':'https://wa.me/6285177454988?text=Halo%20Kak%20Rudi%2C%20saya%20ingin%20coba%20Kelas%20Privat%20Online.','coba|Kedinasan TNI-Polri':'https://wa.me/6285177454988?text=Halo%20Kak%20Rudi%2C%20saya%20ingin%20coba%20Kelas%20Kedinasan.','coba|Airis':'https://ai.ruangguru.com/?referralCookiesId=cc8c7901-e0f7-4c01-90a3-bc37f79336ae','coba|Buku Kitab':'https://wa.me/6285177454988?text=Halo%20Kak%20Rudi%2C%20saya%20ingin%20minta%20Buku%20Kitab%20(PDF).','coba|Try Out':'https://wa.me/6285177454988?text=Halo%20Kak%20Rudi%2C%20saya%20ingin%20coba%20Mini%20Try%20Out.','coba|Roboguru':'https://roboguru.ruangguru.com/roboguru-plus?referralCookiesId%5B0%5D=cc8c7901-e0f7-4c01-90a3-bc37f79336ae&referralCookiesId%5B1%5D=cc8c7901-e0f7-4c01-90a3-bc37f79336ae&referrer=https%253A%252F%252Fwww.ruangguru.com%252Froboguruplus'};
 var NAMA={video:'Video',foto:'Foto',fasilitas:'Fasilitas',harga:'Harga',testimoni:'Testimoni',coba:'Coba Kelas Gratis'};
-var MAPID={'Try Out':'ru','Airis':'airis','Roboguru':'robo','Buku Kitab':'kitab','Ruang Belajar':'rb','Brain Academy Online':'bao','Match Champs':'mc','Kalananti':'kal','Brain Academy Center':'bac','Privat Offline':'privat','Privat Online':'privat'};
-var CHIPTXT={ru:'Ruanguji/Try Out',robo:'Roboguru Plus',kitab:'Buku Kitab TKA',airis:'Airis',rb:'Ruang Belajar',bao:'Brain Academy Online',mc:'Match Champs',kal:'Kalananti',bac:'Brain Academy Center',privat:'Privat (rumah/cabang)'};
+var MAPID={'Try Out':'ru','Airis':'airis','Roboguru':'robo','Buku Kitab':'kitab','Ruangbelajar':'rb','Brain Academy Online':'bao','Match Champs':'mc','Kalananti':'kal','Brain Academy Center':'bac','Privat Offline':'privat','Privat Online':'privat'};
+var CHIPTXT={ru:'Ruanguji/Try Out',robo:'Roboguru Plus',kitab:'Buku Kitab TKA',airis:'Airis',rb:'Ruangbelajar',bao:'Brain Academy Online',mc:'Match Champs',kal:'Kalananti',bac:'Brain Academy Center',privat:'Privat (rumah/cabang)'};
 var ts=document.getElementById('ts'),tt=0,sl=document.getElementById('sl'),down=false,moved=false,sx=0,s0=0;
 function toast(t,col){ts.textContent=t;ts.style.background=col?col[0]:'';ts.style.color=col?col[1]:'';ts.hidden=false;clearTimeout(tt);tt=setTimeout(function(){ts.hidden=true},2800);}
 var TCT={ru:['#CD7F32','#1a0d03'],airis:['#CD7F32','#1a0d03'],robo:['#CD7F32','#1a0d03'],kitab:['#C0C0C0','#0f172a'],rb:['#C0C0C0','#0f172a'],bao:['#FFD700','#2e2200'],mc:['#FFD700','#2e2200'],kal:['#FFD700','#2e2200'],bac:['#B8C6DB','#0f172a'],privat:['#5B5DC7','#fff']};
@@ -1973,7 +2195,8 @@ function openPanel(id,label,prod){
 function go(k,prod){
  var id=MAPID[prod];
  if(k==='coba'){window.open(LINKS['coba|'+prod]||LINKS.coba,'_blank','noopener');return}
- if(k==='video'||k==='foto'||k==='testimoni'){openPanel(id,NAMA[k],prod);return}
+ if(k==='fasilitas'&&(id==='airis'||id==='robo'||id==='ru'||id==='kitab'||id==='rb'||id==='kal'||id==='bao'||id==='mc'||id==='privat')){openPanel(id,'Fasilitas',prod);return}
+ if(k==='video'||k==='foto'||k==='testimoni'){openPanel(id,(k==='foto'&&id!=='ru')?'Gambar':NAMA[k],prod);return}
  if(k==='harga'){
   if(!id||!reveal(id)){toast('Harga '+prod+' belum tersedia');return}
   closeSheet();
@@ -2187,7 +2410,7 @@ var C={
 bac:['Brain Academy Center','off','Mulai 42rb/sesi'],
 bao:['Brain Academy Online','on','Mulai 161rb/bulan'],
 kal:['Kalananti','on','Mulai 340rb/bulan'],
-rb:['Ruang Belajar','mad','Mulai 30rb/bulan'],
+rb:['Ruangbelajar','mad','Mulai 30rb/bulan'],
 ru:['Ruanguji/Try Out','mad','Mulai 16.500/try out'],
 kitab:['Buku Kitab TKA','mad','Mulai 120rb/buku'],
 privat:['Privat (rumah/cabang)','off','Mulai 195rb/sesi']
