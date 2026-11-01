@@ -430,6 +430,13 @@ a.r.mad,.chip.mad,.rkb.mad,.fq2.mad>summary{box-shadow:inset 0 0 0 2px #dc2626,0
 .pk2 .pl2{font-size:clamp(12.5px,3.2vw,14.5px);font-weight:600;color:#2563eb;line-height:1.5}
 .pk2 p{margin:8px 0 0;font-size:clamp(12px,3vw,14px);line-height:1.65;color:var(--tx2)}
 .pk2 p b{color:var(--tx);font-weight:600}
+.pkr{display:flex;align-items:center;gap:6px;margin-top:8px}
+.pkr p{flex:1;min-width:0;margin:0;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pkb{flex:none;width:30px;height:30px;padding:0;border:0;border-radius:50%;background:rgba(37,99,235,.12);color:#2563eb;display:grid;place-items:center;cursor:pointer;transition:transform .2s}
+.pkb svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.pkx.open .pkr p{white-space:normal;overflow:visible;text-align:center}
+.pkx.open .pkb{transform:rotate(180deg)}
+.pkm[hidden]{display:none}
 .kb2{display:flex;flex-direction:column;gap:10px;max-width:380px;margin:14px auto 0}
 .kb2 button{display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:wrap;width:100%;padding:13px 20px;border:0;border-radius:99px;background:linear-gradient(135deg,#2563eb,#1e3a8a);color:#fff;font:700 clamp(13px,3.4vw,15px) Poppins,Arial,sans-serif;cursor:pointer;box-shadow:0 4px 12px rgba(37,99,235,.4)}
 .kb2 button:active{transform:scale(.97)}
@@ -728,7 +735,7 @@ body.pvbig #produk{display:block!important;position:fixed;inset:0;z-index:60}
 <symbol id="i-ig" viewBox="0 0 24 24"><rect width="24" height="24" rx="6" fill="url(#igg)"/><rect x="5.5" y="5.5" width="13" height="13" rx="4" fill="none" stroke="#fff" stroke-width="1.6"/><circle cx="12" cy="12" r="3.2" fill="none" stroke="#fff" stroke-width="1.6"/><circle cx="16.2" cy="7.8" r="1" fill="#fff"/></symbol></defs></svg>
 <main id="top">
   <header class="rg"><img class="bac" src="media/gambar-001.png" alt="Brain Academy Center" width="300" height="166"><img src="media/gambar-002.png" alt="Ruangguru" width="360" height="201"></header>
-  <div class="pk2 pt" id="pk2t" data-v="produk"><h3>Paket Belajar Favorit Siswa</h3><div class="pl2">Privat offline, Brain Academy Center, Brain Academy Online, Ruangbelajar, Buku Kitab, Try Out</div><div data-for="siswa" hidden><p>Cara belajar tiap anak itu beda. Ada yang suka ditemani guru, ada yang lebih nyaman belajar sendiri di rumah.</p><p>Supaya semua bisa belajar, Ruangguru sediakan dua jalur: <b>tatap muka</b> bareng guru ahli, atau <b>belajar mandiri</b> lewat aplikasi. Kamu bisa pilih sesuai kebutuhan dan budgetmu.</p></div><div data-for="ortu"><p>Setiap keluarga punya pertimbangan berbeda dalam mendukung belajar Ananda.</p><p>Karena itu Ruangguru sediakan dua jalur fleksibel: <b>pendampingan intensif</b> bersama guru tersertifikasi, atau <b>belajar mandiri</b> dari rumah yang lebih hemat dan tetap terpantau.</p><p>Keduanya tetap memberikan materi terbaik yang disesuaikan dengan kebutuhan Ananda, agar belajar lebih efektif dan nyaman untuk keluarga.</p></div></div>
+  <div class="pk2 pt" id="pk2t" data-v="produk"><h3>Paket Belajar Favorit Siswa</h3><div class="pl2">Privat offline, Brain Academy Center, Brain Academy Online, Ruangbelajar, Buku Kitab, Try Out</div><div data-for="siswa" class="pkx" hidden><div class="pkr"><p>Cara belajar tiap anak itu beda. Ada yang suka ditemani guru, ada yang lebih nyaman belajar sendiri di rumah.</p><button type="button" class="pkb" aria-expanded="false" aria-label="Baca selengkapnya"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button></div><div class="pkm" hidden><p>Supaya semua bisa belajar, Ruangguru sediakan dua jalur: <b>tatap muka</b> bareng guru ahli, atau <b>belajar mandiri</b> lewat aplikasi. Kamu bisa pilih sesuai kebutuhan dan budgetmu.</p></div></div><div data-for="ortu" class="pkx"><div class="pkr"><p>Setiap keluarga punya pertimbangan berbeda dalam mendukung belajar Ananda.</p><button type="button" class="pkb" aria-expanded="false" aria-label="Baca selengkapnya"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button></div><div class="pkm" hidden><p>Karena itu Ruangguru sediakan dua jalur fleksibel: <b>pendampingan intensif</b> bersama guru tersertifikasi, atau <b>belajar mandiri</b> dari rumah yang lebih hemat dan tetap terpantau.</p><p>Keduanya tetap memberikan materi terbaik yang disesuaikan dengan kebutuhan Ananda, agar belajar lebih efektif dan nyaman untuk keluarga.</p></div></div></div>
   <section class="beranda" id="beranda" data-v="beranda">
     <div class="pick"><p class="pl" id="pickL">Anda sebagai:</p><div class="sg" role="radiogroup" aria-labelledby="pickL"><button type="button" role="radio" aria-checked="false" data-mode="ortu"><span>Orang Tua</span></button><button type="button" role="radio" aria-checked="true" data-mode="siswa"><span>Siswa</span></button></div></div>
     <figure class="hero"><img src="media/gambar-003.jpg" alt="Poster Brain Academy by Ruangguru: Tingkatkan nilai dan raih sekolah impian, bimbel kombinasi tatap muka dan online" width="800" height="1131"></figure>
@@ -757,7 +764,6 @@ body.pvbig #produk{display:block!important;position:fixed;inset:0;z-index:60}
   <div class="h1 mm"><span>Platform belajar mandiri di rumah</span></div>
   <div class="c2"><button type="button" class="chip mad" data-t="g-mad" aria-controls="g-mad" aria-expanded="false">Ruanguji/Try Out</button><button type="button" class="chip mad" data-t="g-mad" aria-controls="g-mad" aria-expanded="false">Roboguru Plus</button><button type="button" class="chip mad" data-t="g-mad" aria-controls="g-mad" aria-expanded="false">Buku Kitab TKA</button><button type="button" class="chip mad" data-t="g-mad" aria-controls="g-mad" aria-expanded="false">Airis</button><button type="button" class="chip mad" data-t="g-mad" aria-controls="g-mad" aria-expanded="false">Ruangbelajar</button></div>
 </nav>
-  <p class="vid" data-v="produk">Lihat <a href="https://www.instagram.com/reel/Ddadg51PN7o/?obrf=MTd3emZ0bXJlbng2bw==" target="_blank" rel="noopener">video</a> perbandingan produk offline, online dan mandiri.</p>
   <div class="pk2" id="pk2" data-v="produk"><div class="kb2"><button type="button" id="kgb2" onclick="var a=document.querySelector('.bar a[href=&quot;#gratis&quot;]');if(a)a.click()">Konsultasi Gratis untuk Orang Tua</button>
   <button type="button" id="faqb2">Pertanyaan Sering Diajukan</button>
   <button type="button" id="bacb2">Lihat Brain Academy Center <b class="rk">★ Rekomendasi</b></button></div></div>
@@ -1808,7 +1814,7 @@ h1{margin:6px 0 4px;text-align:center;font-size:clamp(22px,3.4vw,34px);font-weig
 .pvroot[data-view=siswa] .pk,.pvroot[data-view=siswa] .kbs,.pvroot[data-view=siswa] #dock{display:none}
 .sub{text-align:center;margin:0 0 26px;font-size:14px;color:var(--muted)}
 .map{background:var(--panel);border-radius:22px;padding:20px 18px 18px;box-shadow:0 20px 50px rgba(15,23,42,.14)}
-.row{display:grid;grid-template-columns:128px repeat(6,1fr)}
+.row{display:grid;grid-template-columns:128px repeat(6,minmax(0,1fr))}
 .grp{position:relative;text-align:center;padding:0 6px 50px}
 .grp .t{display:inline-block;padding:9px 24px;border-radius:99px;color:#fff;font-weight:600;font-size:clamp(14px,1.6vw,18px);background:linear-gradient(135deg,var(--g1),var(--g2));box-shadow:0 8px 18px rgba(0,0,0,.18)}
 .grp::before{content:"";position:absolute;left:50%;bottom:0;height:37px;width:3px;margin-left:-1.5px;background:var(--gc)}
@@ -1830,7 +1836,7 @@ h1{margin:6px 0 4px;text-align:center;font-size:clamp(22px,3.4vw,34px);font-weig
 .b2{--t:#0f172a;--acc:#6b6b6b;--ln:#4b5563;background:linear-gradient(135deg,#C0C0C0,#A8A8A8)}
 .b3{--t:#2e2200;--acc:#c98a00;--ln:#6b5200;background:linear-gradient(135deg,#FFD700,#FFB700)}
 .b4{--t:#0f172a;--acc:#5f7ea6;--ln:#334a6b;background:linear-gradient(135deg,#E5E4E2,#B8C6DB)}
-.b5{--t:#fff;--acc:#4547a8;--ln:#fde9ee;background:linear-gradient(135deg,#5B5DC7,#E86A6A)}
+.b5{--t:#fff;--acc:#4547a8;--ln:#1e293b;background:linear-gradient(135deg,#5B5DC7,#E86A6A)}
 .tier{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;padding:14px 8px;text-align:center;color:#fff;background:#27b6c1;border-radius:16px 0 0 16px}
 
 .tier .n{width:34px;height:34px;border-radius:50%;border:2px solid #fff;display:grid;place-items:center;font-weight:700;font-size:15px;box-shadow:0 3px 8px rgba(0,0,0,.25)}
@@ -1841,19 +1847,20 @@ h1{margin:6px 0 4px;text-align:center;font-size:clamp(22px,3.4vw,34px);font-weig
 .b5 .tier .n{background:linear-gradient(135deg,#5B5DC7,#E86A6A);color:#fff}
 .tier .nm{font-weight:700;letter-spacing:1.8px;font-size:13px;text-transform:uppercase}
 .tier .ds{font-size:11px;opacity:.85}
-.cell{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:12px;padding:34px 10px 22px;min-height:100px}
+.cell{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:12px;padding:34px 6px 22px;min-height:100px;min-width:0}
 .ln::before,.ln-end::before{content:"";position:absolute;left:50%;top:-8px;bottom:0;width:3px;margin-left:-1.5px;background:var(--ln)}
 .ln-end::before{bottom:auto;height:42px}
 .ln-end::after{content:"";position:absolute;left:50%;top:28px;width:11px;height:11px;margin-left:-5.5px;border-radius:50%;background:var(--ln)}
-.card{position:relative;z-index:1;width:100%;max-width:160px;padding:12px 10px;text-align:center;font-size:14.5px;font-weight:600;line-height:1.3;color:#0f172a;background:#fff;border-radius:12px;border-left:5px solid var(--acc);box-shadow:0 6px 14px rgba(15,23,42,.22)}
+.card{position:relative;z-index:1;width:100%;max-width:160px;padding:12px 8px;text-align:center;font-size:14px;font-weight:600;line-height:1.3;overflow-wrap:anywhere;color:#0f172a;background:#fff;border-radius:12px;border-left:5px solid var(--acc);box-shadow:0 6px 14px rgba(15,23,42,.22)}
 .b5 .card{box-shadow:0 0 0 1px rgba(91,93,199,.6),0 6px 20px rgba(232,106,106,.3)}
 .legend{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;margin-top:18px;font-size:12.5px;color:var(--muted)}
 .legend span{display:inline-flex;align-items:center;gap:6px;font-weight:600;color:var(--ink)}
 .legend i{width:18px;height:18px;border-radius:6px;display:inline-block}
 .legend em{font-style:normal;color:var(--muted);font-weight:500}
-.legend{flex-wrap:nowrap;gap:clamp(6px,2vw,14px);font-size:clamp(10.5px,2.8vw,13px)}
-.legend span{gap:5px;white-space:nowrap}
-.legend i{width:clamp(11px,3vw,16px);height:clamp(11px,3vw,16px);border-radius:4px}
+.legend{flex-wrap:nowrap;gap:clamp(5px,1.6vw,10px);font-size:clamp(10px,2.9vw,13px);margin:0;padding:10px 6px 14px}
+.legend span{gap:4px;white-space:nowrap}
+.legend i{width:clamp(10px,2.8vw,14px);height:clamp(10px,2.8vw,14px);border-radius:4px}
+.pvroot.big .legend{position:absolute;left:0;right:0;bottom:0;z-index:44;background:var(--panel);box-shadow:0 -4px 12px rgba(15,23,42,.15)}
 .card{cursor:pointer;transition:transform .15s}
 .card:hover,.card:focus-visible{transform:translateY(-2px);outline:none}
 .card:focus-visible{box-shadow:0 0 0 3px #2563eb}
@@ -1944,21 +1951,21 @@ h1{margin:6px 0 4px;text-align:center;font-size:clamp(22px,3.4vw,34px);font-weig
 
 .vrow{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 14px}
 .vrow .vt{margin:0}
-.bigb{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border:0;border-radius:99px;background:linear-gradient(135deg,#f59e0b,#d97706);color:#fff;font:700 clamp(12.5px,3.2vw,14px) Poppins,Arial,sans-serif;cursor:pointer;box-shadow:0 3px 10px rgba(217,119,6,.45)}
+.bigb{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border:0;border-radius:99px;background:linear-gradient(135deg,#ef4444,#b91c1c);color:#fff;font:700 clamp(13px,3.4vw,15px) Poppins,Arial,sans-serif;cursor:pointer;box-shadow:0 3px 10px rgba(220,38,38,.45);flex:none;white-space:nowrap}
 .bigb:active{transform:scale(.96)}
 .bigx{display:none}
 .pvroot.big{border-radius:0;height:100dvh}
 .pvroot.big .pvwrap{height:100%}
 .pvroot.big .scroll{position:absolute;inset:0;max-height:none;height:100%}
-.pvroot.big .bigb{display:none}
+.pvroot.big .bigb,.pvroot.big .hintbar{display:none}
+.hintbar{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;padding:6px 16px 14px}
+.hinttx{flex:1 1 100%;margin:0;font-size:clamp(13px,3.6vw,15px);line-height:1.55;font-weight:500;color:var(--ink);text-align:center}
+.hinttx b{color:#b91c1c;font-weight:700}
 .pvroot.big .bigx{display:flex;position:absolute;top:10px;left:10px;z-index:45;align-items:center;gap:6px;padding:9px 16px;border:0;border-radius:99px;background:rgba(15,23,42,.85);color:#fff;font:700 13px Poppins,Arial,sans-serif;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.35)}
 
 </style>
-<div class="pvroot" id="pvroot" data-view="ortu"><div class="pvwrap"><div class="scroll" id="sc"><div class="stage" id="st">
+<div class="pvroot" id="pvroot" data-view="ortu"><div class="pvwrap"><div class="hintbar"><p class="hinttx">Klik salah satu produk pada tabel di bawah ini. Gunakan tombol <b>(Diperbesar)</b> berwarna merah untuk melihat tampilan yang lebih besar.</p><button type="button" class="bigb" id="big" aria-label="Buka tampilan diperbesar di tab baru">⤢ Diperbesar</button></div><div class="scroll" id="sc"><div class="stage" id="st">
 
-<h1 id="ttl">Tampilan Produk Ruangguru</h1>
-<div class="vrow"><button type="button" class="bigb" id="big" aria-label="Buka tampilan diperbesar di tab baru">⤢ Diperbesar</button></div>
-<p class="sub">Klik salah satu produk untuk melihat penjelasan singkatnya.</p>
 <div class="map">
 
 <div class="sticky-head">
@@ -2012,6 +2019,12 @@ h1{margin:6px 0 4px;text-align:center;font-size:clamp(22px,3.4vw,34px);font-weig
 </div>
 
 </div>
+
+<div class="pk"><h3>Paket belajar yang banyak dipilih siswa</h3><div class="pl2">Privat, Brain Academy Center, Brain Academy Online, Ruangbelajar, Buku Kitab, Try Out</div><p>Setiap anak punya gaya belajar, kebiasaan, kebutuhan, dan anggaran yang berbeda. Karena itu, Ruangguru menyediakan dua jalur belajar: tatap muka bersama pendamping belajar (guru tersertifikasi) atau platform belajar mandiri di rumah. Silakan pilih yang paling sesuai.</p></div>
+<div class="kbs"><button type="button" id="kgb" onclick="window.open('https://ruanggurupwr-bot.github.io/info/','_blank','noopener')">Konsultasi Gratis untuk Orang Tua</button>
+<button type="button" id="bacb">Lihat Brain Academy Center <b class="rk">★ Rekomendasi</b></button>
+<button type="button" id="faqb">Pertanyaan Sering Diajukan</button></div>
+</div></div>
 <div class="legend">
 <span><i style="background:linear-gradient(135deg,#CD7F32,#A05A2C)"></i>Bronze</span>
 <span><i style="background:linear-gradient(135deg,#C0C0C0,#A8A8A8)"></i>Silver</span>
@@ -2020,11 +2033,6 @@ h1{margin:6px 0 4px;text-align:center;font-size:clamp(22px,3.4vw,34px);font-weig
 <span><i style="background:linear-gradient(135deg,#5B5DC7,#E86A6A)"></i>Diamond</span>
 
 </div>
-<div class="pk"><h3>Paket belajar yang banyak dipilih siswa</h3><div class="pl2">Privat, Brain Academy Center, Brain Academy Online, Ruangbelajar, Buku Kitab, Try Out</div><p>Setiap anak punya gaya belajar, kebiasaan, kebutuhan, dan anggaran yang berbeda. Karena itu, Ruangguru menyediakan dua jalur belajar: tatap muka bersama pendamping belajar (guru tersertifikasi) atau platform belajar mandiri di rumah. Silakan pilih yang paling sesuai.</p></div>
-<div class="kbs"><button type="button" id="kgb" onclick="window.open('https://ruanggurupwr-bot.github.io/info/','_blank','noopener')">Konsultasi Gratis untuk Orang Tua</button>
-<button type="button" id="bacb">Lihat Brain Academy Center <b class="rk">★ Rekomendasi</b></button>
-<button type="button" id="faqb">Pertanyaan Sering Diajukan</button></div>
-</div></div>
 <div class="zc" id="zc"><button id="zo" aria-label="Perkecil">−</button><button class="pc" id="zp" aria-label="Pas layar">100%</button><button id="zi" aria-label="Perbesar">+</button></div>
 <button type="button" class="bigx" id="bigx">← Kembali</button></div><div class="ov" id="ov" hidden><div class="sheet" id="sh" role="dialog" aria-modal="true" aria-labelledby="mt"><button class="x" id="mx" aria-label="Tutup">×</button><span class="badge" id="mb"></span><h2 id="mt"></h2><div class="tags" id="mg"></div><p id="md"></p><div class="ex" id="ex" hidden><div class="lj">Lihat juga</div><div class="sl" id="sl"><button type="button" data-k="fasilitas">Fasilitas</button><button type="button" data-k="video">Video</button><button type="button" data-k="foto">Gambar</button><button type="button" data-k="testimoni">Testimoni</button><button type="button" data-k="harga">Harga</button></div><button type="button" class="cg" id="cb" data-k="coba">Coba Kelas Gratis<small>Daftar sekarang, gratis</small></button></div></div></div>
 <div class="dock" id="dock" role="navigation" aria-label="Hubungi konsultan"><button type="button" class="d-ck" id="dck" aria-label="Tampilkan menu kontak" title="Tampilkan kontak">✓</button><button type="button" class="d-x" id="dx" aria-label="Sembunyikan menu kontak" title="Sembunyikan">✕</button><button type="button" class="d-wa" data-a="wa" aria-label="Chat WhatsApp konsultan" title="Chat WhatsApp"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3zm0 1.8a7.2 7.2 0 1 1-3.9 13.3l-.3-.2-2.4.6.6-2.3-.2-.3A7.2 7.2 0 0 1 12 4.8z"/><path d="M9 8.2c-.3 0-.7.2-.9.6-.3.6-.3 1.6.6 2.9 1 1.6 2.4 2.6 3.8 3 .8.2 1.5 0 1.9-.5.2-.3.3-.7.2-.8l-1.5-.7c-.2-.1-.4 0-.5.1l-.5.6c-.2.2-.4.2-.6.1-.8-.4-1.5-1-2-1.8-.1-.2-.1-.4 0-.5l.4-.5c.1-.2.1-.3 0-.5l-.6-1.4c-.1-.2-.2-.3-.4-.3z"/></svg></button><button type="button" class="d-ig" data-a="ig" aria-label="DM Instagram konsultan" title="DM Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="#fff"/></svg></button><button type="button" class="d-gm" data-a="gm" aria-label="Jadwalkan simulasi kelas online" title="Simulasi kelas online"><svg viewBox="0 0 24 24" fill="#fff"><rect x="2.5" y="6" width="13" height="12" rx="2.5"/><path d="M16.5 10.5 21.5 7v10l-5-3.5z"/></svg></button><button type="button" class="d-hm" data-a="hm" aria-label="Minta dikunjungi ke rumah" title="Kunjungan ke rumah"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 3 2.5 11.5h2.7V20h5v-5.5h3.6V20h5v-8.5h2.7z"/></svg></button></div>
@@ -2457,6 +2465,9 @@ document.getElementById('recX').addEventListener('click',close);
 document.getElementById('recG').addEventListener('click',function(){close();var a=document.querySelector('.bar a[href="#produk"]');if(a)a.click()});
 rec.addEventListener('keydown',function(e){if(e.key==='Escape'){e.preventDefault();close()}});
 })();
+</script>
+<script>
+document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('.pkb');if(!b)return;var x=b.closest('.pkx'),m=x&&x.querySelector('.pkm');if(!m)return;var o=m.hidden;m.hidden=!o;x.classList.toggle('open',o);b.setAttribute('aria-expanded',o?'true':'false');b.setAttribute('aria-label',o?'Tutup':'Baca selengkapnya')});
 </script>
 </body>
 </html>
