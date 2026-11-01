@@ -1234,7 +1234,7 @@ var KAL_VID='media/video-001.mp4';
 var KAL_T=[['v','media/video-002.mp4'],['v','media/video-003.mp4'],['v','media/video-004.mp4'],['i','media/gambar-088.webp'],['i','media/gambar-089.webp'],['v','media/video-005.mp4'],['v','media/video-006.mp4'],['v','media/video-007.mp4'],['v','media/video-008.mp4'],['v','media/video-009.mp4'],['v','media/video-010.mp4'],['v','media/video-011.mp4'],['v','media/video-012.mp4'],['v','media/video-013.mp4']];
 var KAL_C=[['v','media/video-014.mp4'],['v',KAL_VID],['v','media/video-015.mp4'],['v','media/video-016.mp4'],['i','media/gambar-090.webp'],['v','media/video-017.mp4'],['v','media/video-018.mp4'],['v','media/video-019.mp4'],['v','media/video-020.mp4'],['v','media/video-021.mp4'],['v','media/video-022.mp4'],['v','media/video-023.mp4']];
 /* Kelas Online Kalananti: v = video, i = gambar (urutan tampil) */
-var KAL_O=[['v','media/video-045.mp4'],['i','media/gambar-142.jpg'],['i','media/gambar-143.jpg'],['i','media/gambar-144.jpg'],['v','media/video-049.mp4'],['v','media/video-050.mp4'],['v','media/video-051.mp4'],['v','media/video-052.mp4'],['v','media/video-053.mp4'],['v','media/video-054.mp4'],['v','media/video-055.mp4']];
+var KAL_O=[['i','media/gambar-142.jpg'],['i','media/gambar-143.jpg'],['i','media/gambar-144.jpg'],['v','media/video-049.mp4'],['v','media/video-050.mp4'],['v','media/video-051.mp4'],['v','media/video-052.mp4'],['v','media/video-053.mp4'],['v','media/video-054.mp4'],['v','media/video-055.mp4']];
 function kalTesti(){return kalSlider(KAL_T,'Testimoni')}
 function kalSlider(IT,lbl){
  var wrap=el('div'),vs=[],ix=0,n=IT.length;
@@ -1746,7 +1746,7 @@ function build(card){
   [['sd','SD'],['smp','SMP'],['sma','SMA'],['snbt','SNBT']].forEach(function(x){var b=el('button');b.type='button';b.textContent=x[1];b.setAttribute('aria-pressed',x[0]==='sd'?'true':'false');
    b.addEventListener('click',function(){jj=x[0];jb.forEach(function(y){y.setAttribute('aria-pressed',y===b?'true':'false')});if(kind){var k=kind;close();open(k)}});
    jb.push(b);jr.appendChild(b)});p.appendChild(jr)}
- if(id==='bac'||id==='bao'){var g=el('a','mxg2 '+(id==='bao'?'on':'off'));g.href='https://rudiruangguru.github.io/kelasgratis/';g.target='_blank';g.rel='noopener';g.textContent=id==='bao'?'Coba Kelas BAON':'Coba Kelas BAC';p.appendChild(g)}
+ if(id==='bac'){var g=el('a','mxg2 off');g.href='https://rudiruangguru.github.io/kelasgratis/';g.target='_blank';g.rel='noopener';g.textContent='Coba Kelas BAC';p.appendChild(g)}
  function close(){if(cur){cur.stop();cur.el.remove();cur=null}kind='';if(cr)cr.hidden=true;if(lr)lr.hidden=true;if(vr)vr.hidden=true;if(fr)fr.hidden=true;if(mr)mr.hidden=true;if(gr)gr.hidden=true;for(var k in btns)btns[k].setAttribute('aria-expanded','false')}
  function open(k){
   if(kind===k){close();return}
