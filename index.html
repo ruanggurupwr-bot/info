@@ -711,6 +711,7 @@ body a.r .p{color:var(--tx)!important;font-weight:600;font-size:12.5px;line-heig
 .jg button:focus-visible,.kg button:focus-visible{outline:2px solid var(--tx);outline-offset:2px}
 .kg .kw{flex:1 1 100%;font-size:12px}
 .kg .kw:disabled{opacity:1;cursor:default}
+.kg.kg3 button{flex:0 0 calc((100% - 16px)/3);min-width:0}
 .kh{flex:1 1 100%;margin:0;padding:12px 4px;font-size:11px;line-height:1.4;color:var(--tx2);text-align:center}
 </style>
 <style>
@@ -1234,7 +1235,7 @@ var KAL_VID='media/video-001.mp4';
 var KAL_T=[['v','media/video-002.mp4'],['v','media/video-003.mp4'],['v','media/video-004.mp4'],['i','media/gambar-088.webp'],['i','media/gambar-089.webp'],['v','media/video-005.mp4'],['v','media/video-006.mp4'],['v','media/video-007.mp4'],['v','media/video-008.mp4'],['v','media/video-009.mp4'],['v','media/video-010.mp4'],['v','media/video-011.mp4'],['v','media/video-012.mp4'],['v','media/video-013.mp4']];
 var KAL_C=[['v','media/video-014.mp4'],['v',KAL_VID],['v','media/video-015.mp4'],['v','media/video-016.mp4'],['i','media/gambar-090.webp'],['v','media/video-017.mp4'],['v','media/video-018.mp4'],['v','media/video-019.mp4'],['v','media/video-020.mp4'],['v','media/video-021.mp4'],['v','media/video-022.mp4'],['v','media/video-023.mp4']];
 /* Kelas Online Kalananti: v = video, i = gambar (urutan tampil) */
-var KAL_O=[['i','media/gambar-142.jpg'],['i','media/gambar-143.jpg'],['i','media/gambar-144.jpg'],['v','media/video-049.mp4'],['v','media/video-050.mp4'],['v','media/video-051.mp4'],['v','media/video-052.mp4'],['v','media/video-053.mp4'],['v','media/video-054.mp4'],['v','media/video-055.mp4']];
+var KAL_O=[['v','media/video-045.mp4'],['i','media/gambar-142.jpg'],['i','media/gambar-143.jpg'],['i','media/gambar-144.jpg'],['v','media/video-049.mp4'],['v','media/video-050.mp4'],['v','media/video-051.mp4'],['v','media/video-052.mp4'],['v','media/video-053.mp4'],['v','media/video-054.mp4'],['v','media/video-055.mp4']];
 function kalTesti(){return kalSlider(KAL_T,'Testimoni')}
 function kalSlider(IT,lbl){
  var wrap=el('div'),vs=[],ix=0,n=IT.length;
@@ -1746,7 +1747,7 @@ function build(card){
   [['sd','SD'],['smp','SMP'],['sma','SMA'],['snbt','SNBT']].forEach(function(x){var b=el('button');b.type='button';b.textContent=x[1];b.setAttribute('aria-pressed',x[0]==='sd'?'true':'false');
    b.addEventListener('click',function(){jj=x[0];jb.forEach(function(y){y.setAttribute('aria-pressed',y===b?'true':'false')});if(kind){var k=kind;close();open(k)}});
    jb.push(b);jr.appendChild(b)});p.appendChild(jr)}
- if(id==='bac'){var g=el('a','mxg2 off');g.href='https://rudiruangguru.github.io/kelasgratis/';g.target='_blank';g.rel='noopener';g.textContent='Coba Kelas BAC';p.appendChild(g)}
+ if(id==='bac'||id==='bao'){var g=el('a','mxg2 '+(id==='bao'?'on':'off'));g.href='https://rudiruangguru.github.io/kelasgratis/';g.target='_blank';g.rel='noopener';g.textContent=id==='bao'?'Coba Kelas BAON':'Coba Kelas BAC';p.appendChild(g)}
  function close(){if(cur){cur.stop();cur.el.remove();cur=null}kind='';if(cr)cr.hidden=true;if(lr)lr.hidden=true;if(vr)vr.hidden=true;if(fr)fr.hidden=true;if(mr)mr.hidden=true;if(gr)gr.hidden=true;for(var k in btns)btns[k].setAttribute('aria-expanded','false')}
  function open(k){
   if(kind===k){close();return}
@@ -2339,6 +2340,8 @@ window.__mkJK=function(jg,kg,cb){
   else if(KL[st.j]){KL[st.j].forEach(function(n){h+='<button type="button" role="radio" aria-checked="false" data-val="'+n+'">'+n+'</button>'})}
   else h='<p class="kh">Pilih jenjang dulu</p>';
   kg.innerHTML=h;
+  /* SD: 6 tombol kelas tersusun 3 per baris (1,2,3 lalu 4,5,6) */
+  kg.classList.toggle('kg3',st.j==='SD');
  }
  jg.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;st.j=b.getAttribute('data-val');st.k='';mark(jg,st.j);renderK();cb(st)});
  kg.addEventListener('click',function(e){var b=e.target.closest('button');if(!b||b.disabled)return;st.k=b.getAttribute('data-val');mark(kg,st.k);cb(st)});
@@ -2413,6 +2416,7 @@ var rec=document.getElementById('rec');if(!rec)return;
 var C={
 bac:['Brain Academy Center','off','Mulai 42rb/sesi'],
 bao:['Brain Academy Online','on','Mulai 161rb/bulan'],
+mc:['Match Champs','on','Mulai 525rb/bulan'],
 kal:['Kalananti','on','Mulai 340rb/bulan'],
 rb:['Ruangbelajar','mad','Mulai 30rb/bulan'],
 ru:['Ruanguji/Try Out','mad','Mulai 16.500/try out'],
@@ -2423,10 +2427,12 @@ function pick(j,k){
  var n=parseInt(k,10);
  if(j==='SD'){
   if(n===6)return [['bac','Belajar tatap muka bareng Master Teacher untuk persiapan TKA SD dan masuk SMP.'],['ru','Try out TKA SD untuk mengukur kesiapan sebelum ujian.'],['kitab','Buku latihan dan rangkuman TKA lengkap dengan pembahasan.']];
-  return [['bac','Belajar tatap muka bareng Master Teacher, cocok untuk membangun dasar belajar.'],['rb','Video materi dan bank soal, bisa belajar mandiri di rumah dengan biaya ringan.'],['kal','Kursus coding dan kreativitas, seru untuk anak yang suka bikin game dan animasi.']];
+  if(n<=4)return [['mc','Program kompetisi akademik dengan latihan soal HOTS dan pembahasan juara.'],['rb','Video materi dan bank soal, bisa belajar mandiri di rumah dengan biaya ringan.'],['kal','Kursus coding dan kreativitas, seru untuk anak yang suka bikin game dan animasi.']];
+  return [['bao','Live teaching dari rumah bareng Star Teacher, ada Klinik PR dan try out rutin.'],['rb','Video materi dan bank soal, bisa belajar mandiri di rumah dengan biaya ringan.'],['kal','Kursus coding dan kreativitas, seru untuk anak yang suka bikin game dan animasi.']];
  }
  if(j==='SMP'){
   if(n===9)return [['bac','Belajar tatap muka bareng Master Teacher untuk persiapan TKA SMP dan masuk SMA.'],['ru','Try out TKA SMP untuk mengukur kesiapan sebelum ujian.'],['kitab','Buku latihan dan rangkuman TKA lengkap dengan pembahasan.']];
+  if(n===7)return [['bao','Live teaching dari rumah, ada Klinik PR dan try out rutin.'],['rb','Video materi dan bank soal untuk belajar mandiri kapan saja.'],['privat','Les 1-on-1 dengan jadwal fleksibel, bebas pilih pengajar dan materi.']];
   return [['bac','Belajar tatap muka bareng Master Teacher, materi sesuai kurikulum sekolah.'],['bao','Live teaching dari rumah, ada Klinik PR dan try out rutin.'],['rb','Video materi dan bank soal untuk belajar mandiri kapan saja.']];
  }
  if(j==='SMA'){
