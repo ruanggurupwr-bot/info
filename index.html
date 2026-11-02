@@ -596,6 +596,12 @@ a.r.off .d{color:#0e4a55;opacity:1}
 .ub:focus-visible{outline:2px solid #2d2d2d;outline-offset:2px}
 .ufn{margin:10px 0 0;text-align:center;font-size:12px;color:var(--tx2)}
 .mxg2:active{transform:translateY(3px);box-shadow:0 2px 0 #374b55}
+.mxr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin:12px 4px 0}
+.mxr .mxg2{margin:0;padding:10px 2px;display:flex;align-items:center;justify-content:center}
+.mxr .mxg2 svg{width:22px;height:22px;display:block}
+.kbv{margin:16px auto 8px}
+.kbv button.kc{background:var(--c-cream);background-image:none;color:var(--c-ink);box-shadow:0 6px 0 var(--c-shadow)}
+.kbv button.kc:active{transform:translateY(3px);box-shadow:0 3px 0 var(--c-shadow)}
 .mxg2:focus-visible{outline:2px solid #2d2d2d;outline-offset:2px}
 .mxt{display:flex;height:100%;transition:transform .35s ease}
 .mxs{flex:0 0 100%;height:100%;position:relative;background:#16222c center/cover no-repeat;display:flex;align-items:center;justify-content:center;color:#fff;text-align:center;font-size:12.5px;font-weight:600;line-height:1.5;padding:12px}
@@ -767,6 +773,7 @@ body,button,input,select,textarea{font-family:Poppins,system-ui,-apple-system,"S
 
 /* Produk: dua tombol atas krem seperti judul FAQ */
 .kb2{gap:16px}
+#pk2{display:none!important}
 .kb2 button#kgb2,.kb2 button#faqb2{background:var(--c-cream);background-image:none;color:var(--c-ink);box-shadow:0 6px 0 var(--c-shadow)}
 .kb2 button#kgb2:active,.kb2 button#faqb2:active{transform:translateY(3px);box-shadow:0 3px 0 var(--c-shadow)}
 /* BAC: judul, sub judul, tombol Back/Next, dan kepala accordion krem */
@@ -1401,7 +1408,7 @@ var ROBO_VID=[];
 var RB_VID={apa:[],fitur:[],adapto:[]};
 var BAO_VR={apa:'4/5',fitur:'4/5',testi:'16/9'};
 /* VIDEO YOUTUBE: tempel link YouTube di dalam [ ] tiap produk. Kosong = tampil "Video segera hadir". */
-var YT0='84xRPgir6sk';var YT={robo:[YT0],airis:[YT0],ru:[YT0],kitab:{sd:[YT0],smp:[YT0],sma:[YT0],snbt:[YT0]},rb:{apa:[YT0],fitur:[YT0],adapto:[YT0]},bao:{apa:[YT0],fitur:[YT0],testi:[YT0]}};
+var YT0='84xRPgir6sk';var YT={robo:['Ri4SrN16xj8'],ru:{pembahasan:['RtCNcAznWvo','ix2LM9oGo3k','QpNZZgotSIw','qXyFbD-_JLE'],utbk:['xIyeM_TkKeY']},airis:[YT0],kitab:{sd:[YT0],smp:[YT0],sma:[YT0],snbt:[YT0]},rb:{apa:[YT0],fitur:[YT0],adapto:[YT0]},bao:{apa:[YT0],fitur:[YT0],testi:[YT0]}};
 var VID_LINK='https://rudiruangguru.github.io/bac/';
 function ytEmpty(id,k){var L=YT[id];if(L&&!Array.isArray(L))L=L[k];return !(L||[]).map(ytId).filter(Boolean).length}
 function ytId(u){var m=String(u).match(/(?:youtu\.be\/|v=|embed\/|shorts\/|live\/)([\w-]{11})/);return m?m[1]:(/^[\w-]{11}$/.test(String(u))?String(u):'')}
@@ -1413,10 +1420,10 @@ function ytViewer(id,k){
  var sl=el('div','vsl'),tr=el('div','vsl-t'),pill=el('div','vsl-p');
  L.forEach(function(v){var sd=el('div','vsl-s'),f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+v+'?rel=0&playsinline=1&enablejsapi=1';f.title='Video YouTube';f.loading='lazy';f.allow='accelerometer; encrypted-media; picture-in-picture; fullscreen';f.allowFullscreen=true;f.style.cssText='display:block;width:100%;aspect-ratio:16/9;border:0;background:#000';sd.appendChild(f);tr.appendChild(sd);fr.push(f)});
  sl.appendChild(tr);
- lk=el('a','mxg2','Buka di YouTube');lk.target='_blank';lk.rel='noopener';
+ lk=el('a','mxg2','');lk.target='_blank';lk.rel='noopener';lk.setAttribute('aria-label','Buka di YouTube');lk.title='Buka di YouTube';lk.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>';
  function go(i){fr.forEach(function(f){try{f.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}','*')}catch(e){}});ix=(i+n)%n;tr.style.transform='translateX(-'+ix*100+'%)';pill.textContent=(ix+1)+' / '+n;lk.href='https://www.youtube.com/watch?v='+L[ix];wa.href='https://wa.me/?text='+encodeURIComponent('Tonton video ini: https://www.youtube.com/watch?v='+L[ix])}
  if(n>1){var pb=el('button','vsl-b vsl-l'),nb=el('button','vsl-b vsl-r');pb.type='button';nb.type='button';pb.textContent='‹';nb.textContent='›';pb.setAttribute('aria-label','Video sebelumnya');nb.setAttribute('aria-label','Video berikutnya');pb.addEventListener('click',function(){go(ix-1)});nb.addEventListener('click',function(){go(ix+1)});sl.appendChild(pill);sl.appendChild(pb);sl.appendChild(nb)}
- wa=el('a','mxg2','Bagikan lewat WA');wa.target='_blank';wa.rel='noopener';var cl=el('a','mxg2','Tutup video');cl.href='#';cl.addEventListener('click',function(ev){ev.preventDefault();var pp=wrap.closest&&wrap.closest('.mxp'),bb=pp&&pp.querySelector('.mxb button[aria-expanded="true"]');if(bb)bb.click()});wrap.appendChild(sl);wrap.appendChild(lk);wrap.appendChild(wa);wrap.appendChild(cl);go(0);
+ wa=el('a','mxg2','');wa.target='_blank';wa.rel='noopener';wa.setAttribute('aria-label','Bagikan lewat WhatsApp');wa.title='Bagikan lewat WhatsApp';wa.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>';var cl=el('a','mxg2','');cl.setAttribute('aria-label','Tutup video');cl.title='Tutup video';cl.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>';cl.href='#';cl.addEventListener('click',function(ev){ev.preventDefault();var pp=wrap.closest&&wrap.closest('.mxp'),bb=pp&&pp.querySelector('.mxb button[aria-expanded="true"]');if(bb)bb.click()});wrap.appendChild(sl);var rw=el('div','mxr');rw.appendChild(lk);rw.appendChild(wa);rw.appendChild(cl);wrap.appendChild(rw);var kb=el('div','kb2 kbv');[['kgb2','Konsultasi Gratis untuk Orang Tua','kc'],['faqb2','Pertanyaan Sering Diajukan','kc'],['bacb2','Lihat Brain Academy Center <b class="rk">★ Rekomendasi</b>','']].forEach(function(x){var b=document.createElement('button');b.type='button';if(x[2])b.className=x[2];b.innerHTML=x[1];b.addEventListener('click',function(){var o=document.getElementById(x[0]);if(o)o.click()});kb.appendChild(b)});wrap.appendChild(kb);go(0);
  return{el:wrap,start:function(){},stop:function(){if(iv)iv.stop()}}
 }
 function baoVideo(k){
@@ -1756,12 +1763,12 @@ function FasViewer(id){
  return {el:wrap,start:function(i){show(i||0)},stop:function(){}};
 }
 function buildRu(card,p,name){
- var cur=null,cur2=null,cur3=null,top='',jj='',sub='',topBtn={};
+ var cur=null,cur2=null,cur3=null,top='',jj='',sub='',vs='',topBtn={};
  var LBL={sd:'SD',smp:'SMP',sma:'SMA',snbt:'SNBT',tni:'TNI/POLRI',ked:'Kedinasan',psi:'Psikotes Kedinasan'};
  var bar=el('div','mxb'),slot=el('div');bar.style.gridTemplateColumns='repeat(6,1fr)';
  [['mega','TO Mega',2],['tka','TKA',2],['testimoni','Testimoni',2],['video','Video',2],['pend','Dampingi TKA',2],['fasilitas','Fasilitas',2]].forEach(function(x){
   var b=el('button');b.type='button';b.textContent=x[1];b.style.gridColumn='span '+x[2];b.setAttribute('aria-expanded','false');
-  b.addEventListener('click',function(){top=top===x[0]?'':x[0];jj='';sub='';if(top==='video'&&ytEmpty('ru'))window.open(VID_LINK,'_blank','noopener');draw()});
+  b.addEventListener('click',function(){top=top===x[0]?'':x[0];jj='';sub='';vs='';if(top==='video'&&ytEmpty('ru','pembahasan'))window.open(VID_LINK,'_blank','noopener');draw()});
   topBtn[x[0]]=b;bar.appendChild(b);
  });
  p.appendChild(bar);p.appendChild(slot);
@@ -1777,7 +1784,7 @@ function buildRu(card,p,name){
   slot.innerHTML='';
   for(var k in topBtn)topBtn[k].setAttribute('aria-expanded',k===top?'true':'false');
   if(!top)return;
-  if(top==='video'){cur=ytViewer('ru');p.appendChild(cur.el);cur.start();return}
+  if(top==='video'){var vrow=el('div','mxj');vrow.style.gridTemplateColumns='repeat(2,1fr)';[['pembahasan','Pembahasan Eps 1-2'],['utbk','UTBK Center']].forEach(function(x){var b=el('button');b.type='button';b.textContent=x[1];b.setAttribute('aria-pressed',x[0]===vs?'true':'false');b.addEventListener('click',function(){vs=vs===x[0]?'':x[0];draw()});vrow.appendChild(b)});slot.appendChild(vrow);if(vs){cur=ytViewer('ru',vs);p.appendChild(cur.el);cur.start()}return}
   if(top==='fasilitas'){cur=FasViewer('ru');p.appendChild(cur.el);cur.start();return}
   if(top==='pend'){cur=Viewer('ru_pend','foto','Dampingi TKA');p.appendChild(cur.el);cur.start();return}
   if(top==='testimoni'){cur=Viewer('ru','testimoni',name);p.appendChild(cur.el);cur.start();return}
@@ -2051,7 +2058,7 @@ h1{margin:6px 0 4px;text-align:center;font-size:clamp(22px,3.4vw,34px);font-weig
 .pvroot.big .scroll{position:absolute;inset:0;max-height:none;height:100%}
 .pvroot.big .bigb,.pvroot.big .hintbar{display:none}
 .hintbar{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;padding:6px 16px 14px}
-.hinttx{flex:1 1 100%;margin:0;font-size:clamp(13px,3.6vw,15px);line-height:1.55;font-weight:500;color:var(--ink);text-align:center}
+.hinttx{flex:1 1 100%;margin:0;font-size:clamp(10.5px,2.8vw,12px);line-height:1.55;font-weight:500;color:var(--ink);text-align:center}
 .hinttx b{color:#b91c1c;font-weight:700}
 .pvroot.big .bigx{display:flex;position:absolute;top:10px;left:10px;z-index:45;align-items:center;gap:6px;padding:9px 16px;border:0;border-radius:99px;background:rgba(15,23,42,.85);color:#fff;font:700 13px Poppins,Arial,sans-serif;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.35)}
 
