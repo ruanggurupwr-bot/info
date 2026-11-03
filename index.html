@@ -786,6 +786,7 @@ body a.r .p{color:var(--tx)!important;font-weight:600;font-size:12.5px;line-heig
 
 /* BAC: teks pembuka rata tengah, tombol Coba Kelas Gratis merah, sub-menu hijau logo */
 .cap,.cap .lead{text-align:center}
+.cap p:not(.lead){font-size:11px;line-height:1.6}
 @keyframes ctaPulseR{0%{transform:scale(1);box-shadow:0 6px 0 #374b55,0 0 0 0 rgba(220,38,38,.6)}55%{transform:scale(1.04);box-shadow:0 6px 0 #374b55,0 0 0 12px rgba(220,38,38,0)}100%{transform:scale(1);box-shadow:0 6px 0 #374b55,0 0 0 0 rgba(220,38,38,0)}}
 .cta#ctaBtn,#ctaBtn{background:#dc2626;color:#fff;--tx:#fff;--tx2:#fff;animation:ctaPulseR 1.6s ease-in-out infinite}
 @media (prefers-reduced-motion:reduce){#ctaBtn{animation:none}}
@@ -1914,7 +1915,7 @@ function build(card){
   var fillV=function(){vr.innerHTML='';vb=[];if(!rbl)return;var L=RBS[rbl];vj=L[0][0];vr.style.gridTemplateColumns='repeat('+L.length+',1fr)';L.forEach(function(x){var b=el('button');b.type='button';b.textContent=x[1];b.setAttribute('role','tab');b.setAttribute('aria-selected',x[0]===vj?'true':'false');
    b.addEventListener('click',function(){if(vj===x[0])return;vj=x[0];vb.forEach(function(y){y.setAttribute('aria-selected',y===b?'true':'false')});if(kind==='video'){close();open('video')}});
    vb.push(b);vr.appendChild(b)})};
-  [['sd','Jenjang SD'],['up','Jenjang SMP-SMA-SMK']].forEach(function(x){var b=el('button');b.type='button';b.textContent=x[1];b.setAttribute('aria-expanded','false');
+  [['sd','SD (Dafa & Lulu)'],['up','SMP-SMA-SMK']].forEach(function(x){var b=el('button');b.type='button';b.textContent=x[1];b.setAttribute('aria-expanded','false');
    b.addEventListener('click',function(){rbl=rbl===x[0]?'':x[0];vj='';vlb.forEach(function(y){y.setAttribute('aria-expanded',(y===b&&rbl)?'true':'false')});fillV();if(kind==='video'){close();open('video')}});
    vlb.push(b);vl.appendChild(b)});
   p.appendChild(vl);p.appendChild(vr)}
@@ -2174,6 +2175,9 @@ h1{margin:6px 0 4px;text-align:center;font-size:clamp(22px,3.4vw,34px);font-weig
 .pvroot.big .zc{flex:none;margin:6px auto 8px}
 .pvroot.big .bigx{position:static;top:auto;left:auto;flex:none;width:max-content;margin:0 auto calc(12px + env(safe-area-inset-bottom,0px))}
 .dock.min{top:auto;bottom:calc(64px + env(safe-area-inset-bottom,0px));transform:none}
+.dock,.dock.min{top:auto;bottom:calc(72px + env(safe-area-inset-bottom,0px));transform:none}
+.wm{top:auto;bottom:calc(72px + env(safe-area-inset-bottom,0px));transform:none;max-height:calc(100vh - 100px)}
+.wm.frm{top:calc(12px + env(safe-area-inset-top,0px));bottom:auto}
 .pvroot.big .dock.min{bottom:calc(10px + env(safe-area-inset-bottom,0px))}
 </style>
 <div class="pvroot" id="pvroot" data-view="ortu"><div class="pvwrap"><div class="hintbar"><p class="hinttx">Klik salah satu produk pada tabel di bawah ini. Gunakan tombol <b>(Diperbesar)</b> berwarna merah untuk melihat tampilan yang lebih besar.</p><button type="button" class="bigb" id="big" aria-label="Buka tampilan diperbesar di tab baru">⤢ Diperbesar</button></div><div class="scroll" id="sc"><div class="stage" id="st">
@@ -2705,15 +2709,22 @@ var F=["data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAoHBwgHBgoICAgLC
 var o=document.getElementById('dvOv'),s=document.getElementById('dvS'),n=document.getElementById('dvN'),e=document.getElementById('dvE'),b=document.getElementById('dvOpen'),x=document.getElementById('dvX');
 if(!o||!b)return;
 var imgs=F.map(function(u,k){var m=document.createElement('img');m.src=u;m.alt='Dokumentasi Home Visit '+(k+1);s.insertBefore(m,n);return m});
-var t=0,i=0,prev='';
+var t=0,i=0,prev='',sx=null;
+function auto(){clearInterval(t);if(imgs.length>1)t=setInterval(function(){i=(i+1)%imgs.length;show(i)},1200)}
+function go(d){i=(i+d+imgs.length)%imgs.length;show(i)}
 function show(k){imgs.forEach(function(m,j){m.classList.toggle('on',j===k)});n.textContent=(k+1)+' / '+imgs.length}
 function open(){
  o.hidden=false;prev=document.body.style.overflow;document.body.style.overflow='hidden';
- if(imgs.length){s.hidden=false;e.hidden=true;n.hidden=false;i=0;show(0);clearInterval(t);if(imgs.length>1)t=setInterval(function(){i=(i+1)%imgs.length;show(i)},1200)}
+ if(imgs.length){s.hidden=false;e.hidden=true;n.hidden=false;i=0;show(0);auto()}
  else{s.hidden=true;e.hidden=false}
  try{x.focus({preventScroll:true})}catch(z){}
 }
 function close(){o.hidden=true;clearInterval(t);document.body.style.overflow=prev}
+s.style.touchAction='pan-y';s.style.cursor='grab';
+s.addEventListener('pointerdown',function(ev){sx=ev.clientX;clearInterval(t);try{s.setPointerCapture(ev.pointerId)}catch(z){}});
+s.addEventListener('pointerup',function(ev){if(sx===null)return;var d=ev.clientX-sx;sx=null;if(Math.abs(d)>30)go(d<0?1:-1);if(!o.hidden)auto()});
+s.addEventListener('pointercancel',function(){sx=null;if(!o.hidden)auto()});
+document.addEventListener('keydown',function(ev){if(o.hidden)return;if(ev.key==='ArrowLeft'){go(-1);auto()}else if(ev.key==='ArrowRight'){go(1);auto()}});
 b.addEventListener('click',open);
 x.addEventListener('click',close);
 o.addEventListener('click',function(ev){if(ev.target===o)close()});
