@@ -2963,7 +2963,7 @@ document.addEventListener('click',function(e){var b=e.target.closest&&e.target.c
 var VIEWS={produk:1,gratis:1,faq:1},TITLE='Konsep Belajar di Ruangguru',chipId={};
 [].forEach.call(document.querySelectorAll('#mnu button[data-chip][data-id]'),function(b){chipId[b.getAttribute('data-chip')]=b.getAttribute('data-id')});
 function curHash(){return (location.hash||'').replace(/^#/,'')}
-function setHash(h){try{history.replaceState(null,'',location.pathname+location.search+(h?'#'+h:''))}catch(e){}}
+function setHash(h){try{var base=location.pathname.replace(/[^/]*$/,''),P={produk:1,gratis:1,faq:1,bac:1};/* menu utama memakai alamat /produk /bac /gratis /faq (tanpa #) agar link yang disalin tampil sebagai preview di WhatsApp */history.replaceState(null,'',P[h]?base+h+location.search:base+location.search+(h?'#'+h:''))}catch(e){}}
 function isKonsep(d){var sp=d.querySelector(':scope>summary span');return !!sp&&sp.textContent.trim()===TITLE}
 
 /* 1) alamat ikut berubah saat bagian dibuka */
