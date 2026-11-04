@@ -2651,7 +2651,7 @@ function exitBig(){
  window.scrollTo(0,0);
 }
 sr.getElementById('big').addEventListener('click',function(){
- var u=location.href.split('#')[0],w=null;
+ var u=location.href.split('#')[0].split('?')[0].replace(/[^/]*$/,''),w=null;
  if(/^https?:/.test(u)){try{w=window.open(u+'#besar','_blank')}catch(e){}}
  if(!w)enterBig();
 });
@@ -2704,7 +2704,7 @@ var KEY='rg_gate_v1',g=document.getElementById('gate');
 if(!g)return;
 /* pilihan awal tidak disimpan: setiap halaman dimuat ulang, pengisian dimulai dari awal */
 var done=false,skipped=false;
-if(/^#(besar|konsep$|bac$|produk(-[a-z0-9]+)?$|gratis$|faq$)/i.test(location.hash))return;
+if(/^#(besar|konsep$|bac$|produk(-[a-z0-9]+)?$|gratis$|faq$|baon-gratis$|kitab-(snbt|smp|sd)$|adapto$|kalananti-robotic$|mc-gratis$|bac-reguler$|bac-snbt$|drill-rubel$)/i.test(location.hash))return;
 var F=document.getElementById('gateF'),E=document.getElementById('gateE'),B=document.getElementById('gateB'),rb=g.querySelectorAll('.gate-r button'),role='';
 var jk=window.__mkJK(document.getElementById('gJG'),document.getElementById('gKG'),function(){E.hidden=true});
 document.body.style.overflow='hidden';g.hidden=false;
@@ -2996,9 +2996,34 @@ function openProduk(id){
  var b=document.querySelector('#mnu .mi.s[data-id="'+id+'"]');
  if(b)b.click();else goBar('produk');
 }
+/* link langsung ke bagian produk / BAC (dipakai halaman preview WhatsApp) */
+var DLP={'baon-gratis':['bao',['Fasilitas']],'kitab-snbt':['kitab',['Gambar','SNBT']],'kitab-smp':['kitab',['Gambar','SMP']],'kitab-sd':['kitab',['Gambar','SD']],'adapto':['rb',['Video','SMP-SMA-SMK','ADAPTO']],'kalananti-robotic':['kal',['Video','Robotic']],'mc-gratis':['mc',['Gambar']]};
+var DLB={'bac-reguler':1,'bac-snbt':1,'drill-rubel':1};
+function clickLabel(root,label){var bs=[].slice.call(root.querySelectorAll('button'));for(var i=0;i<bs.length;i++){if(bs[i].textContent.trim()===label){var b=bs[i];if(b.getAttribute('aria-expanded')!=='true'&&b.getAttribute('aria-pressed')!=='true'&&b.getAttribute('aria-selected')!=='true')b.click();return true}}return false}
+function runDL(h){var d=DLP[h],i=0;openProduk(d[0]);
+ function step(){var p=document.getElementById('mx-'+d[0]);
+  if(i>=d[1].length){if(p)setTimeout(function(){p.scrollIntoView({behavior:'smooth',block:'start'})},250);return}
+  if(p)clickLabel(p,d[1][i]);i++;setTimeout(step,380)}
+ setTimeout(step,800)}
+function runBac(h){goBar('top');
+ setTimeout(function(){
+  function tb(t){var b=document.querySelector('.tb[data-t="'+t+'"]');if(b&&b.getAttribute('aria-expanded')!=='true')b.click();return b}
+  if(h==='drill-rubel'){tb('p-prosedur');
+   setTimeout(function(){var ds=[].slice.call(document.querySelectorAll('#p-prosedur details.sd')),d=null;
+    ds.forEach(function(x){var sm=x.querySelector('summary');if(sm&&/drill soal/i.test(sm.textContent))d=x});
+    if(!d)return;d.open=true;
+    var pb=d.querySelector('.ph-b[data-l="Lihat foto drill via Ruangbelajar"]');if(pb&&pb.getAttribute('aria-expanded')!=='true')pb.click();
+    setTimeout(function(){d.scrollIntoView({behavior:'smooth',block:'start'})},250)},250);
+   return}
+  tb('p-fasilitas');
+  setTimeout(function(){var want=h==='bac-reguler'?'Akademik':'Persiapan SNBT / UTBK',tg=null;
+   [].slice.call(document.querySelectorAll('#p-fasilitas details.fz')).forEach(function(d){var sm=d.querySelector('summary'),on=!!sm&&sm.textContent.trim()===want;d.open=on;if(on)tg=d});
+   if(tg)setTimeout(function(){tg.scrollIntoView({behavior:'smooth',block:'start'})},250)},250)},350)}
 function route(){
  var h=curHash();if(!h)return;
  if(h==='konsep')openKonsep();
+ else if(DLP[h])runDL(h);
+ else if(DLB[h])runBac(h);
  else if(/^produk-[a-z0-9]+$/i.test(h))openProduk(h.slice(7).toLowerCase());
  else if(h==='bac')goBar('top');
   else if(VIEWS[h])goBar(h);
