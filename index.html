@@ -849,10 +849,11 @@ body .tb[aria-expanded="true"]{background:#e9d9bf;color:#2d2d2d;border-color:tra
 #faq .lgm-e{margin:0;padding:14px;border-radius:12px;background:rgba(100,116,139,.12);font-size:12.5px;text-align:center}
 .bcp{margin:12px 0 0;border-radius:14px;overflow:hidden;background:#fff}.bcp img{display:block;width:100%;height:auto}.bcp{position:relative}
 .bcp-tg{position:absolute;top:8px;left:8px;z-index:2;background:rgba(0,0,0,.55);color:#fff;font:600 10px/1 Poppins,system-ui,sans-serif;letter-spacing:.04em;padding:4px 8px;border-radius:99px;pointer-events:none}
-.snbtm{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(0,0,0,.72);opacity:0;pointer-events:none;transition:opacity .25s}
+.snbtm{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;background:#0b1b3a;opacity:0;pointer-events:none;transition:opacity .25s}
 .snbtm.on{opacity:1;pointer-events:auto}
-.snbtm-b{position:relative;max-width:min(92vw,440px);max-height:92vh;border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 16px 48px rgba(0,0,0,.5)}
-.snbtm-b img{display:block;width:100%;height:auto;max-height:92vh;object-fit:contain}
+.snbtm-b{position:relative;width:100%;height:100dvh;max-width:480px;display:flex;align-items:center;justify-content:center;background:#0b1b3a}
+.snbtm-b img{display:block;width:100%;height:100%;object-fit:contain}
+.snbtm-s{position:absolute;left:50%;bottom:calc(14px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:3;display:flex;align-items:center;gap:6px;padding:7px 14px;border-radius:99px;background:rgba(255,255,255,.95);color:#111;font:600 12px/1 Poppins,system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.35)}
 .snbtm-x{position:absolute;top:8px;right:8px;z-index:3;width:32px;height:32px;border:0;border-radius:50%;background:rgba(0,0,0,.6);color:#fff;font-size:20px;line-height:1;cursor:pointer;padding:0}
 </style>
 <style>
@@ -2082,7 +2083,7 @@ function build(card){
  function close(){if(cur){cur.stop();cur.el.remove();cur=null}kind='';if(cr)cr.hidden=true;if(lr)lr.hidden=true;if(br)br.hidden=true;if(vr)vr.hidden=true;if(vl)vl.hidden=true;if(fr)fr.hidden=true;if(mr)mr.hidden=true;if(gr)gr.hidden=true;for(var k in btns)btns[k].setAttribute('aria-expanded','false');syncK()}
  function open(k){
   if(kind===k){close();return}
-  close();kind=k;if(k==='fasilitas'){if(mr)mr.hidden=false;cur=id==='bao'?Viewer('bao_fas','foto','Fasilitas '+name):FasViewer(id==='mc'?'mc_'+mj:id==='privat'?'privat_'+mj:id);put(cur.el);cur.start(id==='kitab'?({sd:0,smp:1,sma:2,snbt:2})[jj]:0);if(FREE[id]){var r2=el('div','mxr mxr-bao');r2.appendChild(freeBtn(id));cur.el.appendChild(r2)}btns[k].setAttribute('aria-expanded','true');syncK();cur.el.scrollIntoView({behavior:'smooth',block:'nearest'});return}var ln2=id==='bac'&&k==='testimoni'&&cj==='ln';if(cr)cr.hidden=k!=='testimoni';if(lr)lr.hidden=k!=='testimoni';if(br)br.hidden=k!=='video';if(vr)vr.hidden=k!=='video'||(id==='rb'&&!rbl);if(vl)vl.hidden=k!=='video';if(fr)fr.hidden=k!=='foto';if(gr)gr.hidden=k!=='foto';var bt=id==='bao'&&k==='testimoni';cur=(id==='bac'&&k==='video'&&bj==='fas')?ytViewer('bac','fas'):(id==='rb'&&k==='video'&&!vj)?{el:el('div'),start:function(){},stop:function(){}}:((id==='robo'||id==='rb'||id==='bao'||id==='airis'||id==='kitab'||id==='privat')&&k==='video')?ytViewer(id,id==='kitab'?jj:vj):(id==='mc'&&k==='foto')?Viewer(gj==='online'?'mc_online':'mc','foto',gj==='online'?'Kelas Online':'Penjelasan'):(id==='privat'&&k==='foto')?Viewer('privat_'+pj,'foto',({privat:'Privat',mapel:'Mapel',ujian:'Ujian'})[pj]):(id==='kal'&&k==='testimoni')?kalTesti():(id==='kal'&&k==='video'&&vj==='coding')?kalSlider(KAL_C,'Video'):(id==='kal'&&k==='video'&&vj==='online')?kalSlider(KAL_O,'Video'):((id==='bao'||id==='rb'||id==='robo'||id==='kal'||id==='bac'||id==='mc'||id==='privat')&&k==='video')?vidViewer(id,vj):Viewer(id==='kitab'?'kitab_'+jj:(bt?'bao_'+jj:(ln2?'bac_lain':id)),k,(id==='kitab'||bt)?name+' '+jj.toUpperCase():(ln2?name+' Cabang Lainnya':name));if(id==='bac'&&k==='foto'&&!ln2&&window.BAC_POSTER){var pf=el('figure','bcp'),pim=document.createElement('img');pim.src=window.BAC_POSTER;pim.alt='Poster Paket UTBK Only di Brain Academy Center Purworejo, kuota terbatas untuk 10 siswa';pim.width=853;pim.height=1280;pim.loading='lazy';var tg=el('span','bcp-tg');tg.textContent='Iklan';pf.appendChild(tg);pf.appendChild(pim);cur.el.appendChild(pf);if(window.snbtAd)window.snbtAd(pf)}if(FREE[id]&&!(id==='bac'&&k==='video'&&bj==='fas')&&(k!=='video'||!(id==='robo'||id==='rb'||id==='bao'||id==='airis'||id==='kitab'||id==='privat'))){var r1=el('div','mxr mxr-bao');r1.appendChild(freeBtn(id));cur.el.appendChild(r1)}
+  close();kind=k;if(k==='fasilitas'){if(mr)mr.hidden=false;cur=id==='bao'?Viewer('bao_fas','foto','Fasilitas '+name):FasViewer(id==='mc'?'mc_'+mj:id==='privat'?'privat_'+mj:id);put(cur.el);cur.start(id==='kitab'?({sd:0,smp:1,sma:2,snbt:2})[jj]:0);if(FREE[id]){var r2=el('div','mxr mxr-bao');r2.appendChild(freeBtn(id));cur.el.appendChild(r2)}btns[k].setAttribute('aria-expanded','true');syncK();cur.el.scrollIntoView({behavior:'smooth',block:'nearest'});return}var ln2=id==='bac'&&k==='testimoni'&&cj==='ln';if(cr)cr.hidden=k!=='testimoni';if(lr)lr.hidden=k!=='testimoni';if(br)br.hidden=k!=='video';if(vr)vr.hidden=k!=='video'||(id==='rb'&&!rbl);if(vl)vl.hidden=k!=='video';if(fr)fr.hidden=k!=='foto';if(gr)gr.hidden=k!=='foto';var bt=id==='bao'&&k==='testimoni';cur=(id==='bac'&&k==='video'&&bj==='fas')?ytViewer('bac','fas'):(id==='rb'&&k==='video'&&!vj)?{el:el('div'),start:function(){},stop:function(){}}:((id==='robo'||id==='rb'||id==='bao'||id==='airis'||id==='kitab'||id==='privat')&&k==='video')?ytViewer(id,id==='kitab'?jj:vj):(id==='mc'&&k==='foto')?Viewer(gj==='online'?'mc_online':'mc','foto',gj==='online'?'Kelas Online':'Penjelasan'):(id==='privat'&&k==='foto')?Viewer('privat_'+pj,'foto',({privat:'Privat',mapel:'Mapel',ujian:'Ujian'})[pj]):(id==='kal'&&k==='testimoni')?kalTesti():(id==='kal'&&k==='video'&&vj==='coding')?kalSlider(KAL_C,'Video'):(id==='kal'&&k==='video'&&vj==='online')?kalSlider(KAL_O,'Video'):((id==='bao'||id==='rb'||id==='robo'||id==='kal'||id==='bac'||id==='mc'||id==='privat')&&k==='video')?vidViewer(id,vj):Viewer(id==='kitab'?'kitab_'+jj:(bt?'bao_'+jj:(ln2?'bac_lain':id)),k,(id==='kitab'||bt)?name+' '+jj.toUpperCase():(ln2?name+' Cabang Lainnya':name));if(id==='bac'&&k==='foto'&&!ln2&&window.BAC_POSTER){var pf=el('figure','bcp'),pim=document.createElement('img');pim.src=window.BAC_POSTER;pim.alt='Poster Paket UTBK Only di Brain Academy Center Purworejo, kuota terbatas untuk 10 siswa';pim.width=853;pim.height=1280;pim.loading='lazy';var tg=el('span','bcp-tg');tg.textContent='Iklan';pf.appendChild(tg);pf.appendChild(pim);pf.style.cursor='pointer';pf.setAttribute('role','button');pf.setAttribute('aria-label','Buka poster Paket UTBK Only');pf.onclick=function(){window.snbtModal()};cur.el.appendChild(pf);if(window.snbtAd)window.snbtAd(pf)}if(FREE[id]&&!(id==='bac'&&k==='video'&&bj==='fas')&&(k!=='video'||!(id==='robo'||id==='rb'||id==='bao'||id==='airis'||id==='kitab'||id==='privat'))){var r1=el('div','mxr mxr-bao');r1.appendChild(freeBtn(id));cur.el.appendChild(r1)}
   put(cur.el);cur.start();
   btns[k].setAttribute('aria-expanded','true');syncK();
   cur.el.scrollIntoView({behavior:'smooth',block:'nearest'});
@@ -2711,7 +2712,7 @@ var KEY='rg_gate_v1',g=document.getElementById('gate');
 if(!g)return;
 /* pilihan awal tidak disimpan: setiap halaman dimuat ulang, pengisian dimulai dari awal */
 var done=false,skipped=false;
-if(/^#(besar|konsep$|bac$|produk(-[a-z0-9]+)?$|gratis$|faq$|baon-gratis$|kitab-(snbt|smp|sd)$|adapto$|kalananti-robotic$|mc-gratis$|bac-reguler$|bac-snbt$|drill-rubel$)/i.test(location.hash))return;
+if(/^#(poster$|besar|konsep$|bac$|produk(-[a-z0-9]+)?$|gratis$|faq$|baon-gratis$|kitab-(snbt|smp|sd)$|adapto$|kalananti-robotic$|mc-gratis$|bac-reguler$|bac-snbt$|drill-rubel$)/i.test(location.hash))return;
 var F=document.getElementById('gateF'),E=document.getElementById('gateE'),B=document.getElementById('gateB'),rb=g.querySelectorAll('.gate-r button'),role='';
 var jk=window.__mkJK(document.getElementById('gJG'),document.getElementById('gKG'),function(){E.hidden=true});
 document.body.style.overflow='hidden';g.hidden=false;
@@ -3057,7 +3058,10 @@ window.snbtModal=function(){
     var tg=document.createElement('span');tg.className='bcp-tg';tg.textContent='Iklan';
     var x=document.createElement('button');x.type='button';x.className='snbtm-x';x.setAttribute('aria-label','Tutup');x.textContent='\u00D7';
     var im=document.createElement('img');im.src=window.BAC_POSTER;im.alt='Poster Paket UTBK Only, kuota terbatas untuk 10 siswa';
-    box.appendChild(tg);box.appendChild(x);box.appendChild(im);m.appendChild(box);document.body.appendChild(m);
+    var sh=document.createElement('a');sh.className='snbtm-s';sh.target='_blank';sh.rel='noopener';
+    sh.href='https://wa.me/?text='+encodeURIComponent('Paket UTBK Only di Ruangguru Purworejo, kuota terbatas untuk 10 siswa! Info lengkap: https://ruanggurupwr-bot.github.io/info/#poster');
+    sh.innerHTML='<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="#25D366" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/><path fill="#fff" d="M8.6 7.2c-.2 0-.5.1-.7.4-.3.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.8 2.8 4.4 3.8 2.1.8 2.6.7 3 .6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3l-1.7-.8c-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.3-.1-1.1-.4-2-1.3-.7-.7-1.2-1.5-1.4-1.8-.1-.2 0-.4.1-.5l.4-.5c.1-.1.2-.3.2-.4.1-.2 0-.3 0-.4l-.8-1.9c-.2-.5-.4-.5-.6-.5z"/></svg><span>Bagikan</span>';
+    box.appendChild(tg);box.appendChild(x);box.appendChild(im);box.appendChild(sh);m.appendChild(box);document.body.appendChild(m);
     var close=function(){m.classList.remove('on');document.documentElement.style.overflow=''};
     x.onclick=close;m.onclick=function(e){if(e.target===m)close()};
     document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
@@ -3068,8 +3072,8 @@ window.snbtAd=function(fig){
   var ad=document.getElementById('snbtad');
   if(!ad){
     ad=document.createElement('div');ad.id='snbtad';ad.className='snbtad';ad.setAttribute('role','complementary');
-    ad.innerHTML='<a href="#poster-iklan" role="button">\uD83C\uDFAF Coba <b>Kelas SNBT Only Gratis</b></a><button type="button" aria-label="Tutup iklan">\u00D7</button>';
-    ad.querySelector('a').onclick=function(e){e.preventDefault();window.snbtModal()};
+    ad.innerHTML='<a role="button" tabindex="0" style="cursor:pointer">\uD83C\uDFAF Coba <b>Kelas SNBT Only Gratis</b></a><button type="button" aria-label="Tutup iklan">\u00D7</button>';
+    ad.querySelector('a').onclick=function(e){e.preventDefault();window.snbtModal()};ad.querySelector('a').onkeydown=function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();window.snbtModal()}};
     document.body.appendChild(ad);
   }
   var closed=false,prev=null;
@@ -3083,6 +3087,9 @@ window.snbtAd=function(fig){
   }
   window.addEventListener('scroll',chk,true);
 };
+(function(){function go(){if(/^#poster$/i.test(location.hash)&&window.BAC_POSTER)window.snbtModal()}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go);else go();
+window.addEventListener('hashchange',go)})();
 </script>
 </body>
 </html>
