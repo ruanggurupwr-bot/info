@@ -854,6 +854,9 @@ body .tb[aria-expanded="true"]{background:#e9d9bf;color:#2d2d2d;border-color:tra
 .snbt-pill-top.on{opacity:1;transform:translate(-50%,0);pointer-events:auto}
 .snbt-pill-mid{position:absolute;top:50%;left:50%;z-index:4;transform:translate(-50%,-50%) scale(.92)}
 .snbt-pill-mid{padding:8px 10px 8px 16px;gap:8px}
+.snbt-pill-mid.on.dock{top:min(calc(50% + min(100dvh,min(100vw,480px)*1.5005)/2 + 10px),calc(100dvh - 46px - env(safe-area-inset-bottom,0px)));left:14px;transform:none;max-width:calc(100% - 140px);padding:6px 8px 6px 12px;font-size:12px;box-shadow:0 4px 14px rgba(0,0,0,.35)}
+.snbt-pill-mid.dock .snbt-pill-x{display:none}
+.snbt-pill-mid.dock b{padding:4px 9px}
 .snbt-pill-a{display:flex;align-items:center;gap:8px;color:#fff;text-decoration:none;cursor:pointer}
 .snbt-pill-x{position:absolute;left:-8px;bottom:-8px;width:24px;height:24px;border:0;border-radius:50%;background:#fff;color:#15803d;font:700 16px/1 system-ui,sans-serif;cursor:pointer;padding:0;box-shadow:0 2px 8px rgba(0,0,0,.35)}
 .snbt-pill-mid.on{opacity:1;transform:translate(-50%,-50%) scale(1);pointer-events:auto}
@@ -3073,17 +3076,17 @@ window.snbtModal=function(){
     sh.innerHTML='<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="#25D366" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/><path fill="#fff" d="M8.6 7.2c-.2 0-.5.1-.7.4-.3.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.8 2.8 4.4 3.8 2.1.8 2.6.7 3 .6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3l-1.7-.8c-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.3-.1-1.1-.4-2-1.3-.7-.7-1.2-1.5-1.4-1.8-.1-.2 0-.4.1-.5l.4-.5c.1-.1.2-.3.2-.4.1-.2 0-.3 0-.4l-.8-1.9c-.2-.5-.4-.5-.6-.5z"/></svg><span>Bagikan</span>';
     var pl=document.createElement('div');pl.className='snbt-pill snbt-pill-mid';pl.id='snbtmpill';
     var px=document.createElement('button');px.type='button';px.className='snbt-pill-x';px.setAttribute('aria-label','Tutup iklan');px.textContent='\u00D7';
-    px.onclick=function(e){e.stopPropagation();pl.classList.remove('on')};
+    px.onclick=function(e){e.stopPropagation();pl.classList.add('dock')};
     var pa=document.createElement('a');pa.className='snbt-pill-a';pa.target='_blank';pa.rel='noopener';pa.href='https://wa.me/6285177454988?text='+encodeURIComponent('Halo Kak Rudi, saya ingin coba Kelas SNBT Only Gratis.');
     pa.innerHTML='\uD83C\uDFAF Coba <b>Kelas SNBT Only Gratis</b>';
     pl.appendChild(px);pl.appendChild(pa);
     box.appendChild(tg);box.appendChild(x);box.appendChild(im);box.appendChild(sh);box.appendChild(pl);m.appendChild(box);document.body.appendChild(m);
-    var close=function(){clearTimeout(window.__snbtMt);var q=document.getElementById('snbtmpill');if(q)q.classList.remove('on');m.classList.remove('on');document.documentElement.style.overflow=''};
+    var close=function(){clearTimeout(window.__snbtMt);var q=document.getElementById('snbtmpill');if(q){q.classList.remove('on');q.classList.remove('dock')}m.classList.remove('on');document.documentElement.style.overflow=''};
     x.onclick=close;m.onclick=function(e){if(e.target===m)close()};
     document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
   }
   m.classList.add('on');document.documentElement.style.overflow='hidden';
-  var mp=document.getElementById('snbtmpill');if(mp){mp.classList.remove('on');clearTimeout(window.__snbtMt);window.__snbtMt=setTimeout(function(){mp.classList.add('on')},3000)}
+  var mp=document.getElementById('snbtmpill');if(mp){mp.classList.remove('on');mp.classList.remove('dock');clearTimeout(window.__snbtMt);window.__snbtMt=setTimeout(function(){mp.classList.add('on')},3000)}
 };
 window.snbtAd=function(fig){
   var pill=document.createElement('button');pill.type='button';pill.className='snbt-pill snbt-pill-top';
