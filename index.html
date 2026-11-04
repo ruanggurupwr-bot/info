@@ -504,14 +504,17 @@ body.adopen .rg{z-index:1001}
 .aoc-tag{display:inline-block;margin:0 0 8px;padding:4px 12px;border-radius:999px;border:1px solid rgba(232,200,114,.6);background:rgba(232,200,114,.12);color:#f0d98c;font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
 .aoc-t{margin:0;font-size:19px;line-height:1.3;font-weight:800;color:#f6f1e3}
 .aoc-t span{color:#f0d98c}
-.aoc-s{margin:6px 0 12px;font-size:12.5px;font-weight:600;line-height:1.5;color:#d9d3c2}
+.aoc-s{margin:8px -10px 14px;line-height:1.45;color:#d9d3c2}
+.aoc-s span{display:block}
+.aoc-s1{font-size:12.5px;font-weight:800;color:#f0d98c;white-space:nowrap}
+.aoc-s2{margin-top:3px;font-size:12px;font-weight:600;text-wrap:balance}
 .aoc-l{list-style:none;margin:0 0 14px;padding:0;display:grid;gap:6px;text-align:left}
 .aoc-l li{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:12px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.08);font-size:12px;font-weight:600;line-height:1.35}
 .aoc-l svg{flex:none;width:17px;height:17px;fill:none;stroke:#f0d98c;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
-.aoc-cta{display:block;padding:13px 14px;border-radius:999px;background:linear-gradient(180deg,#f3dc92 0%,#d8a944 100%);color:#2a1a05;font-size:14.5px;font-weight:800;text-decoration:none;box-shadow:0 5px 0 #8f6a1c}
+.aoc-cta{display:block;padding:11px 14px 12px;border-radius:26px;background:linear-gradient(180deg,#f3dc92 0%,#d8a944 100%);color:#2a1a05;font-size:14.5px;font-weight:800;text-decoration:none;box-shadow:0 5px 0 #8f6a1c}
+.aoc-c1{display:block;font-size:15px;font-weight:800;line-height:1.25}
+.aoc-c2{display:block;margin-top:2px;font-size:11.5px;font-weight:700;line-height:1.3;opacity:.85}
 .aoc-cta:active{transform:translateY(2px);box-shadow:0 3px 0 #8f6a1c}
-.aoc-n{margin:10px 0 0;font-size:11.5px;font-weight:600;color:#cfc8b6}
-.aoc-n a{color:inherit;text-decoration:underline;text-underline-offset:3px}
 .mq .cts img.sn{display:block;width:180px;height:180px;max-width:70%;height:auto;aspect-ratio:1;margin:10px auto 0;border-radius:50%}
 .cta:active{filter:brightness(.92)}
 .tk i.ft{font-style:normal;font-weight:700;padding:1px 9px;border-radius:999px;margin:0 1px}
@@ -880,11 +883,18 @@ body:not(.pvbig):not([data-view="produk"]):not([data-view="beranda"]) #produk{di
 .rg .rl img{display:block;height:22px;width:auto;max-width:none}
 .rg .rt{display:flex;flex-direction:column;flex:1;min-width:0;text-align:center}
 .rg .rgt{flex:1;min-width:0;display:flex;align-items:center;justify-content:center;margin:0;padding:0;border:0;background:none;font:inherit;color:inherit;text-decoration:none;cursor:pointer;-webkit-tap-highlight-color:transparent}
-.rg .rgb .mb{width:34px;height:34px;border:0;border-radius:6px;background:linear-gradient(180deg,#14b8ad 0%,#00a79d 100%);color:#fff;box-shadow:0 2px 0 #007a72}
+.rg .rgb .mb{width:34px;height:34px;box-sizing:border-box;border:2px solid #00a79d;border-radius:6px;background:#fff;color:#00a79d;box-shadow:none}
 .rg .rgb .mb svg{width:20px;height:20px}
 .rg .rti{display:block;height:36px;width:auto;max-width:100%;margin:0 auto;object-fit:contain;filter:drop-shadow(0 1px 2px rgba(0,0,0,.5))}
 .rg .rt b{font-size:13px;font-weight:700;white-space:nowrap}
 .rg .rt span{font-size:10.5px;font-weight:600;color:#ffd68c;white-space:nowrap}
+/* Header transparan: menu navigasi putih, logo Ruangguru putih tanpa latar */
+body .rg,body.sc .rg{background:transparent!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important;border-bottom:0!important;box-shadow:none!important}
+body .rg .rgb{background:transparent!important;border:0!important;box-shadow:none!important}
+body .rg .rgb .mb,body .rg .mb{background:transparent!important;border:2px solid #fff!important;color:#fff!important;box-shadow:none!important;filter:drop-shadow(0 1px 2px rgba(0,0,0,.45))}
+body .rg .mb svg{stroke:#fff!important}
+body .rg .rl{background:transparent!important;box-shadow:none!important;border:0!important}
+body .rg .rl img{background:transparent!important;filter:brightness(0) invert(1) drop-shadow(0 1px 2px rgba(0,0,0,.45))}
 body::before{content:"";position:fixed;left:0;right:0;top:0;height:env(safe-area-inset-top,0px);background:transparent;z-index:39;transition:background .2s}
 body.sc .rg,body.sc::before{background:color-mix(in srgb,var(--bg) 60%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
 body.sc .rg{border-bottom-color:var(--ln)}
@@ -1284,13 +1294,13 @@ t.forEach(function(b,i){b.addEventListener('click',function(){
 <div class="aoc-b">
 <p class="aoc-tag">Kompetisi Sains Ruangguru</p>
 <h2 class="aoc-t">Panggung juara siswa SMA dari <span>12 district</span> se-Indonesia</h2>
-<p class="aoc-s">Mau jadi juara berikutnya? Mulai asah kemampuanmu bareng Brain Academy Purworejo.</p>
+<p class="aoc-s"><span class="aoc-s1">Mau jadi satu-satunya perwakilan Purworejo?</span><span class="aoc-s2">Mulai asah kemampuanmu bareng Brain Academy Purworejo</span></p>
 <ul class="aoc-l">
 <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg>Tayang di aplikasi Ruangguru &amp; YouTube</li>
 <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg>Bagian dari rangkaian Kompetisi Sains Ruangguru</li>
 </ul>
-<a class="aoc-cta" href="https://wa.me/6285177454988?text=Halo%20Kak%20Rudi%2C%20saya%20ingin%20coba%20kelas%20gratis." target="_blank" rel="noopener">Coba Kelas Gratis</a>
-<p class="aoc-n"><a href="https://wa.me/6285177454988?text=Halo%20Kak%20Rudi%2C%20saya%20ingin%20tanya%20tentang%20kelas%20gratis." target="_blank" rel="noopener">Tanya Kak Rudi · 0851-7745-4988</a></p>
+<a class="aoc-cta" href="https://wa.me/6285177454988?text=Halo%20Kak%20Rudi%2C%20saya%20ingin%20konsultasi%20gratis%20dan%20info%20tentang%20Academy%20of%20Champions." target="_blank" rel="noopener"><span class="aoc-c1">Konsultasi Gratis</span><span class="aoc-c2">Info tentang Academy of Champions</span></a>
+
 </div>
 </div>
 </div>
