@@ -2037,7 +2037,9 @@ function build(card){
   if(x[0]==='foto')b.textContent='Gambar';
   b.addEventListener('click',function(){if(x[0]==='video'&&kind!=='video'&&YT[id]!==undefined&&!(id==='rb')&&id!=='bac'&&ytEmpty(id,id==='kitab'?jj:vj))window.open(VID_LINK,'_blank','noopener');open(x[0])});btns[x[0]]=b;bar.appendChild(b);
  });
- bar.style.gridTemplateColumns='repeat('+bar.children.length+',1fr)';p.appendChild(bar);
+ if(id==='rb'){var wm=el('button');wm.type='button';wm.textContent='Web Mini Dafa Lulu';wm.setAttribute('aria-label','Buka web mini Dafa Lulu di tab baru');wm.style.lineHeight='1.2';wm.style.whiteSpace='normal';wm.addEventListener('click',function(){window.open('https://ruanggurupwr-bot.github.io/2026/','_blank','noopener')});bar.appendChild(wm)}
+ if(id==='rb'){bar.style.gap='6px';[].forEach.call(bar.children,function(x){x.style.fontSize='12px';x.style.padding='14px 3px'})}
+ bar.style.gridTemplateColumns=id==='rb'?'repeat(3,minmax(min-content,1fr)) minmax(min-content,1.5fr)':'repeat('+bar.children.length+',1fr)';p.appendChild(bar);
  var cr=null,cj='pw',cb=[];
  if(id==='bac'){cr=el('div','cbr');cr.hidden=true;cr.setAttribute('role','group');cr.setAttribute('aria-label','Pilih cabang');
   [['pw','Cabang Purworejo'],['ln','Cabang Lainnya']].forEach(function(x){var b=el('button','cbb');b.textContent=x[1];b.type='button';b.setAttribute('aria-pressed',x[0]==='pw'?'true':'false');
